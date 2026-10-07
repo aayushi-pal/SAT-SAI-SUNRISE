@@ -1,0 +1,1088 @@
+/* ==========================================================================
+   HOMEHAVEN — RESPONSIVE
+   ========================================================================== */
+
+/* -------------------------------------------------------------
+   GLOBAL FIXES
+   ------------------------------------------------------------- */
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+
+/* ==========================================================================
+   1. LAPTOPS & SMALL DESKTOPS (992px to 1199px)
+   ========================================================================== */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    /* Hero */
+    .hero-title {
+        font-size: 50px;
+    }
+
+    .hero-content {
+        max-width: 560px;
+    }
+
+    /* Section 04: Why Choose Us */
+    .why-choose-img-box {
+        height: 440px;
+    }
+
+    .why-choose-title {
+        font-size: 36px;
+    }
+
+    .why-feature-card {
+        padding: 15px 14px;
+        gap: 12px;
+    }
+
+    .why-icon-box {
+        width: 46px;
+        height: 46px;
+        font-size: 20px;
+    }
+
+    .why-card-title {
+        font-size: 14.5px;
+    }
+
+    .why-card-desc {
+        font-size: 11.5px;
+    }
+
+    /* Section 05: Prime Locations */
+    .locations-title {
+        font-size: 36px;
+    }
+
+    .locations-map-visual {
+        max-width: 170px;
+    }
+
+    .location-card {
+        padding: 11px 12px;
+        gap: 10px;
+    }
+
+    .location-card-img {
+        width: 58px;
+        height: 58px;
+    }
+
+    .location-card-title {
+        font-size: 14.5px;
+    }
+
+    .location-card-desc {
+        font-size: 11px;
+    }
+
+    /* Section 06: Projects */
+    .growth-title {
+        font-size: 36px;
+    }
+
+    .growth-stats-bar {
+        gap: 20px;
+    }
+
+    .growth-stat-number {
+        font-size: 20px;
+    }
+
+    .growth-stat-label {
+        font-size: 11px;
+    }
+
+    .growth-card-img {
+        height: 195px;
+    }
+
+    /* Section 07: Testimonials */
+    .testimonials-title {
+        font-size: 36px;
+    }
+
+    .testimonial-card {
+        padding: 18px 18px;
+        gap: 14px;
+    }
+
+    .testimonial-avatar {
+        width: 60px;
+        height: 60px;
+    }
+
+    .trust-badges-bar {
+        padding: 18px 22px;
+    }
+
+    .trust-badge-item {
+        gap: 12px;
+        padding-right: 12px;
+    }
+
+    .trust-badge-title {
+        font-size: 13px;
+    }
+
+    /* Section 08: Contact CTA */
+    .contact-cta-title {
+        font-size: 34px;
+    }
+
+    .contact-cta-btn {
+        padding: 0 16px;
+        font-size: 13px;
+    }
+
+}
+
+
+/* ==========================================================================
+   2. TABLET (768px to 991px)
+   ========================================================================== */
+
+@media (max-width: 991px) {
+
+    /* --- Navbar --- */
+    .navbar {
+        padding: 14px 0;
+    }
+
+    .navbar-collapse {
+        margin-top: 14px;
+        padding: 18px 20px;
+        background: rgba(255, 255, 255, 0.98);
+        border-radius: 12px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(226, 218, 204, 0.8);
+    }
+
+    .navbar-nav {
+        gap: 4px;
+    }
+
+    .nav-link {
+        padding: 10px 8px !important;
+        font-size: 14.5px;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    .navbar-right {
+        margin-top: 14px;
+        padding-top: 14px;
+        border-top: 1px solid var(--border);
+        justify-content: space-between;
+    }
+
+    .phone-link span {
+        display: inline;
+    }
+
+    /* --- Hero & Search --- */
+    .hero-section {
+        min-height: auto;
+        padding-top: 135px;
+        padding-bottom: 55px;
+    }
+
+    .hero-title {
+        font-size: 46px;
+    }
+
+    .hero-content {
+        max-width: 620px;
+    }
+
+    .property-search-wrapper {
+        margin-top: 36px;
+    }
+
+    .property-search-form {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .search-submit-btn {
+        grid-column: span 2;
+    }
+
+    /* --- Section 02: Featured Properties --- */
+    .featured-properties-section {
+        padding: 70px 0 75px;
+    }
+
+    .featured-section-title {
+        font-size: 32px;
+    }
+
+    .property-img-wrap {
+        height: 230px;
+    }
+
+    /* --- Section 03: Property Types --- */
+    .property-types-section {
+        padding: 70px 0 75px;
+    }
+
+    .types-section-title {
+        font-size: 32px;
+    }
+
+    .type-card-img {
+        height: 180px;
+    }
+
+    /* --- Section 04: Why Choose Us --- */
+    .why-choose-section {
+        padding: 70px 0 75px;
+    }
+
+    .why-choose-img-box {
+        height: 360px;
+        margin-bottom: 15px;
+    }
+
+    .why-choose-content {
+        padding-left: 0;
+    }
+
+    .why-choose-title {
+        font-size: 32px;
+    }
+
+    /* --- Section 05: Explore Prime Locations --- */
+    .prime-locations-section {
+        padding: 70px 0 75px;
+    }
+
+    .locations-watermark {
+        display: none;
+    }
+
+    .locations-title {
+        font-size: 32px;
+    }
+
+    .locations-header-content {
+        margin-bottom: 24px;
+    }
+
+    /* --- Section 06: Projects --- */
+    .growth-projects-section {
+        padding: 70px 0 75px;
+    }
+
+    .growth-title {
+        font-size: 32px;
+    }
+
+    .growth-stats-bar {
+        justify-content: flex-start;
+        margin-top: 14px;
+        gap: 28px;
+    }
+
+    .growth-card-img {
+        height: 200px;
+    }
+
+    /* --- Section 07: Testimonials & Trust Badges --- */
+    .testimonials-section {
+        padding: 70px 0 75px;
+    }
+
+    .testimonials-title {
+        font-size: 32px;
+    }
+
+    .trust-badges-bar {
+        padding: 20px 22px;
+    }
+
+    .trust-badge-item {
+        gap: 12px;
+        padding-right: 10px;
+    }
+
+    .trust-badge-title {
+        font-size: 13px;
+    }
+
+    /* --- Section 08: Contact CTA & Footer --- */
+    .contact-cta-section {
+        padding: 65px 0 70px;
+    }
+
+    .contact-cta-title {
+        font-size: 32px;
+    }
+
+    .contact-form-row {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .form-field-wrap {
+        flex: 1 1 45%;
+    }
+
+    .form-field-btn {
+        flex: 1 1 100%;
+        margin-top: 4px;
+    }
+
+    .contact-cta-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .main-footer {
+        padding: 65px 0 30px;
+    }
+
+    .footer-top-row {
+        gap: 28px 0;
+    }
+
+}
+
+
+/* ==========================================================================
+   3. MOBILE (576px to 767px)
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    /* --- Navbar --- */
+    .brand-content h1 {
+        font-size: 19px;
+    }
+
+    .brand-content span {
+        font-size: 6.5px;
+    }
+
+    .brand-icon {
+        font-size: 26px;
+    }
+
+    /* --- Hero --- */
+    .hero-section {
+        min-height: auto;
+        padding-top: 120px;
+        padding-bottom: 45px;
+        background-position: 75% center;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(180deg,
+                rgba(255, 255, 255, 0.88) 0%,
+                rgba(255, 255, 255, 0.65) 45%,
+                rgba(255, 255, 255, 0.2) 100%);
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .hero-title {
+        font-size: 38px;
+        line-height: 1.15;
+    }
+
+    .hero-description {
+        font-size: 13.5px;
+        line-height: 1.7;
+    }
+
+    .hero-features {
+        flex-wrap: wrap;
+        gap: 8px 14px;
+    }
+
+    /* --- Hero Search --- */
+    .property-search-wrapper {
+        width: 100%;
+        margin-top: 28px;
+    }
+
+    .search-card {
+        padding: 12px;
+        border-radius: 14px;
+    }
+
+    .search-tabs {
+        margin-bottom: 8px;
+        width: 100%;
+        display: flex;
+    }
+
+    .search-tab {
+        flex: 1;
+        padding: 9px 8px;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .property-search-form {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .search-field-box {
+        height: 56px;
+        padding: 8px 12px;
+    }
+
+    .search-submit-btn {
+        grid-column: span 1;
+        height: 50px;
+        font-size: 13px;
+    }
+
+    /* --- Section 02: Featured Properties --- */
+    .featured-properties-section {
+        padding: 60px 0 65px;
+    }
+
+    .featured-section-title {
+        font-size: 26px;
+    }
+
+    .featured-section-desc {
+        font-size: 13px;
+    }
+
+    .property-img-wrap {
+        height: 220px;
+    }
+
+    .property-spec-chips {
+        gap: 10px;
+    }
+
+    .spec-unit {
+        font-size: 11px;
+    }
+
+    /* --- Section 03: Property Types --- */
+    .property-types-section {
+        padding: 60px 0 65px;
+    }
+
+    .types-section-title {
+        font-size: 26px;
+    }
+
+    .types-section-desc {
+        font-size: 13px;
+    }
+
+    .type-card-img {
+        height: 170px;
+    }
+
+    .type-card-body {
+        padding: 14px 14px 16px;
+    }
+
+    .type-icon-box {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .type-title {
+        font-size: 14px;
+    }
+
+    .type-desc {
+        font-size: 11px;
+    }
+
+    /* --- Section 04: Why Choose Us --- */
+    .why-choose-section {
+        padding: 60px 0 65px;
+    }
+
+    .why-choose-img-box {
+        height: 260px;
+        border-radius: 16px;
+    }
+
+    .why-choose-title {
+        font-size: 26px;
+    }
+
+    .why-choose-desc {
+        font-size: 13px;
+        margin-bottom: 24px;
+    }
+
+    .why-feature-card {
+        padding: 14px 14px;
+        border-radius: 14px;
+        gap: 12px;
+    }
+
+    .why-icon-box {
+        width: 44px;
+        height: 44px;
+        font-size: 20px;
+    }
+
+    .why-card-title {
+        font-size: 14px;
+    }
+
+    .why-card-desc {
+        font-size: 11.5px;
+    }
+
+    /* --- Section 05: Explore Prime Locations --- */
+    .prime-locations-section {
+        padding: 60px 0 65px;
+    }
+
+    .locations-title {
+        font-size: 26px;
+    }
+
+    .locations-desc {
+        font-size: 13px;
+        margin-bottom: 22px;
+    }
+
+    .btn-view-locations {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 12px;
+    }
+
+    .location-card {
+        padding: 12px 14px;
+        border-radius: 14px;
+        gap: 12px;
+    }
+
+    .location-card-img {
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+    }
+
+    .location-card-title {
+        font-size: 14.5px;
+    }
+
+    .location-card-desc {
+        font-size: 11px;
+    }
+
+    .location-card-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    /* --- Section 06: Projects --- */
+    .growth-projects-section {
+        padding: 60px 0 65px;
+    }
+
+    .growth-title {
+        font-size: 26px;
+    }
+
+    .growth-desc {
+        font-size: 13px;
+    }
+
+    .growth-stats-bar {
+        flex-wrap: wrap;
+        gap: 16px 22px;
+    }
+
+    .growth-stat-icon {
+        font-size: 24px;
+    }
+
+    .growth-stat-number {
+        font-size: 19px;
+    }
+
+    .growth-stat-label {
+        font-size: 11px;
+    }
+
+    .growth-card-img {
+        height: 185px;
+    }
+
+    .growth-card-body {
+        padding: 15px 16px 14px;
+    }
+
+    .growth-card-title {
+        font-size: 16px;
+    }
+
+    .growth-card-price {
+        font-size: 16px;
+    }
+
+    /* --- Section 07: Testimonials & Trust Badges --- */
+    .testimonials-section {
+        padding: 60px 0 65px;
+    }
+
+    .testimonials-title {
+        font-size: 26px;
+    }
+
+    .testimonials-desc {
+        font-size: 13px;
+    }
+
+    .testimonial-card {
+        padding: 16px 16px;
+        gap: 14px;
+        border-radius: 16px;
+    }
+
+    .testimonial-avatar {
+        width: 58px;
+        height: 58px;
+    }
+
+    .testimonial-quote {
+        font-size: 12px;
+    }
+
+    .testimonial-name {
+        font-size: 14px;
+    }
+
+    .trust-badges-bar {
+        padding: 16px 16px;
+        border-radius: 14px;
+    }
+
+    .trust-badge-item {
+        border-right: none;
+        padding-right: 0;
+        gap: 10px;
+    }
+
+    .trust-badge-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+    }
+
+    .trust-badge-title {
+        font-size: 12px;
+    }
+
+    .trust-badge-sub {
+        font-size: 10.5px;
+    }
+
+    /* --- Section 08: Contact CTA & Footer --- */
+    .contact-cta-section {
+        padding: 55px 0 60px;
+    }
+
+    .contact-cta-title {
+        font-size: 26px;
+    }
+
+    .contact-cta-desc {
+        font-size: 13px;
+        margin-bottom: 16px;
+    }
+
+    .contact-form-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-field-wrap {
+        width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .contact-cta-input,
+    .contact-cta-select {
+        font-size: 16px;
+        /* Prevents auto-zoom on mobile */
+        height: 48px;
+    }
+
+    .form-field-btn {
+        width: 100%;
+    }
+
+    .contact-cta-btn {
+        width: 100%;
+        justify-content: center;
+        height: 48px;
+    }
+
+    .main-footer {
+        padding: 55px 0 25px;
+    }
+
+    .footer-top-row {
+        gap: 24px 0;
+    }
+
+    .footer-brand-title {
+        font-size: 18px;
+    }
+
+    .footer-col-title {
+        font-size: 14.5px;
+        margin-bottom: 12px;
+    }
+
+    .footer-bottom-bar {
+        margin-top: 35px;
+        padding-top: 20px;
+    }
+
+}
+
+
+/* ==========================================================================
+   4. SMALL MOBILE (360px to 575px)
+   ========================================================================== */
+
+@media (max-width: 575px) {
+
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    /* --- Navbar --- */
+    .brand-content h1 {
+        font-size: 18px;
+    }
+
+    .brand-content span {
+        font-size: 5.5px;
+        letter-spacing: 0.8px;
+    }
+
+    .brand-icon {
+        font-size: 24px;
+    }
+
+    /* --- Hero --- */
+    .hero-section {
+        min-height: auto;
+        padding-top: 110px;
+        padding-bottom: 35px;
+        background-position: 70% center;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-description {
+        font-size: 12.5px;
+        max-width: 100%;
+    }
+
+    .hero-features {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .feature-divider {
+        display: none;
+    }
+
+    .hero-feature {
+        font-size: 12px;
+    }
+
+    /* --- Hero Search --- */
+    .property-search-wrapper {
+        width: 100%;
+        margin-top: 22px;
+    }
+
+    .search-card {
+        padding: 10px;
+    }
+
+    .search-tab {
+        font-size: 11px;
+        padding: 8px 6px;
+    }
+
+    .search-field-box {
+        height: 52px;
+        padding: 6px 10px;
+    }
+
+    .field-label {
+        font-size: 9.5px;
+    }
+
+    .field-input,
+    .field-select {
+        font-size: 11.5px;
+    }
+
+    .search-submit-btn {
+        height: 46px;
+        font-size: 12px;
+    }
+
+    /* --- Section 02: Featured Properties --- */
+    .property-img-wrap {
+        height: 200px;
+    }
+
+    .property-card-title {
+        font-size: 16px;
+    }
+
+    .property-price {
+        font-size: 17px;
+    }
+
+    /* --- Section 03: Property Types --- */
+    .type-card-img {
+        height: 160px;
+    }
+
+    /* --- Section 04: Why Choose Us --- */
+    .why-choose-img-box {
+        height: 230px;
+    }
+
+    .why-feature-card {
+        padding: 12px 12px;
+    }
+
+    .why-icon-box {
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+    }
+
+    .why-card-title {
+        font-size: 13.5px;
+    }
+
+    .why-card-desc {
+        font-size: 11px;
+    }
+
+    /* --- Section 05: Prime Locations --- */
+    .location-card {
+        padding: 10px 12px;
+    }
+
+    .location-card-img {
+        width: 52px;
+        height: 52px;
+    }
+
+    .location-card-title {
+        font-size: 14px;
+    }
+
+    .location-card-desc {
+        font-size: 10.5px;
+    }
+
+    /* --- Section 06: Projects --- */
+    .growth-card-img {
+        height: 170px;
+    }
+
+    .growth-card-badge {
+        font-size: 10px;
+        padding: 4px 9px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .growth-card-title {
+        font-size: 15px;
+    }
+
+    .growth-card-price {
+        font-size: 15.5px;
+    }
+
+    .growth-stats-bar {
+        gap: 12px 18px;
+    }
+
+    .growth-stat-icon {
+        font-size: 22px;
+    }
+
+    .growth-stat-number {
+        font-size: 18px;
+    }
+
+    /* --- Section 07: Testimonials & Trust Badges --- */
+    .testimonial-card {
+        padding: 14px 14px;
+        gap: 12px;
+    }
+
+    .testimonial-avatar {
+        width: 52px;
+        height: 52px;
+    }
+
+    .testimonial-quote {
+        font-size: 11.5px;
+    }
+
+    .trust-badges-bar {
+        padding: 14px 12px;
+    }
+
+    .trust-badge-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 6px;
+    }
+
+    .trust-badge-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 17px;
+    }
+
+    .trust-badge-title {
+        font-size: 11.5px;
+    }
+
+    .trust-badge-sub {
+        font-size: 10px;
+    }
+
+    /* --- Section 08: Contact CTA & Footer --- */
+    .contact-cta-section {
+        padding: 45px 0 50px;
+    }
+
+    .contact-cta-form {
+        padding: 10px 10px;
+        border-radius: 14px;
+    }
+
+    .contact-cta-input,
+    .contact-cta-select {
+        height: 46px;
+    }
+
+    .contact-cta-btn {
+        height: 46px;
+    }
+
+    .main-footer {
+        padding: 45px 0 20px;
+    }
+
+}
+
+
+/* ==========================================================================
+   5. COMPACT MOBILE (Under 380px, e.g. iPhone SE / Galaxy Fold)
+   ========================================================================== */
+
+@media (max-width: 380px) {
+
+    .brand-icon {
+        font-size: 22px;
+    }
+
+    .brand-content h1 {
+        font-size: 16px;
+    }
+
+    .brand-content span {
+        font-size: 5px;
+    }
+
+    .hero-section {
+        padding-top: 105px;
+        padding-bottom: 30px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-description {
+        font-size: 11.5px;
+    }
+
+    .search-tab {
+        font-size: 10px;
+        padding: 7px 4px;
+    }
+
+    .search-submit-btn {
+        font-size: 11px;
+    }
+
+    .featured-section-title,
+    .types-section-title,
+    .why-choose-title,
+    .locations-title,
+    .growth-title,
+    .testimonials-title,
+    .contact-cta-title {
+        font-size: 24px;
+    }
+
+    .property-img-wrap {
+        height: 180px;
+    }
+
+    .growth-card-img {
+        height: 155px;
+    }
+
+    .why-choose-img-box {
+        height: 200px;
+    }
+
+    .testimonial-avatar {
+        width: 46px;
+        height: 46px;
+    }
+
+    .location-card-img {
+        width: 48px;
+        height: 48px;
+    }
+
+}
