@@ -82,27 +82,6 @@ body {
         font-size: 11px;
     }
 
-    /* Section 06: Projects */
-    .growth-title {
-        font-size: 36px;
-    }
-
-    .growth-stats-bar {
-        gap: 20px;
-    }
-
-    .growth-stat-number {
-        font-size: 20px;
-    }
-
-    .growth-stat-label {
-        font-size: 11px;
-    }
-
-    .growth-card-img {
-        height: 195px;
-    }
-
     /* Section 07: Testimonials */
     .testimonials-title {
         font-size: 36px;
@@ -152,15 +131,21 @@ body {
 
     /* --- Navbar --- */
     .navbar {
-        padding: 14px 0;
+        padding: 0;
+    }
+
+    .navbar-container {
+        padding: 8px 18px;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
     }
 
     .navbar-collapse {
-        margin-top: 14px;
-        padding: 18px 20px;
-        background: rgba(255, 255, 255, 0.98);
+        margin-top: 10px;
+        padding: 16px 18px;
+        background: rgba(255, 255, 255, 0.99);
         border-radius: 12px;
-        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         border: 1px solid rgba(226, 218, 204, 0.8);
     }
 
@@ -181,18 +166,20 @@ body {
         margin-top: 14px;
         padding-top: 14px;
         border-top: 1px solid var(--border);
-        justify-content: space-between;
+        display: flex;
+        justify-content: center;
     }
 
-    .phone-link span {
-        display: inline;
+    .btn-contact-nav {
+        width: 100%;
+        text-align: center;
     }
 
     /* --- Hero & Search --- */
     .hero-section {
         min-height: auto;
         padding-top: 135px;
-        padding-bottom: 55px;
+        padding-bottom: 0;
     }
 
     .hero-title {
@@ -203,22 +190,19 @@ body {
         max-width: 620px;
     }
 
-    .property-search-wrapper {
-        margin-top: 36px;
+    .hero-marquee {
+        width: 80%;
     }
 
-    .property-search-form {
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-    }
-
-    .search-submit-btn {
-        grid-column: span 2;
+    .marquee-content img {
+        width: 110px;
+        height: 55px;
+        margin: 0 30px;
     }
 
     /* --- Section 02: Featured Properties --- */
     .featured-properties-section {
-        padding: 70px 0 75px;
+        padding: 95px 0 75px;
     }
 
     .featured-section-title {
@@ -275,25 +259,6 @@ body {
 
     .locations-header-content {
         margin-bottom: 24px;
-    }
-
-    /* --- Section 06: Projects --- */
-    .growth-projects-section {
-        padding: 70px 0 75px;
-    }
-
-    .growth-title {
-        font-size: 32px;
-    }
-
-    .growth-stats-bar {
-        justify-content: flex-start;
-        margin-top: 14px;
-        gap: 28px;
-    }
-
-    .growth-card-img {
-        height: 200px;
     }
 
     /* --- Section 07: Testimonials & Trust Badges --- */
@@ -364,6 +329,12 @@ body {
 @media (max-width: 767px) {
 
     /* --- Navbar --- */
+    .navbar-container {
+        padding: 8px 14px;
+        border-bottom-left-radius: 14px;
+        border-bottom-right-radius: 14px;
+    }
+
     .brand-content h1 {
         font-size: 19px;
     }
@@ -376,11 +347,15 @@ body {
         font-size: 26px;
     }
 
+    .navbar-brand img {
+        max-height: 55px !important;
+    }
+
     /* --- Hero --- */
     .hero-section {
         min-height: auto;
         padding-top: 120px;
-        padding-bottom: 45px;
+        padding-bottom: 75px;
         background-position: 75% center;
     }
 
@@ -411,33 +386,39 @@ body {
         gap: 8px 14px;
     }
 
+    .hero-marquee {
+        width: 95%;
+        bottom: 20px;
+    }
+
+    .marquee-content img {
+        width: 90px;
+        height: 45px;
+        margin: 0 20px;
+    }
+
     /* --- Hero Search --- */
-    .property-search-wrapper {
-        width: 100%;
-        margin-top: 28px;
+
+    .search-tabs {
+        margin-bottom: -2px;
+        width: auto;
+        display: inline-flex;
+        background: #ffffff;
+        padding: 6px 10px 4px 8px;
+        border-radius: 14px 14px 0 0;
+        gap: 6px;
+    }
+
+    .search-tab {
+        flex: initial;
+        padding: 8px 16px;
+        font-size: 12px;
+        border-radius: 6px;
     }
 
     .search-card {
         padding: 12px;
-        border-radius: 14px;
-    }
-
-    .search-tabs {
-        margin-bottom: 8px;
-        width: 100%;
-        display: flex;
-    }
-
-    .search-tab {
-        flex: 1;
-        padding: 9px 8px;
-        font-size: 12px;
-        text-align: center;
-    }
-
-    .property-search-form {
-        grid-template-columns: 1fr;
-        gap: 10px;
+        border-radius: 0 14px 14px 14px;
     }
 
     .search-field-box {
@@ -445,15 +426,9 @@ body {
         padding: 8px 12px;
     }
 
-    .search-submit-btn {
-        grid-column: span 1;
-        height: 50px;
-        font-size: 13px;
-    }
-
     /* --- Section 02: Featured Properties --- */
     .featured-properties-section {
-        padding: 60px 0 65px;
+        padding: 85px 0 65px;
     }
 
     .featured-section-title {
@@ -596,52 +571,6 @@ body {
         font-size: 12px;
     }
 
-    /* --- Section 06: Projects --- */
-    .growth-projects-section {
-        padding: 60px 0 65px;
-    }
-
-    .growth-title {
-        font-size: 26px;
-    }
-
-    .growth-desc {
-        font-size: 13px;
-    }
-
-    .growth-stats-bar {
-        flex-wrap: wrap;
-        gap: 16px 22px;
-    }
-
-    .growth-stat-icon {
-        font-size: 24px;
-    }
-
-    .growth-stat-number {
-        font-size: 19px;
-    }
-
-    .growth-stat-label {
-        font-size: 11px;
-    }
-
-    .growth-card-img {
-        height: 185px;
-    }
-
-    .growth-card-body {
-        padding: 15px 16px 14px;
-    }
-
-    .growth-card-title {
-        font-size: 16px;
-    }
-
-    .growth-card-price {
-        font-size: 16px;
-    }
-
     /* --- Section 07: Testimonials & Trust Badges --- */
     .testimonials-section {
         padding: 60px 0 65px;
@@ -752,6 +681,20 @@ body {
         font-size: 18px;
     }
 
+    .footer-social-icons {
+        gap: 8px;
+    }
+
+    .footer-social-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 13.5px;
+    }
+
+    .footer-brand img {
+        max-height: 70px !important;
+    }
+
     .footer-col-title {
         font-size: 14.5px;
         margin-bottom: 12px;
@@ -781,6 +724,10 @@ body {
         font-size: 18px;
     }
 
+    .navbar-brand img {
+        max-height: 45px !important;
+    }
+
     .brand-content span {
         font-size: 5.5px;
         letter-spacing: 0.8px;
@@ -794,7 +741,7 @@ body {
     .hero-section {
         min-height: auto;
         padding-top: 110px;
-        padding-bottom: 35px;
+        padding-bottom: 70px;
         background-position: 70% center;
     }
 
@@ -822,11 +769,18 @@ body {
         font-size: 12px;
     }
 
-    /* --- Hero Search --- */
-    .property-search-wrapper {
+    .hero-marquee {
         width: 100%;
-        margin-top: 22px;
+        bottom: 10px;
     }
+
+    .marquee-content img {
+        width: 75px;
+        height: 38px;
+        margin: 0 10px;
+    }
+
+    /* --- Hero Search --- */
 
     .search-card {
         padding: 10px;
@@ -849,11 +803,6 @@ body {
     .field-input,
     .field-select {
         font-size: 11.5px;
-    }
-
-    .search-submit-btn {
-        height: 46px;
-        font-size: 12px;
     }
 
     /* --- Section 02: Featured Properties --- */
@@ -913,38 +862,6 @@ body {
 
     .location-card-desc {
         font-size: 10.5px;
-    }
-
-    /* --- Section 06: Projects --- */
-    .growth-card-img {
-        height: 170px;
-    }
-
-    .growth-card-badge {
-        font-size: 10px;
-        padding: 4px 9px;
-        top: 10px;
-        left: 10px;
-    }
-
-    .growth-card-title {
-        font-size: 15px;
-    }
-
-    .growth-card-price {
-        font-size: 15.5px;
-    }
-
-    .growth-stats-bar {
-        gap: 12px 18px;
-    }
-
-    .growth-stat-icon {
-        font-size: 22px;
-    }
-
-    .growth-stat-number {
-        font-size: 18px;
     }
 
     /* --- Section 07: Testimonials & Trust Badges --- */
@@ -1010,6 +927,10 @@ body {
         padding: 45px 0 20px;
     }
 
+    .footer-brand img {
+        max-height: 60px !important;
+    }
+
 }
 
 
@@ -1033,7 +954,7 @@ body {
 
     .hero-section {
         padding-top: 105px;
-        padding-bottom: 30px;
+        padding-bottom: 60px;
     }
 
     .hero-title {
@@ -1047,10 +968,6 @@ body {
     .search-tab {
         font-size: 10px;
         padding: 7px 4px;
-    }
-
-    .search-submit-btn {
-        font-size: 11px;
     }
 
     .featured-section-title,

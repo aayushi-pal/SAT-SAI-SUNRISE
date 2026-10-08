@@ -29,7 +29,6 @@ searchTabs.forEach((tab) => {
    PROPERTY SEARCH FORM
 ========================================================= */
 
-const searchForm = document.querySelector(".property-search-form");
 
 if (searchForm) {
 
@@ -56,6 +55,24 @@ if (searchForm) {
 
     });
 
+}
+
+
+
+/* =========================================================
+   STICKY NAVBAR SCROLL STATE
+========================================================= */
+
+const mainHeader = document.querySelector(".main-header");
+
+if (mainHeader) {
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 25) {
+            mainHeader.classList.add("scrolled");
+        } else {
+            mainHeader.classList.remove("scrolled");
+        }
+    });
 }
 
 
@@ -182,6 +199,28 @@ if (contactEnquiryForm) {
 
     });
 
+}
+
+
+
+
+/* =========================================================
+   PROPERTIES SLIDER CONTROLS
+========================================================= */
+const propSlider = document.getElementById("propSlider");
+const propPrevBtn = document.getElementById("propPrevBtn");
+const propNextBtn = document.getElementById("propNextBtn");
+
+if (propSlider && propPrevBtn && propNextBtn) {
+    propNextBtn.addEventListener("click", () => {
+        const scrollAmount = propSlider.clientWidth / 2;
+        propSlider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+
+    propPrevBtn.addEventListener("click", () => {
+        const scrollAmount = propSlider.clientWidth / 2;
+        propSlider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
 }
 
 

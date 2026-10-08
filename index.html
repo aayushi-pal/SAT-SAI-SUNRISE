@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>HomeHaven | Premium Real Estate</title>
+    <title>SAT-SAI-SUNRISE | Premium Real Estate</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -39,18 +39,13 @@
 
         <nav class="navbar navbar-expand-lg">
 
-            <div class="container">
+            <div class="container navbar-container">
 
                 <!-- Logo -->
                 <a href="#" class="navbar-brand brand-logo">
 
-                    <div class="brand-icon">
-                        <i class="bi bi-house-heart-fill"></i>
-                    </div>
-
-                    <div class="brand-content">
-                        <h1>HOMEHAVEN</h1>
-                        <span>Property | People | Possibilities</span>
+                    <div class="brand-content" style="display: flex; align-items: center;">
+                        <img src="images/SSS-Realty-Logo.png" alt="SAT SAI SUNRISE REALITY" style="max-height: 70px;">
                     </div>
 
                 </a>
@@ -76,23 +71,13 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#properties">
-                                Properties
-                            </a>
-                        </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#projects">
+                            <a class="nav-link" href="#properties">
                                 Projects
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#locations">
-                                Locations
-                            </a>
-                        </li>
 
                         <li class="nav-item">
                             <a class="nav-link" href="#about">
@@ -100,11 +85,6 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#blog">
-                                Blog
-                            </a>
-                        </li>
 
                         <li class="nav-item">
                             <a class="nav-link" href="#contact">
@@ -118,13 +98,8 @@
                     <!-- Navbar Right -->
                     <div class="navbar-right">
 
-                        <a href="tel:+919876543210" class="phone-link">
-                            <i class="bi bi-telephone-fill"></i>
-                            <span>+91 98765 43210</span>
-                        </a>
-
-                        <a href="#contact" class="btn-enquire">
-                            Enquire Now
+                        <a href="tel:9953755303" class="btn-contact-nav">
+                            <i class="bi bi-telephone-fill" style="margin-right: 6px;"></i> 9953755303
                         </a>
 
                     </div>
@@ -199,104 +174,29 @@
                         </div>
 
                     </div>
-
                 </div>
+            </div> <!-- End hero-container -->
 
-
-                <!-- =================================================
-                     PROPERTY SEARCH BOX
-                ================================================== -->
-
-                <div class="property-search-wrapper">
-
-                    <!-- Search Tabs -->
-                    <div class="search-tabs">
-
-                        <button type="button" class="search-tab active" data-search-type="buy">
-                            Buy
-                        </button>
-
-                        <button type="button" class="search-tab" data-search-type="rent">
-                            Rent
-                        </button>
-
-                        <button type="button" class="search-tab" data-search-type="invest">
-                            Invest
-                        </button>
-
+            <!-- Hero Marquee for Logos -->
+            <div class="hero-marquee">
+                <div class="marquee-wrapper">
+                    <div class="marquee-content">
+                        <img src="images/Aarambh-Resorts-Logo.png" alt="AARAMBH Resorts">
+                        <img src="images/the-Core-mall-logo.png" alt="Core">
+                        <img src="images/Heaven-Forest-Logo.png" alt="Heaven in the Forest">
+                        <img src="images/Aarambh-Resorts-Logo.png" alt="AARAMBH Resorts">
+                        <img src="images/the-Core-mall-logo.png" alt="Core">
+                        <img src="images/Heaven-Forest-Logo.png" alt="Heaven in the Forest">
                     </div>
-
-
-                    <!-- Search Form Card -->
-                    <div class="search-card">
-
-                        <form class="property-search-form">
-
-                            <!-- Location -->
-                            <div class="search-field-box">
-
-                                <div class="search-field-icon">
-                                    <i class="bi bi-geo-alt-fill"></i>
-                                </div>
-
-                                <div class="search-field-inner">
-                                    <label for="searchLocation" class="field-label">Location</label>
-                                    <input type="text" id="searchLocation" name="location" placeholder="Search location" class="field-input">
-                                </div>
-
-                            </div>
-
-
-                            <!-- Property Type -->
-                            <div class="search-field-box">
-
-                                <div class="search-field-inner">
-                                    <label for="searchType" class="field-label">Property Type</label>
-                                    <select id="searchType" name="propertyType" class="field-select">
-                                        <option value="all">All Types</option>
-                                        <option value="apartment">Apartments</option>
-                                        <option value="villa">Villas</option>
-                                        <option value="commercial">Commercial</option>
-                                        <option value="plots">Plots & Land</option>
-                                    </select>
-                                </div>
-
-                                <i class="bi bi-chevron-down field-chevron"></i>
-
-                            </div>
-
-
-                            <!-- Budget -->
-                            <div class="search-field-box">
-
-                                <div class="search-field-inner">
-                                    <label for="searchBudget" class="field-label">Budget</label>
-                                    <select id="searchBudget" name="budget" class="field-select">
-                                        <option value="">Select Budget</option>
-                                        <option value="under-50l">Under ₹50 Lakhs</option>
-                                        <option value="50l-1cr">₹50 Lakhs - ₹1 Cr</option>
-                                        <option value="1cr-2cr">₹1 Cr - ₹2 Cr</option>
-                                        <option value="2cr-plus">₹2 Cr+</option>
-                                    </select>
-                                </div>
-
-                                <i class="bi bi-chevron-down field-chevron"></i>
-
-                            </div>
-
-
-                            <!-- Search Button -->
-                            <button type="submit" class="search-submit-btn">
-                                <span>Search Properties</span>
-                                <i class="bi bi-arrow-right"></i>
-                            </button>
-
-                        </form>
-
+                    <div class="marquee-content">
+                        <img src="images/Aarambh-Resorts-Logo.png" alt="AARAMBH Resorts">
+                        <img src="images/the-Core-mall-logo.png" alt="Core">
+                        <img src="images/Heaven-Forest-Logo.png" alt="Heaven in the Forest">
+                        <img src="images/Aarambh-Resorts-Logo.png" alt="AARAMBH Resorts">
+                        <img src="images/the-Core-mall-logo.png" alt="Core">
+                        <img src="images/Heaven-Forest-Logo.png" alt="Heaven in the Forest">
                     </div>
-
                 </div>
-
             </div>
 
         </section>
@@ -317,199 +217,104 @@
                         <span class="section-tag-gold">PREMIUM SELECTION</span>
                         <h2 class="featured-section-title">Explore Featured Properties</h2>
                         <p class="featured-section-desc">
-                            Handpicked properties in prime locations, offering the perfect blend of comfort, lifestyle and value.
+                            Handpicked properties in prime locations, offering the perfect blend of comfort, lifestyle
+                            and value.
                         </p>
                     </div>
 
-                    <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
-                        <a href="#properties" class="view-all-link">
-                            View All Properties <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
+
 
                 </div>
 
 
-                <!-- Property Cards Row -->
-                <div class="row g-4">
+                <style>
+                    #propSlider::-webkit-scrollbar {
+                        display: none;
+                    }
+                </style>
+                <!-- Property Cards Slider -->
+                <div class="d-flex" id="propSlider"
+                    style="overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; gap: 1.5rem; padding-bottom: 20px; -ms-overflow-style: none; scrollbar-width: none;">
 
                     <!-- Property Card 1 -->
-                    <div class="col-lg-4 col-md-6">
+                    <div style="flex: 0 0 calc(50% - 0.75rem); scroll-snap-align: start; min-width: 320px;">
 
                         <div class="featured-property-card">
 
                             <div class="property-img-wrap">
 
-                                <img src="images/property-1.jpg" alt="3 BHK Luxury Apartment" loading="lazy">
-
-                                <span class="property-tag-badge">Featured</span>
-
-                                <button type="button" class="wishlist-btn active" title="Save Property" aria-label="Save Property">
-                                    <i class="bi bi-suit-heart-fill"></i>
-                                </button>
-
-                                <div class="property-price-badge">
-                                    ₹ 1.25 Cr
-                                </div>
+                                <img src="images/the-core-mall-hero.png" alt="The Core Mall" loading="lazy">
 
                             </div>
 
                             <div class="property-info-wrap">
 
-                                <h3 class="property-card-name">3 BHK Luxury Apartment</h3>
+                                <h3 class="property-card-name">The Core Mall</h3>
 
                                 <div class="property-location-tag">
                                     <i class="bi bi-geo-alt-fill"></i>
-                                    <span>Noida Extension, Noida</span>
+                                    <span>Ghaziabad</span>
                                 </div>
-
-                                <div class="property-spec-chips">
-
-                                    <div class="spec-unit">
-                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
-                                        <span>3 Beds</span>
-                                    </div>
-
-                                    <span class="spec-sep">|</span>
-
-                                    <div class="spec-unit">
-                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h6"/><path d="M12 3v3"/><path d="M4 11h16a1 1 0 0 1 1 1v3a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-3a1 1 0 0 1 1-1z"/><path d="M6 19v2"/><path d="M18 19v2"/></svg>
-                                        <span>3 Baths</span>
-                                    </div>
-
-                                    <span class="spec-sep">|</span>
-
-                                    <div class="spec-unit">
-                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
-                                        <span>1,650 Sq.Ft.</span>
-                                    </div>
-
-                                </div>
-
+                                <a href="#" class="btn w-100 mt-4 view-property-btn"
+                                    style="background-color: #9a6a24; color: #ffffff; border-radius: 8px; font-weight: 600; padding: 10px 0; transition: background-color 0.3s ease;"
+                                    onmouseover="this.style.backgroundColor='#75501b'"
+                                    onmouseout="this.style.backgroundColor='#9a6a24'">View Property</a>
                             </div>
-
                         </div>
-
                     </div>
 
 
                     <!-- Property Card 2 -->
-                    <div class="col-lg-4 col-md-6">
+                    <div style="flex: 0 0 calc(50% - 0.75rem); scroll-snap-align: start; min-width: 320px;">
 
                         <div class="featured-property-card">
 
                             <div class="property-img-wrap">
 
-                                <img src="images/property-2.jpg" alt="4 BHK Independent Villa" loading="lazy">
-
-                                <span class="property-tag-badge">Ready to Move</span>
-
-                                <button type="button" class="wishlist-btn active" title="Save Property" aria-label="Save Property">
-                                    <i class="bi bi-suit-heart-fill"></i>
-                                </button>
-
-                                <div class="property-price-badge">
-                                    ₹ 3.80 Cr
-                                </div>
+                                <img src="images/Aarambh-Resorts-hero.png" alt="The Aarambh Resorts" loading="lazy">
 
                             </div>
 
                             <div class="property-info-wrap">
-
-                                <h3 class="property-card-name">4 BHK Independent Villa</h3>
+                                <h3 class="property-card-name">The Aarambh Resorts</h3>
 
                                 <div class="property-location-tag">
                                     <i class="bi bi-geo-alt-fill"></i>
-                                    <span>Greater Noida</span>
+                                    <span>Dev Bhoomi Uttarakhand</span>
                                 </div>
-
-                                <div class="property-spec-chips">
-
-                                    <div class="spec-unit">
-                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
-                                        <span>4 Beds</span>
-                                    </div>
-
-                                    <span class="spec-sep">|</span>
-
-                                    <div class="spec-unit">
-                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h6"/><path d="M12 3v3"/><path d="M4 11h16a1 1 0 0 1 1 1v3a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-3a1 1 0 0 1 1-1z"/><path d="M6 19v2"/><path d="M18 19v2"/></svg>
-                                        <span>4 Baths</span>
-                                    </div>
-
-                                    <span class="spec-sep">|</span>
-
-                                    <div class="spec-unit">
-                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
-                                        <span>2,800 Sq.Ft.</span>
-                                    </div>
-
-                                </div>
-
+                                <a href="#" class="btn w-100 mt-4 view-property-btn"
+                                    style="background-color: #9a6a24; color: #ffffff; border-radius: 8px; font-weight: 600; padding: 10px 0; transition: background-color 0.3s ease;"
+                                    onmouseover="this.style.backgroundColor='#75501b'"
+                                    onmouseout="this.style.backgroundColor='#9a6a24'">View Property</a>
                             </div>
-
                         </div>
-
                     </div>
 
 
                     <!-- Property Card 3 -->
-                    <div class="col-lg-4 col-md-6">
+                    <div style="flex: 0 0 calc(50% - 0.75rem); scroll-snap-align: start; min-width: 320px;">
 
                         <div class="featured-property-card">
 
                             <div class="property-img-wrap">
 
-                                <img src="images/property-3.jpg" alt="3 BHK Premium Apartment" loading="lazy">
-
-                                <span class="property-tag-badge">Under Construction</span>
-
-                                <button type="button" class="wishlist-btn active" title="Save Property" aria-label="Save Property">
-                                    <i class="bi bi-suit-heart-fill"></i>
-                                </button>
-
-                                <div class="property-price-badge">
-                                    ₹ 95 Lakhs
-                                </div>
+                                <img src="images/Heaven-forest-hero.png" alt="Heaven in the forest" loading="lazy">
 
                             </div>
 
                             <div class="property-info-wrap">
-
-                                <h3 class="property-card-name">3 BHK Premium Apartment</h3>
+                                <h3 class="property-card-name">Heaven in the forest</h3>
 
                                 <div class="property-location-tag">
                                     <i class="bi bi-geo-alt-fill"></i>
-                                    <span>Sector 150, Noida</span>
+                                    <span>Near Kainchi Dham, Uttarakhand</span>
                                 </div>
-
-                                <div class="property-spec-chips">
-
-                                    <div class="spec-unit">
-                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
-                                        <span>3 Beds</span>
-                                    </div>
-
-                                    <span class="spec-sep">|</span>
-
-                                    <div class="spec-unit">
-                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h6"/><path d="M12 3v3"/><path d="M4 11h16a1 1 0 0 1 1 1v3a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-3a1 1 0 0 1 1-1z"/><path d="M6 19v2"/><path d="M18 19v2"/></svg>
-                                        <span>3 Baths</span>
-                                    </div>
-
-                                    <span class="spec-sep">|</span>
-
-                                    <div class="spec-unit">
-                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
-                                        <span>1,450 Sq.Ft.</span>
-                                    </div>
-
-                                </div>
-
+                                <a href="#" class="btn w-100 mt-4 view-property-btn"
+                                    style="background-color: #9a6a24; color: #ffffff; border-radius: 8px; font-weight: 600; padding: 10px 0; transition: background-color 0.3s ease;"
+                                    onmouseover="this.style.backgroundColor='#75501b'"
+                                    onmouseout="this.style.backgroundColor='#9a6a24'">View Property</a>
                             </div>
-
                         </div>
-
                     </div>
 
                 </div>
@@ -546,7 +351,7 @@
                         <div class="property-type-card">
 
                             <div class="type-card-img">
-                                <img src="images/cat-1.jpg" alt="Apartments" loading="lazy">
+                                <img src="images/Apartments.jpg" alt="Apartments" loading="lazy">
                             </div>
 
                             <div class="type-card-body">
@@ -560,9 +365,9 @@
                                     <p class="type-desc">Modern living with world-class amenities</p>
                                 </div>
 
-                                <a href="#properties" class="type-arrow-btn" aria-label="Explore Apartments" title="Explore Apartments">
+                                <div class="type-arrow-btn" aria-label="Explore Apartments" title="Explore Apartments">
                                     <i class="bi bi-arrow-right"></i>
-                                </a>
+                                </div>
 
                             </div>
 
@@ -577,7 +382,7 @@
                         <div class="property-type-card">
 
                             <div class="type-card-img">
-                                <img src="images/cat-2.jpg" alt="Villas" loading="lazy">
+                                <img src="images/Villas.jpg" alt="Villas" loading="lazy">
                             </div>
 
                             <div class="type-card-body">
@@ -591,9 +396,9 @@
                                     <p class="type-desc">Spacious homes for a better tomorrow</p>
                                 </div>
 
-                                <a href="#properties" class="type-arrow-btn" aria-label="Explore Villas" title="Explore Villas">
+                                <div class="type-arrow-btn" aria-label="Explore Villas" title="Explore Villas">
                                     <i class="bi bi-arrow-right"></i>
-                                </a>
+                                </div>
 
                             </div>
 
@@ -608,7 +413,7 @@
                         <div class="property-type-card">
 
                             <div class="type-card-img">
-                                <img src="images/cat-3.jpg" alt="Commercial" loading="lazy">
+                                <img src="images/Commercial.jpg" alt="Commercial" loading="lazy">
                             </div>
 
                             <div class="type-card-body">
@@ -622,9 +427,9 @@
                                     <p class="type-desc">Business spaces for growth</p>
                                 </div>
 
-                                <a href="#properties" class="type-arrow-btn" aria-label="Explore Commercial" title="Explore Commercial">
+                                <div class="type-arrow-btn" aria-label="Explore Commercial" title="Explore Commercial">
                                     <i class="bi bi-arrow-right"></i>
-                                </a>
+                                </div>
 
                             </div>
 
@@ -639,7 +444,7 @@
                         <div class="property-type-card">
 
                             <div class="type-card-img">
-                                <img src="images/cat-4.jpg" alt="Plots & Land" loading="lazy">
+                                <img src="images/Plots & Land.jpg" alt="Plots & Land" loading="lazy">
                             </div>
 
                             <div class="type-card-body">
@@ -653,9 +458,10 @@
                                     <p class="type-desc">Invest in prime locations</p>
                                 </div>
 
-                                <a href="#properties" class="type-arrow-btn" aria-label="Explore Plots & Land" title="Explore Plots & Land">
+                                <div class="type-arrow-btn" aria-label="Explore Plots & Land"
+                                    title="Explore Plots & Land">
                                     <i class="bi bi-arrow-right"></i>
-                                </a>
+                                </div>
 
                             </div>
 
@@ -700,7 +506,8 @@
                             <h2 class="why-choose-title">Why Choose Us</h2>
 
                             <p class="why-choose-desc">
-                                We are committed to helping you find the right property with complete transparency, expert guidance and unmatched support.
+                                We are committed to helping you find the right property with complete transparency,
+                                expert guidance and unmatched support.
                             </p>
 
 
@@ -718,7 +525,8 @@
 
                                         <div class="why-card-text">
                                             <h3 class="why-card-title">Verified Properties</h3>
-                                            <p class="why-card-desc">All properties are legally verified and thoroughly checked.</p>
+                                            <p class="why-card-desc">All properties are legally verified and thoroughly
+                                                checked.</p>
                                         </div>
 
                                     </div>
@@ -737,7 +545,8 @@
 
                                         <div class="why-card-text">
                                             <h3 class="why-card-title">Expert Guidance</h3>
-                                            <p class="why-card-desc">Get advice from experienced real estate professionals.</p>
+                                            <p class="why-card-desc">Get advice from experienced real estate
+                                                professionals.</p>
                                         </div>
 
                                     </div>
@@ -756,7 +565,8 @@
 
                                         <div class="why-card-text">
                                             <h3 class="why-card-title">Transparent Deals</h3>
-                                            <p class="why-card-desc">No hidden charges, complete honesty in every transaction.</p>
+                                            <p class="why-card-desc">No hidden charges, complete honesty in every
+                                                transaction.</p>
                                         </div>
 
                                     </div>
@@ -775,7 +585,8 @@
 
                                         <div class="why-card-text">
                                             <h3 class="why-card-title">End-to-End Support</h3>
-                                            <p class="why-card-desc">From site visits to documentation, we're with you at every step.</p>
+                                            <p class="why-card-desc">From site visits to documentation, we're with you
+                                                at every step.</p>
                                         </div>
 
                                     </div>
@@ -818,13 +629,11 @@
                             <h2 class="locations-title">Explore Prime Locations</h2>
 
                             <p class="locations-desc">
-                                Invest in fast-growing areas with excellent connectivity, infrastructure and future potential.
+                                Invest in fast-growing areas with excellent connectivity, infrastructure and future
+                                potential.
                             </p>
 
-                            <a href="#properties" class="btn-view-locations">
-                                <span>View All Locations</span>
-                                <i class="bi bi-arrow-right"></i>
-                            </a>
+
 
                         </div>
 
@@ -835,7 +644,8 @@
                     <div class="col-lg-2 col-xl-2 d-none d-lg-flex justify-content-center align-items-center">
 
                         <div class="locations-map-visual">
-                            <img src="images/locations-map.png" alt="Prime Locations Regional Map" class="locations-map-img" loading="lazy">
+                            <img src="images/locations-map.png" alt="Prime Locations Regional Map"
+                                class="locations-map-img" loading="lazy">
                         </div>
 
                     </div>
@@ -860,9 +670,9 @@
                                         <p class="location-card-desc">Modern infrastructure & IT hubs</p>
                                     </div>
 
-                                    <a href="#properties" class="location-card-btn" aria-label="Explore Noida Properties">
+                                    <div class="location-card-btn" aria-label="Explore Noida Properties">
                                         <i class="bi bi-arrow-right"></i>
-                                    </a>
+                                    </div>
 
                                 </div>
 
@@ -875,7 +685,8 @@
                                 <div class="location-card" data-location="greater-noida">
 
                                     <div class="location-card-img">
-                                        <img src="images/loc-greater-noida.jpg" alt="Greater Noida Properties" loading="lazy">
+                                        <img src="images/loc-greater-noida.jpg" alt="Greater Noida Properties"
+                                            loading="lazy">
                                     </div>
 
                                     <div class="location-card-info">
@@ -883,9 +694,9 @@
                                         <p class="location-card-desc">Growing opportunities & affordable luxury</p>
                                     </div>
 
-                                    <a href="#properties" class="location-card-btn" aria-label="Explore Greater Noida Properties">
+                                    <div class="location-card-btn" aria-label="Explore Greater Noida Properties">
                                         <i class="bi bi-arrow-right"></i>
-                                    </a>
+                                    </div>
 
                                 </div>
 
@@ -906,9 +717,9 @@
                                         <p class="location-card-desc">Strategic location with high appreciation</p>
                                     </div>
 
-                                    <a href="#properties" class="location-card-btn" aria-label="Explore Delhi NCR Properties">
+                                    <div class="location-card-btn" aria-label="Explore Delhi NCR Properties">
                                         <i class="bi bi-arrow-right"></i>
-                                    </a>
+                                    </div>
 
                                 </div>
 
@@ -929,9 +740,9 @@
                                         <p class="location-card-desc">Corporate hub with premium lifestyle</p>
                                     </div>
 
-                                    <a href="#properties" class="location-card-btn" aria-label="Explore Gurgaon Properties">
+                                    <div class="location-card-btn" aria-label="Explore Gurgaon Properties">
                                         <i class="bi bi-arrow-right"></i>
-                                    </a>
+                                    </div>
 
                                 </div>
 
@@ -947,207 +758,6 @@
 
         </section>
 
-
-        <!-- =====================================================
-             SECTION 06: HIGH-GROWTH OPPORTUNITIES / PROJECTS
-        ====================================================== -->
-
-        <section id="projects" class="growth-projects-section">
-
-            <div class="container">
-
-                <!-- Header Row: Title & Subtitle on Left, Stats on Right -->
-                <div class="row align-items-end justify-content-between g-4 growth-header-row">
-
-                    <!-- Left: Headings -->
-                    <div class="col-lg-6">
-
-                        <span class="section-tag-gold-light">HIGH-GROWTH OPPORTUNITIES</span>
-
-                        <h2 class="growth-title">Invest in a Brighter Tomorrow</h2>
-
-                        <p class="growth-desc">
-                            Explore our premium projects with high appreciation potential and modern amenities.
-                        </p>
-
-                    </div>
-
-
-                    <!-- Right: Stats Counter Row -->
-                    <div class="col-lg-6 col-xl-5">
-
-                        <div class="growth-stats-bar">
-
-                            <!-- Stat 1: Years of Experience -->
-                            <div class="growth-stat-box">
-                                <div class="growth-stat-icon">
-                                    <i class="bi bi-award"></i>
-                                </div>
-                                <div class="growth-stat-data">
-                                    <span class="growth-stat-number">15+</span>
-                                    <span class="growth-stat-label">Years of Experience</span>
-                                </div>
-                            </div>
-
-                            <!-- Stat 2: Happy Clients -->
-                            <div class="growth-stat-box">
-                                <div class="growth-stat-icon">
-                                    <i class="bi bi-emoji-smile"></i>
-                                </div>
-                                <div class="growth-stat-data">
-                                    <span class="growth-stat-number">500+</span>
-                                    <span class="growth-stat-label">Happy Clients</span>
-                                </div>
-                            </div>
-
-                            <!-- Stat 3: Upcoming Projects -->
-                            <div class="growth-stat-box">
-                                <div class="growth-stat-icon">
-                                    <i class="bi bi-buildings"></i>
-                                </div>
-                                <div class="growth-stat-data">
-                                    <span class="growth-stat-number">20+</span>
-                                    <span class="growth-stat-label">Upcoming Projects</span>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Projects Cards Grid (3 Columns) -->
-                <div class="row g-4 growth-cards-row">
-
-                    <!-- Card 1: Luxury Residences -->
-                    <div class="col-lg-4 col-md-6">
-
-                        <div class="growth-card">
-
-                            <div class="growth-card-img">
-                                <span class="growth-card-badge">New Launch</span>
-                                <img src="images/project-1.jpg" alt="Luxury Residences Sector 150 Noida" loading="lazy">
-                            </div>
-
-                            <div class="growth-card-body">
-
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <div>
-                                        <h3 class="growth-card-title">Luxury Residences</h3>
-                                        <p class="growth-card-location">
-                                            <i class="bi bi-geo-alt"></i> Sector 150, Noida
-                                        </p>
-                                    </div>
-                                    <div class="text-end">
-                                        <span class="growth-card-price">₹ 1.10 Cr</span>
-                                        <span class="growth-card-onwards">Onwards</span>
-                                    </div>
-                                </div>
-
-                                <div class="growth-card-divider"></div>
-
-                                <div class="d-flex justify-content-between align-items-center pt-2">
-                                    <span class="growth-card-specs">3 &amp; 4 BHK &nbsp;|&nbsp; World-class Amenities</span>
-                                    <a href="#contact" class="growth-card-arrow" aria-label="Explore Luxury Residences">
-                                        <i class="bi bi-arrow-right"></i>
-                                    </a>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- Card 2: Independent Villas -->
-                    <div class="col-lg-4 col-md-6">
-
-                        <div class="growth-card">
-
-                            <div class="growth-card-img">
-                                <span class="growth-card-badge">Ready to Move</span>
-                                <img src="images/project-2.jpg" alt="Independent Villas Greater Noida" loading="lazy">
-                            </div>
-
-                            <div class="growth-card-body">
-
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <div>
-                                        <h3 class="growth-card-title">Independent Villas</h3>
-                                        <p class="growth-card-location">
-                                            <i class="bi bi-geo-alt"></i> Greater Noida
-                                        </p>
-                                    </div>
-                                    <div class="text-end">
-                                        <span class="growth-card-price">₹ 2.80 Cr</span>
-                                        <span class="growth-card-onwards">Onwards</span>
-                                    </div>
-                                </div>
-
-                                <div class="growth-card-divider"></div>
-
-                                <div class="d-flex justify-content-between align-items-center pt-2">
-                                    <span class="growth-card-specs">4 BHK &nbsp;|&nbsp; Premium Gated Community</span>
-                                    <a href="#contact" class="growth-card-arrow" aria-label="Explore Independent Villas">
-                                        <i class="bi bi-arrow-right"></i>
-                                    </a>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- Card 3: Business Spaces -->
-                    <div class="col-lg-4 col-md-6">
-
-                        <div class="growth-card">
-
-                            <div class="growth-card-img">
-                                <span class="growth-card-badge">Commercial</span>
-                                <img src="images/project-3.jpg" alt="Business Spaces Noida Expressway" loading="lazy">
-                            </div>
-
-                            <div class="growth-card-body">
-
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <div>
-                                        <h3 class="growth-card-title">Business Spaces</h3>
-                                        <p class="growth-card-location">
-                                            <i class="bi bi-geo-alt"></i> Noida Expressway
-                                        </p>
-                                    </div>
-                                    <div class="text-end">
-                                        <span class="growth-card-price">₹ 75 Lakhs</span>
-                                        <span class="growth-card-onwards">Onwards</span>
-                                    </div>
-                                </div>
-
-                                <div class="growth-card-divider"></div>
-
-                                <div class="d-flex justify-content-between align-items-center pt-2">
-                                    <span class="growth-card-specs">Office Spaces &nbsp;|&nbsp; High ROI Potential</span>
-                                    <a href="#contact" class="growth-card-arrow" aria-label="Explore Business Spaces">
-                                        <i class="bi bi-arrow-right"></i>
-                                    </a>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
 
 
         <!-- =====================================================
@@ -1173,18 +783,7 @@
 
                     </div>
 
-                    <div class="col-md-3 col-lg-4 text-md-end">
 
-                        <div class="testimonial-nav-group">
-                            <button class="testimonial-nav-btn prev-btn" aria-label="Previous testimonial">
-                                <i class="bi bi-arrow-left"></i>
-                            </button>
-                            <button class="testimonial-nav-btn next-btn" aria-label="Next testimonial">
-                                <i class="bi bi-arrow-right"></i>
-                            </button>
-                        </div>
-
-                    </div>
 
                 </div>
 
@@ -1197,27 +796,31 @@
 
                         <div class="testimonial-card">
 
-                            <div class="testimonial-avatar">
-                                <img src="images/client-1.jpg" alt="Priya Sharma" loading="lazy">
+                            <div class="testimonial-header">
+                                <div class="testimonial-avatar">
+                                    <img src="images/client-1.jpg" alt="Priya Sharma" loading="lazy">
+                                </div>
+
+                                <div class="testimonial-meta">
+                                    <div class="testimonial-stars">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+
+                                    <h3 class="testimonial-name">Priya Sharma</h3>
+                                    <span class="testimonial-role">Home Buyer, Noida</span>
+                                </div>
                             </div>
 
                             <div class="testimonial-content">
-
                                 <p class="testimonial-quote">
-                                    “The entire process was smooth and transparent. I found my dream home with their expert guidance.”
+                                    “I had a very smooth experience from start to finish. The team understood my
+                                    requirements and helped me find a property that suited my budget and preferences.
+                                    Their guidance made the whole process much easier.”
                                 </p>
-
-                                <div class="testimonial-stars">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-
-                                <h3 class="testimonial-name">Priya Sharma</h3>
-                                <span class="testimonial-role">Home Buyer, Noida</span>
-
                             </div>
 
                         </div>
@@ -1230,27 +833,31 @@
 
                         <div class="testimonial-card">
 
-                            <div class="testimonial-avatar">
-                                <img src="images/client-2.jpg" alt="Rohit Mehta" loading="lazy">
+                            <div class="testimonial-header">
+                                <div class="testimonial-avatar">
+                                    <img src="images/client-2.jpg" alt="Rohit Mehta" loading="lazy">
+                                </div>
+
+                                <div class="testimonial-meta">
+                                    <div class="testimonial-stars">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+
+                                    <h3 class="testimonial-name">Rohit Mehta</h3>
+                                    <span class="testimonial-role">Investor, Gurgaon</span>
+                                </div>
                             </div>
 
                             <div class="testimonial-content">
-
                                 <p class="testimonial-quote">
-                                    “Highly professional and supportive team. They helped me invest in the right property at the right time.”
+                                    “The team was professional and transparent throughout the process. They explained
+                                    the property details clearly and helped me make an informed investment decision. I’m
+                                    happy with the overall experience.”
                                 </p>
-
-                                <div class="testimonial-stars">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-
-                                <h3 class="testimonial-name">Rohit Mehta</h3>
-                                <span class="testimonial-role">Investor, Gurgaon</span>
-
                             </div>
 
                         </div>
@@ -1263,27 +870,31 @@
 
                         <div class="testimonial-card">
 
-                            <div class="testimonial-avatar">
-                                <img src="images/client-3.jpg" alt="Sneha Verma" loading="lazy">
+                            <div class="testimonial-header">
+                                <div class="testimonial-avatar">
+                                    <img src="images/client-3.jpg" alt="Sneha Verma" loading="lazy">
+                                </div>
+
+                                <div class="testimonial-meta">
+                                    <div class="testimonial-stars">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+
+                                    <h3 class="testimonial-name">Sneha Verma</h3>
+                                    <span class="testimonial-role">Home Buyer, Greater Noida</span>
+                                </div>
                             </div>
 
                             <div class="testimonial-content">
-
                                 <p class="testimonial-quote">
-                                    “Excellent service and genuine advice. I would highly recommend them to anyone looking for property.”
+                                    “I really appreciate the support I received while choosing my property. The team was
+                                    responsive, approachable, and guided me at every step. I would definitely recommend
+                                    their services to others.”
                                 </p>
-
-                                <div class="testimonial-stars">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-
-                                <h3 class="testimonial-name">Sneha Verma</h3>
-                                <span class="testimonial-role">Home Buyer, Greater Noida</span>
-
                             </div>
 
                         </div>
@@ -1393,20 +1004,24 @@
                             <div class="contact-form-row">
 
                                 <div class="form-field-wrap">
-                                    <input type="text" class="contact-cta-input" placeholder="Your Name" required>
+                                    <input type="text" name="name" class="contact-cta-input" placeholder="Your Name"
+                                        required pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed"
+                                        oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
                                 </div>
 
                                 <div class="form-field-wrap">
-                                    <input type="tel" class="contact-cta-input" placeholder="Your Phone" required>
+                                    <input type="tel" name="phone" class="contact-cta-input" placeholder="Your Phone"
+                                        required pattern="\d{10}" maxlength="10" title="Please enter exactly 10 digits"
+                                        oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                                 </div>
 
                                 <div class="form-field-wrap">
-                                    <select class="contact-cta-select" required>
+                                    <select name="property_type" class="contact-cta-select" required>
                                         <option value="" disabled selected>Property Type</option>
-                                        <option value="apartment">Apartments</option>
-                                        <option value="villa">Independent Villas</option>
-                                        <option value="commercial">Commercial</option>
-                                        <option value="plot">Plots &amp; Land</option>
+                                        <option value="Apartments">Apartments</option>
+                                        <option value="Independent Villas">Independent Villas</option>
+                                        <option value="Commercial">Commercial</option>
+                                        <option value="Plots & Land">Plots & Land</option>
                                     </select>
                                 </div>
 
@@ -1447,24 +1062,23 @@
                 <div class="col-lg-4 col-md-12 col-12">
 
                     <a href="#" class="footer-brand">
-                        <div class="brand-icon">
-                            <i class="bi bi-house-heart-fill"></i>
-                        </div>
-                        <div class="brand-content">
-                            <h3 class="footer-brand-title">HOMEHAVEN</h3>
-                            <span class="footer-brand-tagline">Properties | People | Possibilities</span>
+                        <div class="brand-content" style="display: flex; align-items: center;">
+                            <img src="images/SSS-Realty-Logo.png" alt="SAT SAI SUNRISE REALITY"
+                                style="max-height: 100px;">
                         </div>
                     </a>
 
                     <p class="footer-about-text">
-                        Your trusted real estate partner for premium homes, investment opportunities and a better tomorrow.
+                        Your trusted real estate partner for premium homes, investment opportunities and a better
+                        tomorrow.
                     </p>
 
                     <div class="footer-social-icons">
-                        <a href="#" class="footer-social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="footer-social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="footer-social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="footer-social-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61582430763586" target="_blank"
+                            class="footer-social-btn fb-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/saisunrisereality/" target="_blank"
+                            class="footer-social-btn insta-icon" aria-label="Instagram"><i
+                                class="bi bi-instagram"></i></a>
                     </div>
 
                 </div>
@@ -1477,9 +1091,8 @@
 
                     <ul class="footer-links-list">
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#properties">Properties</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#locations">Locations</a></li>
+                        <li><a href="#properties">Projects</a></li>
+
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -1493,12 +1106,12 @@
                     <h4 class="footer-col-title">Property Types</h4>
 
                     <ul class="footer-links-list">
-                        <li><a href="#properties">Apartments</a></li>
-                        <li><a href="#properties">Villas</a></li>
-                        <li><a href="#properties">Commercial</a></li>
-                        <li><a href="#properties">Plots &amp; Land</a></li>
-                        <li><a href="#properties">Resale Properties</a></li>
-                        <li><a href="#projects">New Projects</a></li>
+                        <li><span>Apartments</span></li>
+                        <li><span>Villas</span></li>
+                        <li><span>Commercial</span></li>
+                        <li><span>Plots &amp; Land</span></li>
+                        <li><span>Resale Properties</span></li>
+                        <li><span>New Projects</span></li>
                     </ul>
 
                 </div>
@@ -1510,12 +1123,12 @@
                     <h4 class="footer-col-title">Top Locations</h4>
 
                     <ul class="footer-links-list">
-                        <li><a href="#locations">Noida</a></li>
-                        <li><a href="#locations">Greater Noida</a></li>
-                        <li><a href="#locations">Delhi NCR</a></li>
-                        <li><a href="#locations">Gurgaon</a></li>
-                        <li><a href="#locations">Yamuna Expressway</a></li>
-                        <li><a href="#locations">All Locations</a></li>
+                        <li><span>Noida</span></li>
+                        <li><span>Greater Noida</span></li>
+                        <li><span>Delhi NCR</span></li>
+                        <li><span>Gurgaon</span></li>
+                        <li><span>Yamuna Expressway</span></li>
+                        <li><span>All Locations</span></li>
                     </ul>
 
                 </div>
@@ -1529,11 +1142,11 @@
                     <ul class="footer-contact-list">
                         <li>
                             <i class="bi bi-telephone-fill"></i>
-                            <a href="tel:+919876543210">+91 98765 43210</a>
+                            <span>9953755303</span>
                         </li>
                         <li>
                             <i class="bi bi-envelope-fill"></i>
-                            <a href="mailto:info@homehaven.in">info@homehaven.in</a>
+                            <span>satsaisunrisereality@gmail.com</span>
                         </li>
                         <li>
                             <i class="bi bi-geo-alt-fill"></i>
@@ -1541,7 +1154,7 @@
                         </li>
                         <li>
                             <i class="bi bi-clock-fill"></i>
-                            <span>Mon - Sat: 9:00 AM - 7:00 PM</span>
+                            <span>Monday to Sunday Open</span>
                         </li>
                     </ul>
 
@@ -1552,18 +1165,39 @@
 
             <!-- Bottom Copyright Bar -->
             <div class="footer-bottom-bar">
-                <p>© 2026 HomeHaven. All Rights Reserved. Built with precision and elegance.</p>
+                <p>© 2026 SAT-SAI-SUNRISE. All Rights Reserved. Built with precision and elegance.</p>
             </div>
 
         </div>
 
     </footer>
 
+    <script>
+        document.getElementById("contactEnquiryForm").addEventListener("submit", function (e) {
+            e.preventDefault();
 
+            const name = this.querySelector('[name="name"]').value.trim();
+            const phone = this.querySelector('[name="phone"]').value.trim();
+            const propertyType = this.querySelector('[name="property_type"]').value;
+
+            const whatsappNumber = "919953755303";
+
+            const message = `Hello, I have a new property enquiry.
+
+            Name: ${name}
+            Phone: ${phone}
+            Property Type: ${propertyType}`;
+
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+            window.open(whatsappURL, "_blank");
+        });
+    </script>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
     </script>
+
 
     <!-- Custom JS -->
     <script src="js/script.js"></script>
