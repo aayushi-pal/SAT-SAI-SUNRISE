@@ -310,28 +310,33 @@ select {
 
 .hero-content {
     max-width: 620px;
+    width: 100%;
 }
 
 .hero-title {
     font-family: "Playfair Display", serif;
-    font-size: 58px;
-    line-height: 1.15;
+    font-size: clamp(32px, 5.5vw, 60px);
+    line-height: 1.2;
     font-weight: 700;
     color: var(--dark);
-    margin-bottom: 18px;
+    margin-bottom: 20px;
+    word-wrap: break-word;
 }
 
 .hero-title span {
     color: var(--primary);
     font-weight: 700;
+    display: inline-block;
 }
 
 .hero-description {
-    max-width: 540px;
-    font-size: 15px;
+    max-width: 580px;
+    width: 100%;
+    font-size: clamp(14px, 1.4vw, 18px);
+    font-weight: 450;
     line-height: 1.75;
-    color: #4b4e47;
-    margin-bottom: 22px;
+    color: #505150;
+    margin-bottom: 24px;
 }
 
 /* Hero Features with Dividers */
@@ -339,13 +344,14 @@ select {
     display: flex;
     align-items: center;
     gap: 16px;
+    flex-wrap: wrap;
 }
 
 .hero-feature {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     color: var(--dark);
 }
@@ -359,6 +365,63 @@ select {
     color: #d2ccc0;
     font-size: 15px;
     user-select: none;
+}
+
+/* Responsive Scaling for Hero Section */
+@media (max-width: 991px) {
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: clamp(34px, 5.2vw, 48px);
+        margin-bottom: 16px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        line-height: 1.65;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-title {
+        font-size: clamp(28px, 6.5vw, 36px);
+        line-height: 1.25;
+    }
+
+    .hero-description {
+        font-size: 14.5px;
+        line-height: 1.6;
+    }
+
+    .hero-features {
+        gap: 10px 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 26px;
+        line-height: 1.25;
+    }
+
+    .hero-description {
+        font-size: 13.5px;
+        line-height: 1.55;
+    }
+
+    .feature-divider {
+        display: none;
+    }
+
+    .hero-features {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
 }
 
 /* Hero Marquee for Logos */
@@ -1536,4 +1599,43 @@ select {
     font-size: 12.5px;
     color: #88857e;
     margin: 0;
+}
+
+/* =========================================================
+   GLOBAL FLOATING WHATSAPP BUTTON
+========================================================= */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25d366;
+    color: #ffffff !important;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    color: #ffffff !important;
+    background: #20ba59;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5);
+}
+
+@media (max-width: 576px) {
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 52px;
+        height: 52px;
+        font-size: 28px;
+    }
 }

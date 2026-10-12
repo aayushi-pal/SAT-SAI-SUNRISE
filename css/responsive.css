@@ -19,10 +19,6 @@ body {
 @media (min-width: 992px) and (max-width: 1199px) {
 
     /* Hero */
-    .hero-title {
-        font-size: 50px;
-    }
-
     .hero-content {
         max-width: 560px;
     }
@@ -180,10 +176,6 @@ body {
         min-height: auto;
         padding-top: 135px;
         padding-bottom: 0;
-    }
-
-    .hero-title {
-        font-size: 46px;
     }
 
     .hero-content {
@@ -378,16 +370,6 @@ body {
     .hero-content {
         max-width: 100%;
         text-align: left;
-    }
-
-    .hero-title {
-        font-size: 38px;
-        line-height: 1.15;
-    }
-
-    .hero-description {
-        font-size: 13.5px;
-        line-height: 1.7;
     }
 
     .hero-features {
@@ -754,15 +736,6 @@ body {
         background-position: 70% center;
     }
 
-    .hero-title {
-        font-size: 32px;
-    }
-
-    .hero-description {
-        font-size: 12.5px;
-        max-width: 100%;
-    }
-
     .hero-features {
         display: flex;
         flex-direction: column;
@@ -964,14 +937,6 @@ body {
     .hero-section {
         padding-top: 105px;
         padding-bottom: 60px;
-    }
-
-    .hero-title {
-        font-size: 28px;
-    }
-
-    .hero-description {
-        font-size: 11.5px;
     }
 
     .search-tab {
