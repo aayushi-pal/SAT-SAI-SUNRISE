@@ -155,14 +155,17 @@
         <div class="container">
             <h2>Your mountain home is waiting.</h2>
             <p>Book your site visit today and experience the tranquility firsthand.</p>
-            <form action="#" method="POST" class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Email Address" required>
-                <input type="tel" placeholder="Phone Number" required>
+            <form id="heavenContactForm" class="contact-form">
+                <input type="text" id="heavenName" placeholder="Your Name" required pattern="[A-Za-z\s]+"
+                    title="Please enter letters only" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')">
+                <input type="email" id="heavenEmail" placeholder="Email Address" required>
+                <input type="tel" id="heavenPhone" placeholder="Phone Number" required pattern="\d{10}"
+                    maxlength="10" title="Please enter a valid 10-digit mobile number"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                 <button type="submit" class="btn-primary">Request Callback</button>
             </form>
-            <p class="note">For more details, visit <a href="http://propbillions.com"
-                    target="_blank">propbillions.com</a></p>
+            <p class="note">For more details, visit <a href="https://satsaisunrisereality.com"
+                    target="_blank">satsaisunrisereality.com</a></p>
         </div>
     </section>
 
@@ -214,7 +217,6 @@
                         <li><span>Commercial</span></li>
                         <li><span>Plots &amp; Land</span></li>
                         <li><span>Resale Properties</span></li>
-                        <li><span>New Projects</span></li>
                     </ul>
                 </div>
 
@@ -227,7 +229,6 @@
                         <li><span>Delhi NCR</span></li>
                         <li><span>Gurgaon</span></li>
                         <li><span>Yamuna Expressway</span></li>
-                        <li><span>All Locations</span></li>
                     </ul>
                 </div>
 
@@ -275,6 +276,40 @@
     <script src="../js/script.js"></script>
 
     <script src="script.js"></script>
+
+    <script>
+        const heavenContactForm = document.getElementById("heavenContactForm");
+        if (heavenContactForm) {
+            heavenContactForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const name = document.getElementById("heavenName").value.trim();
+                const email = document.getElementById("heavenEmail").value.trim();
+                const phone = document.getElementById("heavenPhone").value.trim();
+
+                const whatsappNumber = "919953755303";
+
+                const text = `Hi SAT-SAI-SUNRISE REALITY,\n\nI would like to request a callback / site visit for *Heaven in the Forest*.\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Email:* ${email}`;
+
+                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+                window.open(whatsappUrl, "_blank");
+
+                const btn = this.querySelector(".btn-primary");
+                const originalHTML = btn.innerHTML;
+                const originalBg = btn.style.backgroundColor;
+
+                btn.innerHTML = `<i class="bi bi-whatsapp"></i> Redirecting...`;
+                btn.style.backgroundColor = "#25D366";
+
+                setTimeout(() => {
+                    this.reset();
+                    btn.innerHTML = originalHTML;
+                    btn.style.backgroundColor = originalBg;
+                }, 3000);
+            });
+        }
+    </script>
 </body>
 
 </html>
