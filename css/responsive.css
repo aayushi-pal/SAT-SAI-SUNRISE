@@ -356,14 +356,23 @@ body {
         min-height: auto;
         padding-top: 120px;
         padding-bottom: 75px;
-        background-position: 75% center;
+    }
+
+    .hero-slide {
+        background-position: 70% center;
+    }
+
+    .hero-slider-dots {
+        right: 16px;
+        top: 35%;
+        gap: 8px;
     }
 
     .hero-overlay {
         background: linear-gradient(180deg,
-                rgba(255, 255, 255, 0.88) 0%,
-                rgba(255, 255, 255, 0.65) 45%,
-                rgba(255, 255, 255, 0.2) 100%);
+                rgba(255, 255, 255, 0.90) 0%,
+                rgba(255, 255, 255, 0.70) 50%,
+                rgba(255, 255, 255, 0.35) 100%);
     }
 
     .hero-content {

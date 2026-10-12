@@ -30,6 +30,8 @@ searchTabs.forEach((tab) => {
 ========================================================= */
 
 
+const searchForm = document.getElementById("searchForm") || document.querySelector(".search-form");
+
 if (searchForm) {
 
     searchForm.addEventListener("submit", function (event) {
@@ -212,16 +214,122 @@ const propPrevBtn = document.getElementById("propPrevBtn");
 const propNextBtn = document.getElementById("propNextBtn");
 
 if (propSlider && propPrevBtn && propNextBtn) {
+    const getScrollStep = () => {
+        const firstCard = propSlider.querySelector(".prop-slider-item") || propSlider.firstElementChild;
+        if (firstCard) {
+            // Gap is 1.5rem (24px)
+            const cardGap = parseFloat(window.getComputedStyle(propSlider).gap) || 24;
+            // On responsive screens (<= 768px), scroll exactly one card width + gap
+            if (window.innerWidth <= 768) {
+                return firstCard.offsetWidth + cardGap;
+            }
+        }
+        return propSlider.clientWidth / 2;
+    };
+
     propNextBtn.addEventListener("click", () => {
-        const scrollAmount = propSlider.clientWidth / 2;
-        propSlider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        propSlider.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
     });
 
     propPrevBtn.addEventListener("click", () => {
-        const scrollAmount = propSlider.clientWidth / 2;
-        propSlider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        propSlider.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
     });
 }
 
 
 
+/* =========================================================
+   HERO BACKGROUND SLIDER (AUTO & MANUAL)
+========================================================= */
+const heroSlides = document.querySelectorAll(".hero-slide");
+const heroDots = document.querySelectorAll(".hero-dot");
+
+if (heroSlides.length > 0) {
+    let currentHeroIndex = 0;
+    const heroSlideIntervalTime = 3000; // Changes image every 2 seconds
+    let heroAutoTimer = null;
+
+    function showHeroSlide(index) {
+        heroSlides.forEach((slide, i) => {
+            slide.classList.toggle("active", i === index);
+        });
+
+        heroDots.forEach((dot, i) => {
+            dot.classList.toggle("active", i === index);
+        });
+
+        currentHeroIndex = index;
+    }
+
+    function nextHeroSlide() {
+        const nextIndex = (currentHeroIndex + 1) % heroSlides.length;
+        showHeroSlide(nextIndex);
+    }
+
+    function startHeroSlider() {
+        if (!heroAutoTimer) {
+            heroAutoTimer = setInterval(nextHeroSlide, heroSlideIntervalTime);
+        }
+    }
+
+    function resetHeroSliderTimer() {
+        if (heroAutoTimer) {
+            clearInterval(heroAutoTimer);
+        }
+        heroAutoTimer = setInterval(nextHeroSlide, heroSlideIntervalTime);
+    }
+
+    // Dot click controls
+    heroDots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+            showHeroSlide(index);
+            resetHeroSliderTimer();
+        });
+    });
+
+    // Start auto slideshow
+    startHeroSlider();
+}
+
+
+/* =========================================================
+   WHATSAPP CONTACT FORM INTEGRATION
+========================================================= */
+const contactPageForm = document.getElementById("contactPageForm");
+
+if (contactPageForm) {
+    contactPageForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("waName").value.trim();
+        const phone = document.getElementById("waPhone").value.trim();
+        const email = document.getElementById("waEmail").value.trim();
+        const message = document.getElementById("waMessage").value.trim();
+
+        // Target WhatsApp Number
+        const whatsappNumber = "919953755303"; 
+
+        // Construct message
+        const text = `Hi SAT-SAI-SUNRISE REALITY,%0A%0AI have an enquiry from your website.%0A%0A*Name:* ${name}%0A*Mobile:* ${phone}%0A*Email:* ${email}%0A%0A*Message:*%0A${message}`;
+
+        // Create WhatsApp API URL
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${text}`;
+
+        // Open WhatsApp in a new tab
+        window.open(whatsappUrl, "_blank");
+
+        // Show Success Feedback
+        const btn = this.querySelector(".btn-submit-custom");
+        const originalHTML = btn.innerHTML;
+        const originalColor = btn.style.backgroundColor;
+
+        btn.innerHTML = `<i class="bi bi-whatsapp"></i> Redirecting...`;
+        btn.style.backgroundColor = "#25D366";
+
+        setTimeout(() => {
+            this.reset();
+            btn.innerHTML = originalHTML;
+            btn.style.backgroundColor = originalColor;
+        }, 3000);
+    });
+}

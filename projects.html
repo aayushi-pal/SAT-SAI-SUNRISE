@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAT-SAI-SUNRISE | Projects</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="images/fevicon-clean.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        /* Specific Styles for Projects Page matching the design */
+        .project-hero-header {
+            position: relative;
+            background: url('images/Hero-section-bg.png') no-repeat center center / cover;
+            min-height: 400px;
+            padding-top: 20px;
+        }
+
+        .project-hero-header::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .project-navbar-container {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+        }
+
+        .project-nav-pill {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 10px 30px;
+            display: flex;
+            gap: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .project-nav-pill a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        .project-nav-pill a:hover {
+            color: #f7d488;
+        }
+
+        .project-call-btn {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(8px);
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: background 0.3s;
+        }
+
+        .project-call-btn:hover {
+            background: rgba(255, 255, 255, 0.4);
+            color: #fff;
+        }
+
+        .project-breadcrumb {
+            padding: 15px 0 25px 0;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .project-breadcrumb a {
+            color: #777;
+            text-decoration: none;
+        }
+
+        .project-breadcrumb a:hover {
+            color: #9a6a24;
+        }
+
+        .project-content-area {
+            background: #fff;
+            padding: 20px 40px 50px 40px;
+            margin-top: -60px;
+            border-radius: 16px 16px 0 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .project-detail-card {
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            padding: 12px;
+            background: #fff;
+        }
+
+        .project-detail-card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-contact-form {
+            background: #1c352a;
+            border-radius: 8px;
+            padding: 40px 30px;
+            position: sticky;
+            top: 30px;
+        }
+
+        .project-contact-form h4 {
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+            margin-bottom: 30px;
+            font-size: 22px;
+        }
+
+        /* New Listing Styles */
+        .listing-card {
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            background: #fff;
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .listing-card:hover {
+            transform: translateY(-5px);
+            color: inherit;
+        }
+
+        .listing-card img {
+            width: 150%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .card-info {
+            padding: 20px;
+            background: #fff;
+            border-top: 1px solid #eee;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1c352a;
+            margin-bottom: 8px;
+        }
+
+        .card-location {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .card-location i {
+            color: #9a6a24;
+        }
+
+        .card-tags {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .tag-dark {
+            background: #1c352a;
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .tag-light {
+            background: #dceada;
+            color: #1c352a;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .projects-intro-title {
+            color: #1c352a;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .projects-intro-text {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Info Box */
+        .projects-info-box {
+            border: 1px solid #dceada;
+            border-radius: 12px;
+            padding: 40px;
+            background: #fff;
+            margin-bottom: 60px;
+        }
+
+        .info-box-title {
+            color: #1c352a;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .info-box-text {
+            color: #444;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .btn-read-more {
+            display: inline-block;
+            background: #dceada;
+            color: #1c352a;
+            padding: 10px 25px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn-read-more:hover {
+            background: #c2dfbe;
+            color: #1c352a;
+        }
+
+        /* FAQ Section */
+        .projects-faq-section {
+            max-width: 900px;
+            margin: 0 auto 50px auto;
+        }
+
+        .faq-title {
+            color: #1c352a;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .faq-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #eaeaea;
+            color: #1c352a;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .project-contact-form h4 i {
+            color: #7ab87a;
+            font-size: 18px;
+        }
+
+        .form-control-custom {
+            background: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 20px;
+            width: 100%;
+            font-size: 14px;
+            color: #333;
+            outline: none;
+        }
+
+        .btn-submit-custom {
+            background: #d4f0cc;
+            color: #1c352a;
+            border: none;
+            padding: 15px;
+            border-radius: 6px;
+            width: 100%;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-submit-custom:hover {
+            background: #b5e4a8;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            z-index: 100;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+
+        .project-meta-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border: 1px solid #eaeaea;
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin-top: 30px;
+        }
+
+        .project-meta-left h5 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #113426;
+            margin-bottom: 8px;
+        }
+
+        .project-meta-left p {
+            color: #555;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14.5px;
+        }
+
+        .project-meta-right {
+            text-align: right;
+        }
+
+        .project-meta-right .badge-features {
+            background: #d4f0cc;
+            color: #113426;
+            padding: 5px 15px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+
+        .project-meta-right p {
+            color: #666;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .project-content-block {
+            border: 1px solid #eaeaea;
+            border-radius: 12px;
+            padding: 40px;
+            margin-top: 30px;
+        }
+
+        .project-content-block h2 {
+            font-size: 30px;
+            font-weight: 700;
+            color: #113426;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+
+        .project-content-block h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #113426;
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+
+        .project-content-block p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 15px;
+            margin-bottom: 18px;
+        }
+
+        .project-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .project-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 15px;
+            color: #555;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        .project-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            top: -2px;
+            color: #555;
+            font-size: 20px;
+        }
+
+        .project-list li strong {
+            color: #333;
+        }
+
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .amenity-item {
+            color: #555;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .amenity-item i {
+            color: #7ab87a;
+            font-size: 18px;
+        }
+
+        .faq-accordion .accordion-item {
+            border: none;
+            border-bottom: 1px solid #eaeaea;
+            border-radius: 0;
+        }
+
+        .faq-accordion .accordion-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-accordion .accordion-button {
+            padding: 20px 0;
+            font-weight: 600;
+            color: #113426;
+            background: transparent !important;
+            box-shadow: none !important;
+            font-size: 16px;
+        }
+
+        .faq-accordion .accordion-button:not(.collapsed) {
+            color: #113426;
+            background-color: #f8f9fa !important;
+        }
+
+        .faq-accordion .accordion-body {
+            padding: 0 0 20px 0;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .project-meta-bar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .project-meta-right {
+                text-align: left;
+            }
+
+            .amenities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .project-navbar-container {
+                flex-direction: column;
+                gap: 15px;
+                padding: 0 15px;
+            }
+
+            .project-content-area {
+                padding: 20px 15px 50px 15px;
+            }
+
+            .projects-intro-title {
+                font-size: 24px;
+            }
+
+            .projects-info-box {
+                padding: 25px;
+            }
+
+            .info-box-title {
+                font-size: 20px;
+            }
+
+            .faq-title {
+                font-size: 26px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .amenities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-nav-pill {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                padding: 10px 15px;
+            }
+
+            .faq-item {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="project-hero-header">
+        <div class="project-navbar-container">
+            <!-- Logo -->
+            <a href="index.html" class="navbar-brand">
+                <img src="images/SSS-Realty-Logo.png" alt="SAT SAI SUNRISE REALITY"
+                    style="max-height: 60px; filter: brightness(0) invert(1);">
+            </a>
+
+            <!-- Center Navbar -->
+            <div class="project-nav-pill">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="projects.html" style="font-weight: 600;">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <!-- Right CTA -->
+            <a href="tel:9953755303" class="project-call-btn">
+                Call us: +91 9953755303
+            </a>
+        </div>
+    </header>
+
+    <!-- Content Area -->
+    <div class="project-content-area mx-3 mx-md-5">
+
+        <div class="project-breadcrumb">
+            <a href="index.html">Home</a> &nbsp;&rarr;&nbsp;
+            <span style="color: #1c352a; font-weight: 500;">Projects</span>
+        </div>
+
+        <div class="container-fluid" style="max-width: 1400px; padding: 0;">
+
+            <div class="text-center mb-5 mt-4">
+                <h2 class="projects-intro-title">Find the Right Property Project for Your Investment Goals</h2>
+                <p class="projects-intro-text">
+                    Every project featured on this page has been personally site-visited, demand-assessed, and
+                    RERA-verified by our team before we recommend it to a client. We work with a carefully curated
+                    portfolio of commercial properties, residential properties, and premium plots across NCR's
+                    fastest-growing locations — including Noida, Greater Noida West, Ghaziabad, and the Yamuna
+                    Expressway corridor — as well as select high-growth locations in Gujarat and Uttarakhand.
+                </p>
+            </div>
+
+            <div class="row g-4 mb-5">
+
+                <!-- Card 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="The-Core-Mall/index.html" class="listing-card">
+                        <div class="card-tags">
+                            <span class="tag-dark">Commercial</span>
+                            <span class="tag-light">For Sale</span>
+                        </div>
+                        <img src="images/the-core-mall-hero.png" alt="The Core Mall">
+                        <div class="card-info">
+                            <h3 class="card-title">The Core Mall</h3>
+                            <p class="card-location"><i class="bi bi-geo-alt"></i> Ghaziabad, UP</p>
+                            <span class="btn-read-more d-block text-center mt-3">View</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="Heaven-in-the-forest/index.html" class="listing-card">
+                        <div class="card-tags">
+                            <span class="tag-dark">Villas & Apartments</span>
+                            <span class="tag-light">For Sale</span>
+                        </div>
+                        <img src="images/Heaven-forest-hero.png" alt="Heaven in the Forest">
+                        <div class="card-info">
+                            <h3 class="card-title">Heaven in the Forest</h3>
+                            <p class="card-location"><i class="bi bi-geo-alt"></i> Near Kainchi Dham, Uttarakhand</p>
+                            <span class="btn-read-more d-block text-center mt-3">View</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="Aarambh Resort/index.html" class="listing-card">
+                        <div class="card-tags">
+                            <span class="tag-dark">Plots</span>
+                            <span class="tag-light">Features</span>
+                        </div>
+                        <img src="images/Aarambh-Resorts-hero.png" alt="The Aarambh Resorts">
+                        <div class="card-info">
+                            <h3 class="card-title">The Aarambh Resorts</h3>
+                            <p class="card-location"><i class="bi bi-geo-alt"></i> Jim Corbett, Uttarakhand</p>
+                            <span class="btn-read-more d-block text-center mt-3">View</span>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Info Box Section -->
+            <div class="projects-info-box mt-5">
+                <h3 class="info-box-title">All Property Types We Deal With — What Each Category Means for Your
+                    Investment</h3>
+                <p class="info-box-text">
+                    Not every project on the market deserves your attention. Locations without real demand, developers
+                    without a delivery track record, and commercial units without footfall are far more common than most
+                    buyers realise. This page exists to show you a different standard.
+                </p>
+                <p class="info-box-text">
+                    Every project listed here has been personally evaluated by our team — site-visited, RERA-verified,
+                    and demand-assessed — before it appears in front of you. If it's here, it has passed our internal
+                    checklist. If it hasn't, it doesn't appear here, regardless of the developer's marketing spend.
+                </p>
+                <a href="#" class="btn-read-more">READ MORE</a>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="projects-faq-section mt-5 pt-4">
+                <h2 class="faq-title">Frequently Asked Questions</h2>
+
+                <div class="faq-list">
+                    <div class="faq-item">Q. What types of property does SAT-SAI-SUNRISE deal in?</div>
+                    <div class="faq-item">Q. How are the projects listed here different from what appears on housing
+                        portals?</div>
+                    <div class="faq-item">Q. Which location is best for commercial property investment in Noida NCR
+                        right now?</div>
+                    <div class="faq-item">Q. Can NRIs invest in commercial or residential property in Noida NCR?</div>
+                    <div class="faq-item">Q. What is the difference between a running mall shop and an
+                        under-construction commercial project?</div>
+                    <div class="faq-item">Q. How do I verify that a project is genuinely RERA-registered?</div>
+                    <div class="faq-item">Q. What investor profile is suited to plot investment on the Yamuna
+                        Expressway?</div>
+                    <div class="faq-item">Q. Does SAT-SAI-SUNRISE provide support after the purchase?</div>
+                    <div class="faq-item">Q. What is the nearest metro station to Greater Noida West commercial
+                        projects?</div>
+                    <div class="faq-item">Q. How do I get started with SAT-SAI-SUNRISE?</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919953755303" target="_blank" class="whatsapp-float">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- MAIN FOOTER -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row g-4 g-lg-5 footer-top-row">
+
+                <!-- Col 1: Brand & About -->
+                <div class="col-lg-4 col-md-12 col-12">
+                    <a href="#" class="footer-brand">
+                        <div class="brand-content" style="display: flex; align-items: center;">
+                            <img src="images/SSS-Realty-Logo.png" alt="SAT SAI SUNRISE REALITY"
+                                style="max-height: 100px;">
+                        </div>
+                    </a>
+                    <p class="footer-about-text">
+                        Your trusted real estate partner for premium homes, investment opportunities and a better
+                        tomorrow.
+                    </p>
+                    <div class="footer-social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61582430763586" target="_blank"
+                            class="footer-social-btn fb-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/saisunrisereality/" target="_blank"
+                            class="footer-social-btn insta-icon" aria-label="Instagram"><i
+                                class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div class="col-lg-2 col-md-3 col-6">
+                    <h4 class="footer-col-title">Quick Links</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Property Types -->
+                <div class="col-lg-2 col-md-3 col-6">
+                    <h4 class="footer-col-title">Property Types</h4>
+                    <ul class="footer-links-list">
+                        <li><span>Apartments</span></li>
+                        <li><span>Villas</span></li>
+                        <li><span>Commercial</span></li>
+                        <li><span>Plots &amp; Land</span></li>
+                        <li><span>Resale Properties</span></li>
+                        <li><span>New Projects</span></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Top Locations -->
+                <div class="col-lg-2 col-md-3 col-6">
+                    <h4 class="footer-col-title">Top Locations</h4>
+                    <ul class="footer-links-list">
+                        <li><span>Noida</span></li>
+                        <li><span>Greater Noida</span></li>
+                        <li><span>Delhi NCR</span></li>
+                        <li><span>Gurgaon</span></li>
+                        <li><span>Yamuna Expressway</span></li>
+                        <li><span>All Locations</span></li>
+                    </ul>
+                </div>
+
+                <!-- Col 5: Contact Us -->
+                <div class="col-lg-2 col-md-3 col-12">
+                    <h4 class="footer-col-title">Contact Us</h4>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <i class="bi bi-telephone-fill"></i>
+                            <span>9953755303</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-envelope-fill"></i>
+                            <span>satsaisunrisereality@gmail.com</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Noida, Uttar Pradesh, India</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-clock-fill"></i>
+                            <span>Monday to Sunday Open</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="footer-bottom-bar">
+                <p>© 2026 SAT-SAI-SUNRISE. All Rights Reserved. Built with precision and elegance.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

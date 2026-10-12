@@ -1,0 +1,433 @@
+/* ==========================================================================
+   THE CORE MALL, GHAZIABAD - DEDICATED RESPONSIVE STYLESHEET
+   ========================================================================== */
+
+/* Mobile Menu Button Styling */
+.mobile-menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--gold-primary);
+  border-radius: 2px;
+  transition: all var(--transition-fast);
+}
+
+/* Mobile Drawer Overlay */
+.mobile-nav-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 360px;
+  background: rgba(9, 13, 22, 0.98);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-left: 1px solid var(--border-color);
+  z-index: 2000;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.7);
+  overflow-y: auto;
+}
+
+.mobile-nav-drawer.active {
+  transform: translateX(0);
+}
+
+.mobile-nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.mobile-close-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-light);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 26px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.mobile-close-btn:hover {
+  background: var(--gold-primary);
+  color: #090d16;
+}
+
+.mobile-nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 28px 0;
+}
+
+.mobile-link {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: #f1f5f9;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all var(--transition-fast);
+}
+
+.mobile-link:hover,
+.mobile-link:active {
+  color: var(--gold-primary);
+  background: rgba(230, 175, 93, 0.08);
+  transform: translateX(6px);
+}
+
+.mobile-nav-footer {
+  border-top: 1px solid var(--border-light);
+  padding-top: 20px;
+}
+
+/* ==========================================================================
+   Breakpoints: Tablets & Small Laptops (max-width: 1024px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .location-layout,
+  .calc-grid,
+  .contact-card-wrap,
+  .spaces-display {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .location-map-card {
+    position: static;
+  }
+
+  .audience-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .showcase-split {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-top {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+/* ==========================================================================
+   Breakpoints: Tablets & Mobile Devices (max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+
+  .nav-links,
+  .call-btn {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .enquire-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .hero-section {
+    padding: 110px 0 60px;
+    min-height: auto;
+  }
+
+  .hero-title {
+    font-size: clamp(30px, 7.5vw, 44px);
+  }
+
+  .hero-highlights-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-outline {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .stats-ribbon {
+    padding: 24px 0;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 12px;
+  }
+
+  .stat-item {
+    border-right: none;
+    border-bottom: 1px solid var(--border-light);
+    padding: 10px 8px;
+  }
+
+  .stat-item:nth-child(3),
+  .stat-item:nth-child(4) {
+    border-bottom: none;
+  }
+
+  .stat-number {
+    font-size: 28px;
+  }
+
+  .distinctive-section,
+  .spaces-section,
+  .location-section,
+  .investment-section,
+  .why-invest-section,
+  .vision-section,
+  .gallery-section,
+  .contact-section {
+    padding: 60px 0;
+  }
+
+  .section-header {
+    margin-bottom: 36px;
+  }
+
+  .features-grid,
+  .why-invest-grid,
+  .gallery-grid,
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .showcase-split {
+    padding: 24px 18px;
+  }
+
+  /* Spaces Tabs Mobile Scroll */
+  .spaces-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 12px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .spaces-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab-btn {
+    flex-shrink: 0;
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+
+  .spaces-display {
+    padding: 24px 18px;
+  }
+
+  .space-visual {
+    height: 240px;
+  }
+
+  .landmark-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 18px 16px;
+  }
+
+  .landmark-badge {
+    align-self: flex-start;
+  }
+
+  .investment-box,
+  .contact-card-wrap,
+  .vision-card {
+    padding: 28px 18px;
+  }
+
+  .calc-sliders {
+    gap: 18px;
+  }
+
+  .audience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .floating-contact-bar {
+    bottom: 16px;
+    right: 16px;
+    gap: 10px;
+  }
+
+  .fab-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+}
+
+/* ==========================================================================
+   Breakpoints: Small Phones (max-width: 480px)
+   ========================================================================== */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .brand-logo .logo-symbol {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .brand-text h1 {
+    font-size: 16px;
+  }
+
+  .brand-text span {
+    font-size: 9px;
+  }
+
+  .hero-badge {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+
+  .hero-form-card {
+    padding: 20px 14px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .return-amount {
+    font-size: 32px;
+  }
+
+  .space-visual {
+    height: 200px;
+  }
+
+  .map-visual-box {
+    height: 220px;
+  }
+
+  .why-item {
+    padding: 16px;
+  }
+
+  .feature-card {
+    padding: 24px 18px;
+  }
+}@media (max-width: 991px) {
+  .navbar { padding: 0; }
+  .navbar-container {
+    padding: 8px 18px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+  .navbar-collapse {
+    margin-top: 10px;
+    padding: 16px 18px;
+    background: rgba(0, 0, 0, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .navbar-nav { gap: 4px; }
+  .nav-link { padding: 10px 8px !important; font-size: 14.5px; }
+  .navbar-right {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+  }
+  .btn-contact-nav { width: 100%; text-align: center; font-size: 13px; }
+  .main-footer { padding: 65px 0 30px; }
+  .footer-top-row { gap: 28px 0; }
+}
+
+@media (max-width: 767px) {
+  .navbar-container {
+    padding: 8px 14px;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+  }
+  .navbar-brand img { max-height: 55px !important; }
+  .main-footer { padding: 55px 0 25px; }
+  .footer-top-row { gap: 24px 0; }
+  .footer-brand-title { font-size: 18px; }
+  .footer-social-icons { gap: 8px; }
+  .footer-social-btn { width: 32px; height: 32px; font-size: 13.5px; }
+  .footer-brand img { max-height: 70px !important; }
+  .footer-col-title { font-size: 14.5px; margin-bottom: 12px; }
+}
+
+@media (max-width: 575px) {
+  .navbar-brand img { max-height: 45px !important; }
+  .main-footer { padding: 45px 0 20px; }
+  .footer-brand img { max-height: 60px !important; }
+}

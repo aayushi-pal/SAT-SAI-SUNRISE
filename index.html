@@ -7,6 +7,13 @@
 
     <title>SAT-SAI-SUNRISE | Premium Real Estate</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="images/fevicon-clean.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -66,28 +73,28 @@
                     <ul class="navbar-nav mx-auto">
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="#home">
+                            <a class="nav-link active" href="">
                                 Home
                             </a>
                         </li>
 
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#properties">
+                            <a class="nav-link" href="projects.html">
                                 Projects
                             </a>
                         </li>
 
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#about">
+                            <a class="nav-link" href="about.html">
                                 About Us
                             </a>
                         </li>
 
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact">
+                            <a class="nav-link" href="contact.html">
                                 Contact
                             </a>
                         </li>
@@ -122,9 +129,23 @@
 
         <section class="hero-section" id="home">
 
+            <!-- Hero Background Slider -->
+            <div class="hero-slider" id="heroSlider">
+                <div class="hero-slide active" style="background-image: url('images/Aarambh-Resorts-slide-img.png');">
+                </div>
+                <div class="hero-slide" style="background-image: url('images/Core-mall-slide-img.png');"></div>
+                <div class="hero-slide" style="background-image: url('images/Heaven-forest-slide-img.png');"></div>
+            </div>
+
             <!-- Background Overlay -->
             <div class="hero-overlay"></div>
 
+            <!-- Hero Slider Indicators -->
+            <div class="hero-slider-dots" aria-label="Hero slider pagination">
+                <button type="button" class="hero-dot active" aria-label="Slide 1" data-slide="0"></button>
+                <button type="button" class="hero-dot" aria-label="Slide 2" data-slide="1"></button>
+                <button type="button" class="hero-dot" aria-label="Slide 3" data-slide="2"></button>
+            </div>
 
             <div class="container hero-container">
 
@@ -231,92 +252,192 @@
                     #propSlider::-webkit-scrollbar {
                         display: none;
                     }
+
+                    .prop-slider-wrapper {
+                        position: relative;
+                        padding: 0 45px;
+                    }
+
+                    .prop-nav-btn {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 48px;
+                        height: 48px;
+                        background: #ffffff;
+                        border: 1px solid rgba(0, 0, 0, 0.08);
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+                        color: #1e221c;
+                        font-size: 20px;
+                        cursor: pointer;
+                        z-index: 10;
+                        transition: all 0.25s ease;
+                    }
+
+                    .prop-nav-btn:hover {
+                        background: #9a6a24;
+                        color: #ffffff;
+                        box-shadow: 0 6px 20px rgba(154, 106, 36, 0.35);
+                        transform: translateY(-50%) scale(1.08);
+                    }
+
+                    .prop-nav-prev {
+                        left: -15px;
+                    }
+
+                    .prop-nav-next {
+                        right: -15px;
+                    }
+
+                    @media (max-width: 991px) {
+                        .prop-slider-wrapper {
+                            padding: 0 30px;
+                        }
+
+                        .prop-nav-prev {
+                            left: -8px;
+                        }
+
+                        .prop-nav-next {
+                            right: -8px;
+                        }
+                    }
+
+                    @media (max-width: 768px) {
+                        .prop-slider-item {
+                            flex: 0 0 100% !important;
+                            min-width: 100% !important;
+                        }
+                    }
+
+                    @media (max-width: 576px) {
+                        .prop-slider-wrapper {
+                            padding: 0 15px;
+                        }
+
+                        .prop-nav-btn {
+                            width: 38px;
+                            height: 38px;
+                            font-size: 16px;
+                        }
+
+                        .prop-nav-prev {
+                            left: -5px;
+                        }
+
+                        .prop-nav-next {
+                            right: -5px;
+                        }
+                    }
                 </style>
-                <!-- Property Cards Slider -->
-                <div class="d-flex" id="propSlider"
-                    style="overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; gap: 1.5rem; padding-bottom: 20px; -ms-overflow-style: none; scrollbar-width: none;">
 
-                    <!-- Property Card 1 -->
-                    <div style="flex: 0 0 calc(50% - 0.75rem); scroll-snap-align: start; min-width: 320px;">
+                <!-- Property Cards Slider Wrapper -->
+                <div class="prop-slider-wrapper">
+                    <!-- Prev Arrow Button -->
+                    <button type="button" class="prop-nav-btn prop-nav-prev" id="propPrevBtn"
+                        aria-label="Previous properties">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
 
-                        <div class="featured-property-card">
+                    <!-- Property Cards Slider -->
+                    <div class="d-flex" id="propSlider"
+                        style="overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; gap: 1.5rem; padding-bottom: 20px; -ms-overflow-style: none; scrollbar-width: none;">
 
-                            <div class="property-img-wrap">
+                        <!-- Property Card 1 -->
+                        <div class="prop-slider-item"
+                            style="flex: 0 0 calc(50% - 0.75rem); scroll-snap-align: start; min-width: 320px;">
 
-                                <img src="images/the-core-mall-hero.png" alt="The Core Mall" loading="lazy">
+                            <div class="featured-property-card">
 
-                            </div>
+                                <div class="property-img-wrap">
 
-                            <div class="property-info-wrap">
+                                    <img src="images/the-core-mall-hero.png" alt="The Core Mall" loading="lazy">
 
-                                <h3 class="property-card-name">The Core Mall</h3>
-
-                                <div class="property-location-tag">
-                                    <i class="bi bi-geo-alt-fill"></i>
-                                    <span>Ghaziabad</span>
                                 </div>
-                                <a href="#" class="btn w-100 mt-4 view-property-btn"
-                                    style="background-color: #9a6a24; color: #ffffff; border-radius: 8px; font-weight: 600; padding: 10px 0; transition: background-color 0.3s ease;"
-                                    onmouseover="this.style.backgroundColor='#75501b'"
-                                    onmouseout="this.style.backgroundColor='#9a6a24'">View Property</a>
+
+                                <div class="property-info-wrap">
+
+                                    <h3 class="property-card-name">The Core Mall</h3>
+
+                                    <div class="property-location-tag">
+                                        <i class="bi bi-geo-alt-fill"></i>
+                                        <span>Ghaziabad</span>
+                                    </div>
+                                    <a href="./The-Core-Mall/" class="btn w-100 mt-4 view-property-btn"
+                                        style="background-color: #9a6a24; color: #ffffff; border-radius: 8px; font-weight: 600; padding: 10px 0; transition: background-color 0.3s ease;"
+                                        onmouseover="this.style.backgroundColor='#75501b'"
+                                        onmouseout="this.style.backgroundColor='#9a6a24'">View Property</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
 
-                    <!-- Property Card 2 -->
-                    <div style="flex: 0 0 calc(50% - 0.75rem); scroll-snap-align: start; min-width: 320px;">
+                        <!-- Property Card 2 -->
+                        <div class="prop-slider-item"
+                            style="flex: 0 0 calc(50% - 0.75rem); scroll-snap-align: start; min-width: 320px;">
 
-                        <div class="featured-property-card">
+                            <div class="featured-property-card">
 
-                            <div class="property-img-wrap">
+                                <div class="property-img-wrap">
 
-                                <img src="images/Aarambh-Resorts-hero.png" alt="The Aarambh Resorts" loading="lazy">
+                                    <img src="images/Aarambh-Resorts-hero.png" alt="The Aarambh Resorts" loading="lazy">
 
-                            </div>
-
-                            <div class="property-info-wrap">
-                                <h3 class="property-card-name">The Aarambh Resorts</h3>
-
-                                <div class="property-location-tag">
-                                    <i class="bi bi-geo-alt-fill"></i>
-                                    <span>Dev Bhoomi Uttarakhand</span>
                                 </div>
-                                <a href="#" class="btn w-100 mt-4 view-property-btn"
-                                    style="background-color: #9a6a24; color: #ffffff; border-radius: 8px; font-weight: 600; padding: 10px 0; transition: background-color 0.3s ease;"
-                                    onmouseover="this.style.backgroundColor='#75501b'"
-                                    onmouseout="this.style.backgroundColor='#9a6a24'">View Property</a>
+
+                                <div class="property-info-wrap">
+                                    <h3 class="property-card-name">The Aarambh Resorts</h3>
+
+                                    <div class="property-location-tag">
+                                        <i class="bi bi-geo-alt-fill"></i>
+                                        <span>Dev Bhoomi Uttarakhand</span>
+                                    </div>
+                                    <a href="./Aarambh Resort/" class="btn w-100 mt-4 view-property-btn"
+                                        style="background-color: #9a6a24; color: #ffffff; border-radius: 8px; font-weight: 600; padding: 10px 0; transition: background-color 0.3s ease;"
+                                        onmouseover="this.style.backgroundColor='#75501b'"
+                                        onmouseout="this.style.backgroundColor='#9a6a24'">View Property</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
 
-                    <!-- Property Card 3 -->
-                    <div style="flex: 0 0 calc(50% - 0.75rem); scroll-snap-align: start; min-width: 320px;">
+                        <!-- Property Card 3 -->
+                        <div class="prop-slider-item"
+                            style="flex: 0 0 calc(50% - 0.75rem); scroll-snap-align: start; min-width: 320px;">
 
-                        <div class="featured-property-card">
+                            <div class="featured-property-card">
 
-                            <div class="property-img-wrap">
+                                <div class="property-img-wrap">
 
-                                <img src="images/Heaven-forest-hero.png" alt="Heaven in the forest" loading="lazy">
+                                    <img src="images/Heaven-forest-hero.png" alt="Heaven in the forest" loading="lazy">
 
-                            </div>
-
-                            <div class="property-info-wrap">
-                                <h3 class="property-card-name">Heaven in the forest</h3>
-
-                                <div class="property-location-tag">
-                                    <i class="bi bi-geo-alt-fill"></i>
-                                    <span>Near Kainchi Dham, Uttarakhand</span>
                                 </div>
-                                <a href="#" class="btn w-100 mt-4 view-property-btn"
-                                    style="background-color: #9a6a24; color: #ffffff; border-radius: 8px; font-weight: 600; padding: 10px 0; transition: background-color 0.3s ease;"
-                                    onmouseover="this.style.backgroundColor='#75501b'"
-                                    onmouseout="this.style.backgroundColor='#9a6a24'">View Property</a>
+
+                                <div class="property-info-wrap">
+                                    <h3 class="property-card-name">Heaven in the forest</h3>
+
+                                    <div class="property-location-tag">
+                                        <i class="bi bi-geo-alt-fill"></i>
+                                        <span>Near Kainchi Dham, Uttarakhand</span>
+                                    </div>
+                                    <a href="./Heaven-in-the-Forest/" class="btn w-100 mt-4 view-property-btn"
+                                        style="background-color: #9a6a24; color: #ffffff; border-radius: 8px; font-weight: 600; padding: 10px 0; transition: background-color 0.3s ease;"
+                                        onmouseover="this.style.backgroundColor='#75501b'"
+                                        onmouseout="this.style.backgroundColor='#9a6a24'">View Property</a>
+                                </div>
                             </div>
                         </div>
+
                     </div>
 
+                    <!-- Next Arrow Button -->
+                    <button type="button" class="prop-nav-btn prop-nav-next" id="propNextBtn"
+                        aria-label="Next properties">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
                 </div>
 
             </div>
