@@ -53,8 +53,8 @@ p {
 /* Buttons */
 .btn-primary {
     display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--text-light);
+    background-color: #dfab27;
+    color: #ffffff;
     padding: 0.8rem 1.5rem;
     border-radius: 30px;
     font-weight: 600;
@@ -65,9 +65,10 @@ p {
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-hover);
+    background-color: #c4931a;
+    color: #ffffff;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(44, 85, 48, 0.3);
+    box-shadow: 0 4px 12px rgba(223, 171, 39, 0.4);
 }
 
 .btn-primary.large {

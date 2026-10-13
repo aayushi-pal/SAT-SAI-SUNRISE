@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAT-SAI-SUNRISE | Contact</title>
+    <title>Contact Us | SAT-SAI-SUNRISE REALITY</title>
+    <meta name="description"
+        content="Get in touch with SAT-SAI-SUNRISE REALITY for luxury homes, commercial spaces, and high-growth land investments across Delhi NCR and Uttarakhand.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -19,6 +21,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -28,7 +31,9 @@
     <link rel="stylesheet" href="css/responsive.css">
 
     <style>
-        /* Specific Styles for Projects Page matching the design */
+        /* =====================================================
+           HEADER & PAGE STRUCTURE (EXACT MATCH TO ABOUT.HTML)
+        ====================================================== */
         .project-hero-header {
             position: relative;
             background: url('images/Hero-section-bg.png') no-repeat center center / cover;
@@ -41,6 +46,7 @@
             position: absolute;
             inset: 0;
             background: rgba(0, 0, 0, 0.2);
+            pointer-events: none;
         }
 
         .project-navbar-container {
@@ -55,6 +61,7 @@
         .project-nav-pill {
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             border-radius: 12px;
             padding: 10px 30px;
             display: flex;
@@ -67,27 +74,29 @@
             text-decoration: none;
             font-weight: 500;
             font-size: 15px;
-            transition: color 0.3s;
+            transition: color 0.3s ease;
         }
 
-        .project-nav-pill a:hover {
+        .project-nav-pill a:hover,
+        .project-nav-pill a.active {
             color: #f7d488;
         }
 
         .project-call-btn {
-            background: rgba(255, 255, 255, 0.25);
-            backdrop-filter: blur(8px);
+            background: #dfab27;
             color: #fff;
             padding: 12px 25px;
             border-radius: 8px;
             text-decoration: none;
-            font-weight: 500;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            transition: background 0.3s;
+            font-weight: 600;
+            border: 1px solid #dfab27;
+            transition: all 0.3s ease;
+            white-space: nowrap;
         }
 
         .project-call-btn:hover {
-            background: rgba(255, 255, 255, 0.4);
+            background: #c4931a;
+            border-color: #c4931a;
             color: #fff;
         }
 
@@ -100,10 +109,11 @@
         .project-breadcrumb a {
             color: #777;
             text-decoration: none;
+            transition: color 0.2s;
         }
 
         .project-breadcrumb a:hover {
-            color: #9a6a24;
+            color: #dfab27;
         }
 
         .project-content-area {
@@ -115,118 +125,10 @@
             z-index: 10;
         }
 
-        .project-detail-card {
-            border: 1px solid #eaeaea;
-            border-radius: 8px;
-            padding: 12px;
-            background: #fff;
-        }
-
-        .project-detail-card img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            display: block;
-        }
-
-        .project-contact-form {
-            background: #1c352a;
-            border-radius: 8px;
-            padding: 40px 30px;
-            position: sticky;
-            top: 30px;
-        }
-
-        .project-contact-form h4 {
-            color: #fff;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-            margin-bottom: 30px;
-            font-size: 22px;
-        }
-
-        /* New Listing Styles */
-        .listing-card {
-            border-radius: 12px;
-            overflow: hidden;
-            position: relative;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-            background: #fff;
-            display: block;
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .listing-card:hover {
-            transform: translateY(-5px);
-            color: inherit;
-        }
-
-        .listing-card img {
-            width: 150%;
-            height: 350px;
-            object-fit: cover;
-        }
-
-        .card-info {
-            padding: 20px;
-            background: #fff;
-            border-top: 1px solid #eee;
-        }
-
-        .card-title {
-            font-size: 20px;
-            font-weight: 600;
-            color: #1c352a;
-            margin-bottom: 8px;
-        }
-
-        .card-location {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 0;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .card-location i {
-            color: #9a6a24;
-        }
-
-        .card-tags {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            right: 15px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .tag-dark {
-            background: #1c352a;
-            color: #fff;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 500;
-        }
-
-        .tag-light {
-            background: #dceada;
-            color: #1c352a;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 500;
-        }
-
         .projects-intro-title {
             color: #1c352a;
             font-weight: 600;
+            font-size: 32px;
             margin-bottom: 20px;
         }
 
@@ -238,365 +140,485 @@
             margin: 0 auto;
         }
 
-        /* Info Box */
-        .projects-info-box {
-            border: 1px solid #dceada;
-            border-radius: 12px;
-            padding: 40px;
-            background: #fff;
-            margin-bottom: 60px;
+        /* =====================================================
+           3 CONTACT CARDS (MATCHING APPROVED SCREENSHOT)
+        ====================================================== */
+        .contact-cards-section {
+            padding: 10px 0 45px 0;
         }
 
-        .info-box-title {
-            color: #1c352a;
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        .info-box-text {
-            color: #444;
-            font-size: 15px;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        /* Contact Cards Styles */
-        .contact-info-card {
-            border: 1px solid #eaeaea;
-            border-radius: 12px;
-            padding: 30px;
-            background: #fff;
+        .luxury-info-card {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 34px 28px;
             height: 100%;
-            transition: box-shadow 0.3s;
-        }
-
-        .contact-info-card:hover {
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        }
-
-        .contact-card-header {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 25px;
-        }
-
-        .contact-card-header .icon-circle {
-            width: 45px;
-            height: 45px;
-            background: #113426;
-            color: #fff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-        }
-
-        .contact-card-header .arrow-circle {
-            width: 45px;
-            height: 45px;
-            border: 1px solid #eaeaea;
-            color: #113426;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-        }
-
-        .contact-info-card h4 {
-            color: #113426;
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        .contact-info-card p {
-            color: #555;
-            font-size: 15px;
-            margin-bottom: 12px;
-            line-height: 1.6;
-        }
-
-        .btn-read-more {
-            display: inline-block;
-            background: #dceada;
-            color: #1c352a;
-            padding: 10px 25px;
-            border-radius: 4px;
-            font-size: 13px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: background 0.3s;
-            margin-top: 10px;
-        }
-
-        .btn-read-more:hover {
-            background: #c2dfbe;
-            color: #1c352a;
-        }
-
-        /* FAQ Section */
-        .projects-faq-section {
-            max-width: 900px;
-            margin: 0 auto 50px auto;
-        }
-
-        .faq-title {
-            color: #1c352a;
-            font-size: 32px;
-            font-weight: 600;
-            margin-bottom: 30px;
-        }
-
-        .faq-list {
+            border: 1px solid #ede8de;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.02);
+            transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
         }
 
-        .faq-item {
-            padding: 15px 0;
-            border-bottom: 1px solid #eaeaea;
-            color: #1c352a;
-            font-size: 16px;
-            font-weight: 500;
+        .luxury-info-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(223, 171, 39, 0.12);
+            border-color: #dfab27;
         }
 
-        .faq-item:last-child {
-            border-bottom: none;
+        .card-icon-orb {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            background: #fdf8ee;
+            border: 1px solid rgba(223, 171, 39, 0.3);
+            color: #dfab27;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin-bottom: 22px;
+            transition: all 0.3s ease;
         }
 
-        .project-contact-form h4 i {
-            color: #7ab87a;
-            font-size: 18px;
+        .luxury-info-card:hover .card-icon-orb {
+            background: #dfab27;
+            color: #ffffff;
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(223, 171, 39, 0.28);
         }
 
-        .form-control-custom {
-            background: #fff;
-            border: none;
-            border-radius: 6px;
-            padding: 15px;
-            margin-bottom: 20px;
-            width: 100%;
+        .card-category-tag {
+            font-family: 'Poppins', sans-serif;
+            font-size: 11px;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #dfab27;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        .luxury-info-card h3 {
+            font-family: 'Poppins', sans-serif !important;
+            font-size: 21px;
+            font-weight: 700;
+            color: #111111;
+            margin-bottom: 12px;
+            letter-spacing: -0.2px;
+        }
+
+        .card-desc {
+            color: #555555;
             font-size: 14px;
-            color: #333;
+            line-height: 1.6;
+            margin-bottom: 14px;
+        }
+
+        .card-highlight-link {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16.5px;
+            font-weight: 700;
+            color: #111111;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 10px;
+            transition: color 0.2s ease;
+        }
+
+        .card-highlight-link:hover {
+            color: #dfab27;
+        }
+
+        .card-meta-note {
+            font-size: 13px;
+            color: #666666;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .card-company-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: #111111;
+            letter-spacing: 0.3px;
+            margin-bottom: 8px;
+        }
+
+        .card-address-text {
+            color: #555555;
+            font-size: 13.5px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* =====================================================
+           TWO COLUMN SECTION: ADVANTAGE & FORM
+        ====================================================== */
+        .contact-main-wrapper {
+            padding: 20px 0 50px 0;
+        }
+
+        .concierge-card {
+            background: linear-gradient(145deg, #111111 0%, #1a1a1a 100%);
+            border-radius: 20px;
+            padding: 42px 36px;
+            color: #ffffff;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(223, 171, 39, 0.32);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+        }
+
+        .concierge-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 260px;
+            height: 260px;
+            background: radial-gradient(circle, rgba(223, 171, 39, 0.16) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .concierge-tag {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #dfab27;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .concierge-title {
+            font-size: 30px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.25;
+            margin-bottom: 16px;
+        }
+
+        .concierge-desc {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.65;
+            margin-bottom: 30px;
+        }
+
+        .concierge-perks-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 32px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .concierge-perk-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+        .perk-icon-check {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: rgba(223, 171, 39, 0.18);
+            border: 1.5px solid #dfab27;
+            color: #dfab27;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .perk-text-title {
+            font-size: 14.5px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 2px;
+        }
+
+        .perk-text-sub {
+            font-size: 12.5px;
+            color: rgba(255, 255, 255, 0.65);
+            line-height: 1.45;
+            margin: 0;
+        }
+
+        .hotline-subcard {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
+            border-radius: 14px;
+            padding: 18px;
+            border: 1px solid rgba(223, 171, 39, 0.35);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .hotline-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #dfab27;
+            color: #111111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+            box-shadow: 0 6px 16px rgba(223, 171, 39, 0.28);
+        }
+
+        .hotline-info h6 {
+            font-size: 11.5px;
+            letter-spacing: 1px;
+            color: #dfab27;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+            font-weight: 600;
+        }
+
+        .hotline-info a {
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .hotline-info a:hover {
+            color: #dfab27;
+        }
+
+        .form-luxury-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 42px 38px;
+            box-shadow: 0 14px 40px rgba(0, 0, 0, 0.05);
+            border: 1px solid #ede8de;
+            position: relative;
+        }
+
+        .form-top-accent {
+            position: absolute;
+            top: 0;
+            left: 38px;
+            right: 38px;
+            height: 4px;
+            background: linear-gradient(90deg, #dfab27, #f7d579, #dfab27);
+            border-radius: 0 0 4px 4px;
+        }
+
+        .form-luxury-header {
+            margin-bottom: 26px;
+        }
+
+        .form-luxury-header h3 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #111111;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .form-luxury-header h3 i {
+            color: #dfab27;
+            font-size: 22px;
+        }
+
+        .form-luxury-header p {
+            font-size: 13.5px;
+            color: #555555;
+            margin: 0;
+        }
+
+        .luxury-field-group {
+            margin-bottom: 18px;
+            position: relative;
+        }
+
+        .luxury-field-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: #111111;
+            margin-bottom: 6px;
+        }
+
+        .input-with-icon {
+            position: relative;
+        }
+
+        .input-with-icon i {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888888;
+            font-size: 16px;
+            pointer-events: none;
+            transition: color 0.25s ease;
+        }
+
+        .luxury-input,
+        .luxury-select,
+        .luxury-textarea {
+            width: 100%;
+            height: 48px;
+            background: #faf8f5;
+            border: 1.5px solid #e2ddd3;
+            border-radius: 10px;
+            padding: 0 16px 0 46px;
+            font-size: 14px;
+            color: #111111;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.25s ease;
             outline: none;
         }
 
-        .btn-submit-custom {
-            background: #d4f0cc;
-            color: #1c352a;
-            border: none;
-            padding: 15px;
-            border-radius: 6px;
+        .luxury-select {
+            cursor: pointer;
+            padding-right: 36px;
+        }
+
+        .luxury-textarea {
+            height: 110px;
+            padding: 12px 16px 12px 46px;
+            resize: vertical;
+        }
+
+        .luxury-field-group textarea+.textarea-icon {
+            position: absolute;
+            left: 16px;
+            top: 38px;
+            transform: none;
+            color: #888888;
+            font-size: 16px;
+            pointer-events: none;
+        }
+
+        .luxury-input:focus,
+        .luxury-select:focus,
+        .luxury-textarea:focus {
+            background: #ffffff;
+            border-color: #dfab27;
+            box-shadow: 0 0 0 3px rgba(223, 171, 39, 0.28);
+        }
+
+        .luxury-field-group:focus-within i {
+            color: #dfab27;
+        }
+
+        .btn-luxury-submit {
             width: 100%;
-            font-weight: 600;
+            height: 52px;
+            background: linear-gradient(135deg, #dfab27 0%, #c4931a 100%);
+            color: #111111;
+            font-weight: 700;
+            border: 1.5px solid #dfab27;
+            border-radius: 10px;
+            font-size: 15.5px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(223, 171, 39, 0.28);
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .btn-luxury-submit:hover {
+            background: #111111;
+            color: #dfab27;
+            border-color: #dfab27;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-guarantee-note {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
-            cursor: pointer;
-            transition: background 0.3s;
+            font-size: 12px;
+            color: #555555;
+            margin-top: 14px;
+            margin-bottom: 0;
+            text-align: center;
         }
 
-        .btn-submit-custom:hover {
-            background: #b5e4a8;
-        }
-
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #25d366;
-            color: white;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-            z-index: 100;
-            text-decoration: none;
-            transition: transform 0.3s;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            color: white;
-        }
-
-        .project-meta-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            border: 1px solid #eaeaea;
-            border-radius: 12px;
-            padding: 20px 25px;
-            margin-top: 30px;
-        }
-
-        .project-meta-left h5 {
-            font-size: 20px;
-            font-weight: 700;
-            color: #113426;
-            margin-bottom: 8px;
-        }
-
-        .project-meta-left p {
-            color: #555;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-size: 14.5px;
-        }
-
-        .project-meta-right {
-            text-align: right;
-        }
-
-        .project-meta-right .badge-features {
-            background: #d4f0cc;
-            color: #113426;
-            padding: 5px 15px;
-            border-radius: 6px;
-            font-weight: 600;
+        .form-guarantee-note i {
+            color: #25D366;
             font-size: 14px;
-            margin-bottom: 8px;
-            display: inline-block;
         }
 
-        .project-meta-right p {
-            color: #666;
-            font-size: 14px;
-            margin: 0;
+        /* =====================================================
+           MAP SECTION
+        ====================================================== */
+        .map-showcase-section {
+            padding: 10px 0 20px 0;
         }
 
-        .project-content-block {
-            border: 1px solid #eaeaea;
-            border-radius: 12px;
-            padding: 40px;
-            margin-top: 30px;
+        .map-luxury-card {
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #ede8de;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
         }
 
-        .project-content-block h2 {
-            font-size: 30px;
-            font-weight: 700;
-            color: #113426;
-            margin-bottom: 25px;
-            line-height: 1.4;
-        }
-
-        .project-content-block h3 {
-            font-size: 24px;
-            font-weight: 700;
-            color: #113426;
-            margin-bottom: 20px;
-            margin-top: 40px;
-        }
-
-        .project-content-block p {
-            color: #555;
-            line-height: 1.8;
-            font-size: 15px;
-            margin-bottom: 18px;
-        }
-
-        .project-list {
-            list-style: none;
-            padding: 0;
-            margin-top: 20px;
-        }
-
-        .project-list li {
+        .map-iframe-container {
+            height: 440px;
+            width: 100%;
             position: relative;
-            padding-left: 20px;
-            margin-bottom: 15px;
-            color: #555;
-            line-height: 1.7;
-            font-size: 15px;
         }
 
-        .project-list li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            top: -2px;
-            color: #555;
-            font-size: 20px;
+        .map-iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
 
-        .project-list li strong {
-            color: #333;
-        }
+        /* =====================================================
+           RESPONSIVE BREAKPOINTS (MATCHING ABOUT & PROJECTS)
+        ====================================================== */
+        @media (max-width: 991px) {
+            .project-navbar-container {
+                padding: 0 20px;
+            }
 
-        .amenities-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-            margin-top: 25px;
-        }
+            .project-content-area {
+                padding: 20px 20px 40px 20px;
+            }
 
-        .amenity-item {
-            color: #555;
-            font-size: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+            .form-luxury-card {
+                padding: 32px 24px;
+            }
 
-        .amenity-item i {
-            color: #7ab87a;
-            font-size: 18px;
-        }
+            .concierge-card {
+                padding: 32px 24px;
+            }
 
-        .faq-accordion .accordion-item {
-            border: none;
-            border-bottom: 1px solid #eaeaea;
-            border-radius: 0;
-        }
-
-        .faq-accordion .accordion-item:last-child {
-            border-bottom: none;
-        }
-
-        .faq-accordion .accordion-button {
-            padding: 20px 0;
-            font-weight: 600;
-            color: #113426;
-            background: transparent !important;
-            box-shadow: none !important;
-            font-size: 16px;
-        }
-
-        .faq-accordion .accordion-button:not(.collapsed) {
-            color: #113426;
-            background-color: #f8f9fa !important;
-        }
-
-        .faq-accordion .accordion-body {
-            padding: 0 0 20px 0;
-            color: #666;
-            line-height: 1.7;
+            .map-iframe-container {
+                height: 350px;
+            }
         }
 
         @media (max-width: 768px) {
-            .project-meta-bar {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .project-meta-right {
-                text-align: left;
-            }
-
-            .amenities-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .project-hero-header {
+                min-height: 320px;
             }
 
             .project-navbar-container {
@@ -606,31 +628,20 @@
             }
 
             .project-content-area {
-                padding: 20px 15px 50px 15px;
+                padding: 20px 15px 40px 15px;
+                margin-top: -40px;
             }
 
             .projects-intro-title {
                 font-size: 24px;
             }
 
-            .projects-info-box {
-                padding: 25px;
-            }
-
-            .info-box-title {
-                font-size: 20px;
-            }
-
-            .faq-title {
-                font-size: 26px;
+            .concierge-title {
+                font-size: 24px;
             }
         }
 
         @media (max-width: 500px) {
-            .amenities-grid {
-                grid-template-columns: 1fr;
-            }
-
             .project-nav-pill {
                 flex-wrap: wrap;
                 justify-content: center;
@@ -638,8 +649,9 @@
                 padding: 10px 15px;
             }
 
-            .faq-item {
-                font-size: 14px;
+            .project-call-btn {
+                width: 100%;
+                justify-content: center;
             }
         }
     </style>
@@ -647,15 +659,18 @@
 
 <body>
 
+    <!-- =====================================================
+         HEADER (IDENTICAL TO ABOUT.HTML & PROJECTS.HTML)
+    ====================================================== -->
     <header class="project-hero-header">
         <div class="project-navbar-container">
             <!-- Logo -->
             <a href="index.html" class="navbar-brand">
                 <img src="images/SSS-Realty-Logo.png" alt="SAT SAI SUNRISE REALITY"
-                    style="max-height: 60px; filter: brightness(0) invert(1);">
+                    style="max-height: 65px; object-fit: contain;">
             </a>
 
-            <!-- Center Navbar -->
+            <!-- Center Translucent Navbar Pill -->
             <div class="project-nav-pill">
                 <a href="index.html">Home</a>
                 <a href="about.html">About Us</a>
@@ -663,139 +678,311 @@
                 <a href="contact.html" style="font-weight: 600;">Contact</a>
             </div>
 
-            <!-- Right CTA -->
+            <!-- Right Call CTA Button -->
             <a href="tel:9953755303" class="project-call-btn">
                 Call us: +91 9953755303
             </a>
         </div>
     </header>
 
-    <!-- Content Area -->
+    <!-- =====================================================
+         PAGE STRUCTURE (IDENTICAL TO ABOUT.HTML)
+    ====================================================== -->
     <div class="project-content-area mx-3 mx-md-5">
 
+        <!-- Breadcrumb inside the White Content Area -->
         <div class="project-breadcrumb">
             <a href="index.html">Home</a> &nbsp;&rarr;&nbsp;
             <span style="color: #1c352a; font-weight: 500;">Contact Us</span>
         </div>
 
+        <!-- 1200px Constrained Content Container -->
         <div class="container-fluid" style="max-width: 1200px; padding: 0;">
+
+            <!-- Intro Section (Matching about.html style) -->
             <div class="text-center mb-5 mt-4">
                 <h2 class="projects-intro-title">Get In Touch</h2>
                 <p class="projects-intro-text">
-                    Whether you are looking for property investment advice, want to schedule a site visit, or have
-                    questions about our services, our team is ready to assist you.
+                    Whether you are seeking high-growth commercial assets, serene hill villas, or prime investment land
+                    parcels, our dedicated advisory team is here to assist you every step of the way.
                 </p>
             </div>
 
-            <!-- Contact Cards -->
-            <div class="row g-4 mb-5">
-                <!-- Card 1: Call Us -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="contact-info-card">
-                        <div class="contact-card-header">
-                            <div class="icon-circle"><i class="bi bi-telephone"></i></div>
-                        </div>
-                        <h4>Call Us</h4>
-                        <p>For Sales: +91 9953755303</p>
-                        <p>For Hiring Query: +91 9953755303</p>
-                        <p>Mon – Sun: 10:00 am – 6:30 pm</p>
-                    </div>
-                </div>
+            <!-- =====================================================
+                 3 CONTACT CARDS (MATCHING APPROVED SCREENSHOT)
+            ====================================================== -->
+            <section class="contact-cards-section">
+                <div class="row g-4">
 
-                <!-- Card 2: Email Us -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="contact-info-card">
-                        <div class="contact-card-header">
-                            <div class="icon-circle"><i class="bi bi-envelope"></i></div>
+                    <!-- Card 1: Direct Calling & WhatsApp -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="luxury-info-card">
+                            <div class="card-icon-orb">
+                                <i class="bi bi-telephone-outbound"></i>
+                            </div>
+                            <span class="card-category-tag">DIRECT CONSULTATION</span>
+                            <h3>Call &amp; WhatsApp</h3>
+                            <p class="card-desc">Speak directly with our senior property advisors for instant details
+                                and bookings:</p>
+                            <a href="tel:9953755303" class="card-highlight-link">+91 9953755303</a>
+                            <p class="card-meta-note">
+                                <i class="bi bi-clock-fill" style="color: #dfab27;"></i> Mon – Sun: 10:00 AM – 6:30 PM
+                            </p>
                         </div>
-                        <h4>Email Us</h4>
-                        <p>info@satsaisunrise.com</p>
-                        <p>We'll respond within 24 hours.</p>
                     </div>
-                </div>
 
-                <!-- Card 3: Address -->
-                <div class="col-lg-4 col-md-12">
-                    <div class="contact-info-card">
-                        <div class="contact-card-header">
-                            <div class="icon-circle"><i class="bi bi-geo-alt"></i></div>
+                    <!-- Card 2: Official Email Support -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="luxury-info-card">
+                            <div class="card-icon-orb">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+                            <span class="card-category-tag">WRITTEN INQUIRIES</span>
+                            <h3>Official Email</h3>
+                            <p class="card-desc">Share your investment criteria or requirements for a comprehensive
+                                response:</p>
+                            <a href="mailto:satsaisunrisereality@gmail.com"
+                                class="card-highlight-link text-break">satsaisunrisereality@gmail.com</a>
+                            <p class="card-meta-note">
+                                <i class="bi bi-shield-check" style="color: #2e9e6b;"></i> Verified response within 24
+                                hours
+                            </p>
                         </div>
-                        <h4>Address</h4>
-                        <p>SAT-SAI-SUNRISE REALITY</p>
-                        <p>Flat 2, 5/853 B, Vaishali Green Street, Near Ramleela Ground, Sector 5, Vaishali, Sahibabad, Ghaziabad, Uttar Pradesh, 201010</p>
                     </div>
-                </div>
-            </div>
 
-            <div class="row g-5 mb-5 justify-content-center">
-                <!-- Centered Contact Form -->
-                <div class="col-lg-8">
-                    <div class="project-contact-form"
-                        style="background: #1c352a; border-radius: 12px; padding: 40px; position: relative; top: 0;">
-                        <h4 style="color: #fff; margin-bottom: 25px;"><i class="bi bi-envelope-paper"></i> Send Us a
-                            Message</h4>
-                        <form id="contactPageForm">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <input type="text" id="waName" class="form-control-custom" placeholder="Full Name*"
-                                        required
-                                        style="width: 100%; padding: 12px; border: none; border-radius: 6px; margin-bottom: 15px;"
-                                        pattern="[A-Za-z\s]+" title="Please enter letters only"
-                                        oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')">
+                    <!-- Card 3: Corporate Office Address -->
+                    <div class="col-lg-4 col-md-12">
+                        <div class="luxury-info-card">
+                            <div class="card-icon-orb">
+                                <i class="bi bi-geo-alt-fill"></i>
+                            </div>
+                            <span class="card-category-tag">HEADQUARTERS</span>
+                            <h3>Corporate Office</h3>
+                            <div class="card-company-name">SAT-SAI-SUNRISE REALITY</div>
+                            <p class="card-address-text">
+                                Flat 2, 5/853 B, Vaishali Green Street, Near Ramleela Ground, Sector 5, Vaishali,
+                                Sahibabad, Ghaziabad, Uttar Pradesh, 201010
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- =====================================================
+                 TWO-COLUMN SECTION: CONCIERGE ADVANTAGE & LUXURY FORM
+            ====================================================== -->
+            <section class="contact-main-wrapper">
+                <div class="row g-5 align-items-stretch">
+
+                    <!-- Left Column: The SAT-SAI-SUNRISE Advantage -->
+                    <div class="col-lg-5">
+                        <div class="concierge-card">
+                            <span class="concierge-tag">TRANSPARENT REAL ESTATE</span>
+                            <h2 class="concierge-title">Why Partner With <br>SAT-SAI-SUNRISE?</h2>
+                            <p class="concierge-desc">
+                                We bridge your aspirations with verified, wealth-generating properties through ethical
+                                guidance, deep market intelligence, and continuous handholding.
+                            </p>
+
+                            <ul class="concierge-perks-list">
+                                <li class="concierge-perk-item">
+                                    <div class="perk-icon-check"><i class="bi bi-check-lg"></i></div>
+                                    <div>
+                                        <div class="perk-text-title">100% RERA Verified Portfolio</div>
+                                        <p class="perk-text-sub">Every project undergoes meticulous due-diligence for
+                                            title approvals and sanctions.</p>
+                                    </div>
+                                </li>
+                                <li class="concierge-perk-item">
+                                    <div class="perk-icon-check"><i class="bi bi-check-lg"></i></div>
+                                    <div>
+                                        <div class="perk-text-title">Complimentary Chauffeur Site Visits</div>
+                                        <p class="perk-text-sub">Experience private, escorted site tours with our senior
+                                            advisors at your preferred schedule.</p>
+                                    </div>
+                                </li>
+                                <li class="concierge-perk-item">
+                                    <div class="perk-icon-check"><i class="bi bi-check-lg"></i></div>
+                                    <div>
+                                        <div class="perk-text-title">Direct Developer Association</div>
+                                        <p class="perk-text-sub">Enjoy priority inventory selection, pre-launch payment
+                                            plans, and absolute transparency.</p>
+                                    </div>
+                                </li>
+                                <li class="concierge-perk-item">
+                                    <div class="perk-icon-check"><i class="bi bi-check-lg"></i></div>
+                                    <div>
+                                        <div class="perk-text-title">End-to-End Documentation Support</div>
+                                        <p class="perk-text-sub">Hassle-free loan processing, legal registration, stamp
+                                            duty assistance, and handover care.</p>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <!-- Direct Hotline Callout -->
+                            <div class="hotline-subcard">
+                                <div class="hotline-avatar">
+                                    <i class="bi bi-headset"></i>
                                 </div>
-                                <div class="col-md-6">
-                                    <input type="tel" id="waPhone" class="form-control-custom"
-                                        placeholder="Mobile Number*" required
-                                        style="width: 100%; padding: 12px; border: none; border-radius: 6px; margin-bottom: 15px;"
-                                        pattern="\d{10}" title="Please enter a valid 10-digit mobile number"
-                                        oninput="this.value = this.value.replace(/[^0-9]/g, '')" maxlength="10">
-                                </div>
-                                <div class="col-12">
-                                    <input type="email" id="waEmail" class="form-control-custom"
-                                        placeholder="Email Address*" required
-                                        style="width: 100%; padding: 12px; border: none; border-radius: 6px; margin-bottom: 15px;"
-                                        pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
-                                        title="Please enter a valid email address">
-                                </div>
-                                <div class="col-12">
-                                    <textarea id="waMessage" class="form-control-custom" placeholder="Your Message*"
-                                        rows="4" required
-                                        style="width: 100%; padding: 12px; border: none; border-radius: 6px; margin-bottom: 20px;"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn-submit-custom"
-                                        style="background: #9a6a24; color: #fff; border: none; padding: 12px 30px; border-radius: 6px; font-weight: 600; width: 100%;">
-                                        Submit <i class="bi bi-arrow-right"></i>
-                                    </button>
+                                <div class="hotline-info">
+                                    <h6>Need Quick Assistance?</h6>
+                                    <a href="tel:9953755303">+91 9953755303</a>
                                 </div>
                             </div>
-                        </form>
+
+                        </div>
                     </div>
+
+                    <!-- Right Column: WhatsApp Integrated Contact Form -->
+                    <div class="col-lg-7">
+                        <div class="form-luxury-card">
+                            <div class="form-top-accent"></div>
+
+                            <div class="form-luxury-header">
+                                <h3>
+                                    <i class="bi bi-chat-dots-fill"></i> Send Us a Message
+                                </h3>
+                                <p>Fill out the form below to receive customized project brochures, floor plans, and
+                                    pricing directly on WhatsApp.</p>
+                            </div>
+
+                            <form id="contactPageForm">
+                                <div class="row g-3">
+
+                                    <!-- Full Name -->
+                                    <div class="col-md-6">
+                                        <div class="luxury-field-group">
+                                            <label for="waName">Full Name *</label>
+                                            <div class="input-with-icon">
+                                                <i class="bi bi-person"></i>
+                                                <input type="text" id="waName" class="luxury-input"
+                                                    placeholder="Enter your full name" required pattern="[A-Za-z\s]+"
+                                                    title="Please enter letters only"
+                                                    oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Mobile Number -->
+                                    <div class="col-md-6">
+                                        <div class="luxury-field-group">
+                                            <label for="waPhone">Mobile Number (WhatsApp) *</label>
+                                            <div class="input-with-icon">
+                                                <i class="bi bi-telephone"></i>
+                                                <input type="tel" id="waPhone" class="luxury-input"
+                                                    placeholder="10-digit mobile number" required pattern="\d{10}"
+                                                    title="Please enter a valid 10-digit mobile number"
+                                                    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                                                    maxlength="10">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Email Address -->
+                                    <div class="col-md-6">
+                                        <div class="luxury-field-group">
+                                            <label for="waEmail">Email Address *</label>
+                                            <div class="input-with-icon">
+                                                <i class="bi bi-envelope"></i>
+                                                <input type="email" id="waEmail" class="luxury-input"
+                                                    placeholder="your.email@example.com" required
+                                                    pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                                                    title="Please enter a valid email address">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Property Interest -->
+                                    <div class="col-md-6">
+                                        <div class="luxury-field-group">
+                                            <label for="waProject">Property of Interest *</label>
+                                            <div class="input-with-icon">
+                                                <i class="bi bi-buildings"></i>
+                                                <select id="waProject" class="luxury-select" required>
+                                                    <option value="" disabled selected>Select project or property
+                                                    </option>
+                                                    <option value="The Core Mall (Ghaziabad - Commercial)">The Core Mall
+                                                        (Ghaziabad - Commercial)</option>
+                                                    <option value="The Aarambh Resorts (Uttarakhand - Plots)">The
+                                                        Aarambh
+                                                        Resorts (Uttarakhand - Plots)</option>
+                                                    <option value="Heaven in the Forest (Kainchi Dham - Villas)">Heaven
+                                                        in the Forest (Kainchi Dham - Villas)</option>
+                                                    <option value="Luxury Apartments">Luxury Apartments</option>
+                                                    <option value="Commercial & Retail Spaces">Commercial &amp; Retail
+                                                        Spaces</option>
+                                                    <option value="Plots & Land Investment">Plots &amp; Land Investment
+                                                    </option>
+                                                    <option value="General Consultation">General Consultation</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Message -->
+                                    <div class="col-12">
+                                        <div class="luxury-field-group">
+                                            <label for="waMessage">Your Message or Query *</label>
+                                            <div class="input-with-icon">
+                                                <textarea id="waMessage" class="luxury-textarea"
+                                                    placeholder="Tell us what you are looking for (e.g., budget, timeline, preferred location)..."
+                                                    required></textarea>
+                                                <i class="bi bi-chat-text textarea-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <div class="col-12 mt-2">
+                                        <button type="submit" class="btn-luxury-submit">
+                                            <i class="bi bi-whatsapp fs-5"></i> Send Message on WhatsApp &nbsp;<i
+                                                class="bi bi-arrow-right"></i>
+                                        </button>
+                                        <p class="form-guarantee-note">
+                                            <i class="bi bi-shield-lock-fill"></i> Your details are strictly
+                                            confidential
+                                            &amp; never shared with third parties.
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
                 </div>
-            </div>
-            <!-- Google Maps Embed -->
-            <div class="row mb-5 justify-content-center">
-                <div class="col-lg-12">
-                    <div
-                        style="border-radius: 12px; overflow: hidden; height: 450px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            </section>
+
+            <!-- =====================================================
+                 INTERACTIVE GOOGLE MAP SHOWCASE
+            ====================================================== -->
+            <section class="map-showcase-section" id="officeMap">
+                <div class="map-luxury-card">
+                    <div class="map-iframe-container">
                         <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0"
-                            marginwidth="0"
+                            marginwidth="0" title="SAT-SAI-SUNRISE Office Location Map"
                             src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Sector%205,%20Vaishali,%20Sahibabad,%20Ghaziabad,%20Uttar%20Pradesh%20-%20201010,%20India&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                            style="border: 0;"></iframe>
+                            loading="lazy"></iframe>
                     </div>
                 </div>
-            </div>
+            </section>
 
+        </div><!-- End of 1200px container-fluid -->
 
-        </div>
-    </div>
+    </div><!-- End of project-content-area -->
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/919953755303" target="_blank" class="whatsapp-float">
+    <!-- =====================================================
+         WHATSAPP FLOATING BUTTON
+    ====================================================== -->
+    <a href="https://wa.me/919953755303" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
         <i class="bi bi-whatsapp"></i>
     </a>
 
-    <!-- MAIN FOOTER -->
+    <!-- =====================================================
+         MAIN FOOTER (IDENTICAL TO ABOUT.HTML)
+    ====================================================== -->
     <footer class="main-footer">
         <div class="container">
             <div class="row g-4 g-lg-5 footer-top-row">
@@ -809,8 +996,8 @@
                         </div>
                     </a>
                     <p class="footer-about-text">
-                        Your trusted real estate partner for premium homes, investment opportunities and a better
-                        tomorrow.
+                        Your trusted real estate partner for premium homes, commercial landmarks, and wealth-compounding
+                        investments.
                     </p>
                     <div class="footer-social-icons">
                         <a href="https://www.facebook.com/profile.php?id=61582430763586" target="_blank"
@@ -851,7 +1038,7 @@
                         <li><span>Noida</span></li>
                         <li><span>Greater Noida</span></li>
                         <li><span>Delhi NCR</span></li>
-                        <li><span>Gurgaon</span></li>
+                        <li><span>Gurugram</span></li>
                         <li><span>Yamuna Expressway</span></li>
                     </ul>
                 </div>
@@ -901,27 +1088,31 @@
                 const name = document.getElementById("waName").value.trim();
                 const phone = document.getElementById("waPhone").value.trim();
                 const email = document.getElementById("waEmail").value.trim();
+                const project = document.getElementById("waProject") ? document.getElementById("waProject").value : "General Inquiry";
                 const message = document.getElementById("waMessage").value.trim();
 
                 const whatsappNumber = "919953755303";
 
-                const text = `Hi SAT-SAI-SUNRISE REALITY,\n\nI have an enquiry from your website.\n\n*Name:* ${name}\n*Mobile:* ${phone}\n*Email:* ${email}\n*Message:* ${message}`;
+                const text = `Hi SAT-SAI-SUNRISE REALITY,\n\nI have an enquiry from your website.\n\n*Name:* ${name}\n*Mobile:* ${phone}\n*Email:* ${email}\n*Interested In:* ${project}\n*Message:* ${message}`;
 
                 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
 
                 window.open(whatsappUrl, "_blank");
 
-                const btn = this.querySelector(".btn-submit-custom");
+                const btn = this.querySelector(".btn-luxury-submit");
                 const originalHTML = btn.innerHTML;
-                const originalColor = btn.style.backgroundColor;
+                const originalBackground = btn.style.background;
+                const originalColor = btn.style.color;
 
-                btn.innerHTML = `<i class="bi bi-whatsapp"></i> Redirecting...`;
-                btn.style.backgroundColor = "#25D366";
+                btn.innerHTML = `<i class="bi bi-whatsapp"></i> Redirecting to WhatsApp...`;
+                btn.style.background = "#25D366";
+                btn.style.color = "#ffffff";
 
                 setTimeout(() => {
                     this.reset();
                     btn.innerHTML = originalHTML;
-                    btn.style.backgroundColor = originalColor;
+                    btn.style.background = originalBackground;
+                    btn.style.color = originalColor;
                 }, 3000);
             });
         }
