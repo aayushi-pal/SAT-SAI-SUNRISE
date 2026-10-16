@@ -8,8 +8,8 @@
     --light-bg: #F8F9FA;
     --text-dark: #2C3E35;
     --text-light: #E0E6E2;
-    --font-heading: 'Playfair Display', serif;
-    --font-body: 'Outfit', sans-serif;
+    --font-heading: "Roboto", sans-serif;
+    --font-body: 'Roboto', sans-serif;
 }
 
 body {

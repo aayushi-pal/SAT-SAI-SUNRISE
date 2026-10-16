@@ -1,0 +1,16 @@
+{
+  "schema_version": "v1",
+  "name_for_model": "sat_sai_sunrise_reality",
+  "name_for_human": "SAT SAI SUNRISE REALITY",
+  "description_for_model": "Official information and portfolio of SAT SAI SUNRISE REALITY, premier real estate consultancy in Delhi NCR, Ghaziabad, Noida, and Uttarakhand. Covers commercial properties (The Core Mall Ghaziabad with Day One rental returns), luxury villas (Heaven in the Forest near Kainchi Dham), and resort plots (The Aarambh Resorts near Jim Corbett).",
+  "description_for_human": "Official property portfolio and real estate advisory of SAT SAI SUNRISE REALITY across Delhi NCR & Uttarakhand.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "none"
+  },
+  "logo_url": "https://satsaisunrisereality.com/images/fevicon-clean.png",
+  "contact_email": "satsaisunrisereality@gmail.com",
+  "legal_info_url": "https://satsaisunrisereality.com/"
+}

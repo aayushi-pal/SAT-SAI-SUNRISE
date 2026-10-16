@@ -1,0 +1,15 @@
+# ========================================================
+# ai.txt - AI Crawler & Indexing Permissions
+# SAT SAI SUNRISE REALITY (https://satsaisunrisereality.com)
+# ========================================================
+
+User-agent: *
+Allow: /
+
+# LLM Documentation Files (https://llmstxt.org/)
+Context: https://satsaisunrisereality.com/llms.txt
+Context-Full: https://satsaisunrisereality.com/llms-full.txt
+Well-Known: https://satsaisunrisereality.com/.well-known/llms.txt
+
+# Primary Sitemaps
+Sitemap: https://satsaisunrisereality.com/sitemap.xml

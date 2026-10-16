@@ -4,14 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAT-SAI-SUNRISE | Projects</title>
+
+    <script>
+        if (window.location.pathname.endsWith('/index.html')) {
+            const cleanPath = window.location.pathname.replace(/\/index\.html$/, '/') || '/';
+            window.history.replaceState(null, '', cleanPath + window.location.search + window.location.hash);
+        }
+    </script>
+
+    <title>Featured Projects | Commercial & Luxury Properties | SAT-SAI-SUNRISE</title>
+    <meta name="description"
+        content="Explore premier projects by SAT SAI SUNRISE REALITY: retail shops at The Core Mall Ghaziabad, villas in Kainchi Dham, and resort plots in Uttarakhand.">
+    <meta name="keywords" content="The Core Mall Ghaziabad, Heaven in the Forest Kainchi Dham, Aarambh Resorts Jim Corbett, commercial property Delhi NCR, retail shop NH-24, luxury villas Uttarakhand">
+    <meta name="author" content="SAT SAI SUNRISE REALITY">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://satsaisunrisereality.com/projects/">
+    <link rel="alternate" type="text/markdown" href="https://satsaisunrisereality.com/llms.txt" title="LLM Context">
+    <link rel="help" type="text/markdown" href="https://satsaisunrisereality.com/llms.txt" title="LLM Documentation">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://satsaisunrisereality.com/projects/">
+    <meta property="og:title" content="Featured Projects | SAT SAI SUNRISE REALITY">
+    <meta property="og:description" content="Commercial shops with Day One rental returns and luxury residential retreats in Delhi NCR and Uttarakhand.">
+    <meta property="og:image" content="https://satsaisunrisereality.com/images/SSS-Realty-Logo.png">
+    <meta property="og:site_name" content="SAT SAI SUNRISE REALITY">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://satsaisunrisereality.com/projects/">
+    <meta name="twitter:title" content="Featured Projects | SAT SAI SUNRISE REALITY">
+    <meta name="twitter:description" content="Discover prime commercial and residential properties in Delhi NCR & Uttarakhand.">
+    <meta name="twitter:image" content="https://satsaisunrisereality.com/images/SSS-Realty-Logo.png">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Featured Projects - SAT SAI SUNRISE REALITY",
+      "url": "https://satsaisunrisereality.com/projects/",
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "The Core Mall, Ghaziabad",
+            "url": "https://satsaisunrisereality.com/The-Core-Mall/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Heaven in the Forest, Kainchi Dham",
+            "url": "https://satsaisunrisereality.com/Heaven-in-the-forest/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "The Aarambh Resorts, Jim Corbett",
+            "url": "https://satsaisunrisereality.com/Aarambh%20Resort/"
+          }
+        ]
+      }
+    }
+    </script>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="icon" type="image/png" href="images/fevicon-clean.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="../images/fevicon-clean.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -20,18 +86,18 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
         rel="stylesheet">
     <!-- Main CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="../css/responsive.css">
 
     <style>
         /* Specific Styles for Projects Page matching the design */
         .project-hero-header {
             position: relative;
-            background: url('images/Hero-section-bg.png') no-repeat center center / cover;
+            background: url('../images/Hero-section-bg.png') no-repeat center center / cover;
             min-height: 400px;
             padding-top: 20px;
         }
@@ -160,15 +226,27 @@
             color: inherit;
         }
 
-        .listing-card:hover {
-            transform: translateY(-5px);
-            color: inherit;
+        .listing-card-img-wrap {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            position: relative;
+            background: #090d16;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .listing-card img {
-            width: 150%;
-            height: 350px;
-            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .listing-card:hover img {
+            transform: scale(1.02);
         }
 
         .card-info {
@@ -507,12 +585,19 @@
         }
 
         .faq-accordion .accordion-button {
-            padding: 20px 0;
+            padding: 18px 0;
             font-weight: 600;
             color: #113426;
             background: transparent !important;
             box-shadow: none !important;
-            font-size: 16px;
+            font-size: 15.5px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .faq-accordion .accordion-button > span:first-child {
+            flex-grow: 1;
         }
 
         .faq-accordion .accordion-button:not(.collapsed) {
@@ -523,10 +608,39 @@
         .faq-accordion .accordion-body {
             padding: 0 0 20px 0;
             color: #666;
-            line-height: 1.7;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .faq-category-tag {
+            display: inline-block;
+            background: #e8f3e6;
+            color: #1c352a;
+            padding: 3px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            white-space: nowrap;
+            flex-shrink: 0;
+            margin-left: 0;
         }
 
         @media (max-width: 768px) {
+            .listing-card-img-wrap {
+                aspect-ratio: 16 / 9;
+            }
+
+            .card-tags {
+                top: 10px;
+                left: 10px;
+                right: 10px;
+            }
+
+            .tag-dark, .tag-light {
+                font-size: 11px;
+                padding: 4px 10px;
+            }
+
             .project-meta-bar {
                 flex-direction: column;
                 gap: 15px;
@@ -591,17 +705,19 @@
     <header class="project-hero-header">
         <div class="project-navbar-container">
             <!-- Logo -->
-            <a href="index.html" class="navbar-brand">
-                <img src="images/SSS-Realty-Logo.png" alt="SAT SAI SUNRISE REALITY"
+            <a href="../" class="navbar-brand">
+                <img src="../images/SSS-Realty-Logo.png" alt="SAT SAI SUNRISE REALITY"
                     style="max-height: 65px; object-fit: contain;">
             </a>
 
             <!-- Center Navbar -->
             <div class="project-nav-pill">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="projects.html" style="font-weight: 600;">Projects</a>
-                <a href="contact.html">Contact</a>
+                <a href="../">Home</a>
+                <a href="../about_us/">About Us</a>
+                <a href="./" style="font-weight: 600;">Projects</a>
+                <a href="../faq/">FAQ</a>
+                <a href="../gallery/">Gallery</a>
+                <a href="../contact_us/">Contact</a>
             </div>
 
             <!-- Right CTA -->
@@ -615,14 +731,14 @@
     <div class="project-content-area mx-3 mx-md-5">
 
         <div class="project-breadcrumb">
-            <a href="index.html">Home</a> &nbsp;&rarr;&nbsp;
+            <a href="../">Home</a> &nbsp;&rarr;&nbsp;
             <span style="color: #1c352a; font-weight: 500;">Projects</span>
         </div>
 
         <div class="container-fluid" style="max-width: 1400px; padding: 0;">
 
             <div class="text-center mb-5 mt-4">
-                <h2 class="projects-intro-title">Find the Right Property Project for Your Investment Goals</h2>
+                <h1 class="projects-intro-title">Find the Right Property Project for Your Investment Goals</h1>
                 <p class="projects-intro-text">
                     Every project featured on this page has been personally site-visited, demand-assessed, and
                     RERA-verified by our team before we recommend it to a client. We work with a carefully curated
@@ -636,12 +752,14 @@
 
                 <!-- Card 1 -->
                 <div class="col-lg-4 col-md-6">
-                    <a href="The-Core-Mall/index.html" class="listing-card">
+                    <a href="../The-Core-Mall/" class="listing-card">
                         <div class="card-tags">
                             <span class="tag-dark">Commercial</span>
                             <span class="tag-light">For Sale</span>
                         </div>
-                        <img src="images/the-core-mall-hero.png" alt="The Core Mall">
+                        <div class="listing-card-img-wrap">
+                            <img src="../images/the-core-mall-hero.png" alt="The Core Mall">
+                        </div>
                         <div class="card-info">
                             <h3 class="card-title">The Core Mall</h3>
                             <p class="card-location"><i class="bi bi-geo-alt"></i> Ghaziabad, UP</p>
@@ -652,12 +770,14 @@
 
                 <!-- Card 2 -->
                 <div class="col-lg-4 col-md-6">
-                    <a href="Heaven-in-the-forest/index.html" class="listing-card">
+                    <a href="../Heaven-in-the-forest/" class="listing-card">
                         <div class="card-tags">
                             <span class="tag-dark">Villas & Apartments</span>
                             <span class="tag-light">For Sale</span>
                         </div>
-                        <img src="images/Heaven-forest-hero.png" alt="Heaven in the Forest">
+                        <div class="listing-card-img-wrap">
+                            <img src="../images/Heaven-forest-hero.png" alt="Heaven in the Forest">
+                        </div>
                         <div class="card-info">
                             <h3 class="card-title">Heaven in the Forest</h3>
                             <p class="card-location"><i class="bi bi-geo-alt"></i> Near Kainchi Dham, Uttarakhand</p>
@@ -668,12 +788,14 @@
 
                 <!-- Card 3 -->
                 <div class="col-lg-4 col-md-6">
-                    <a href="Aarambh Resort/index.html" class="listing-card">
+                    <a href="../Aarambh Resort/" class="listing-card">
                         <div class="card-tags">
                             <span class="tag-dark">Plots</span>
                             <span class="tag-light">Features</span>
                         </div>
-                        <img src="images/Aarambh-Resorts-hero.png" alt="The Aarambh Resorts">
+                        <div class="listing-card-img-wrap">
+                            <img src="../images/Aarambh-Resorts-hero.png" alt="The Aarambh Resorts">
+                        </div>
                         <div class="card-info">
                             <h3 class="card-title">The Aarambh Resorts</h3>
                             <p class="card-location"><i class="bi bi-geo-alt"></i> Jim Corbett, Uttarakhand</p>
@@ -702,26 +824,28 @@
 
             <!-- FAQ Section -->
             <div class="projects-faq-section mt-5 pt-4">
-                <h2 class="faq-title">Frequently Asked Questions</h2>
+                <div class="text-center mb-4">
+                    <h2 class="faq-title" style="font-size: 30px; font-weight: 700; color: #113426; margin-bottom: 10px;">Featured Projects FAQ</h2>
+                    <p style="color: #666; font-size: 15px; max-width: 750px; margin: 0 auto;">
+                        Project-specific answers regarding unit sizes, possession milestones, furnishing specifications, and rental pooling for our three flagship developments.
+                    </p>
+                </div>
 
                 <div class="accordion faq-accordion" id="faqAccordion">
+                    <!-- Project 1: The Core Mall -->
                     <!-- FAQ 1 -->
                     <div class="accordion-item">
                         <h3 class="accordion-header" id="faqHeading1">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
-                                Q. What types of property does SAT-SAI-SUNRISE deal in?
+                                <span>What is the construction status and possession timeline of The Core Mall?</span>
+                                <span class="faq-category-tag">The Core Mall</span>
                             </button>
                         </h3>
                         <div id="faqCollapse1" class="accordion-collapse collapse" aria-labelledby="faqHeading1"
                             data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                SAT-SAI-SUNRISE REALITY specializes in a diverse, verified portfolio across Noida,
-                                Greater Noida, Yamuna Expressway, and premier holiday destinations. Our offerings
-                                include luxury residential apartments, independent villas, commercial retail shops &amp;
-                                food court spaces in high-footfall malls (such as The Core Mall), residential and
-                                industrial plots, as well as luxury hill township resorts (like The Aarambh Resorts) and
-                                nature retreats (Heaven in the Forest).
+                                <strong>The Core Mall</strong> (Plot-CC1, Sushant Aquapolis, Opp. Crossings Republik, NH-24) is in an advanced stage of execution with structural RCC framing and exterior glass facade glazing substantially completed. Retail fit-out handovers and brand occupancy are scheduled in planned phases, allowing early investors to begin receiving Day-One rental returns while tenant interior works proceed under professional central management.
                             </div>
                         </div>
                     </div>
@@ -731,17 +855,14 @@
                         <h3 class="accordion-header" id="faqHeading2">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
-                                Q. How are the projects listed here different from what appears on housing portals?
+                                <span>What is the minimum entry investment to buy a commercial shop or food court?</span>
+                                <span class="faq-category-tag">The Core Mall</span>
                             </button>
                         </h3>
                         <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2"
                             data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                Unlike unverified mass housing portals, every project presented by SAT-SAI-SUNRISE
-                                undergoes an intensive due-diligence review. Our property specialists conduct physical
-                                site inspections, verify builder delivery track records, and confirm clear legal titles
-                                and RERA approvals before onboarding. We do not list speculative or stalled projects,
-                                ensuring complete safety and peace of mind for our buyers and investors.
+                                Investment entry points start from <strong>₹25 Lakhs*</strong> for lockable food court outlets and double-height high-street retail spaces. Investors can choose between Construction-Linked Payment (CLP) schedules and Down Payment Plans with upfront developer pricing benefits, making Grade-A expressway commercial real estate accessible without heavy capital exposure.
                             </div>
                         </div>
                     </div>
@@ -751,38 +872,32 @@
                         <h3 class="accordion-header" id="faqHeading3">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
-                                Q. Which location is best for commercial property investment in Noida NCR right now?
+                                <span>What anchor brands, multiplex, and visitor parking facilities are planned?</span>
+                                <span class="faq-category-tag">The Core Mall</span>
                             </button>
                         </h3>
                         <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3"
                             data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                Prime commercial investment hubs include Greater Noida West (Noida Extension) due to
-                                high residential population density and retail demand, Sector 62 &amp; 63 in Noida for
-                                established corporate and IT activity, and the Yamuna Expressway belt influenced by the
-                                upcoming Noida International Airport (Jewar). Projects like The Core Mall offer
-                                exceptional retail footfall and strong rental yields.
+                                The Core Mall master plan incorporates a modern multi-screen cinema multiplex, family entertainment and gaming zones, large-format supermarket anchor stores, and a dedicated multi-level basement car parking facility designed for high weekend footfalls from the adjacent 200,000+ residents living in Crossings Republik and Sushant Aquapolis.
                             </div>
                         </div>
                     </div>
 
+                    <!-- Project 2: Heaven in the Forest -->
                     <!-- FAQ 4 -->
                     <div class="accordion-item">
                         <h3 class="accordion-header" id="faqHeading4">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
-                                Q. Can NRIs invest in commercial or residential property in Noida NCR?
+                                <span>What villa configurations and floor plans are available?</span>
+                                <span class="faq-category-tag">Heaven in the Forest</span>
                             </button>
                         </h3>
                         <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4"
                             data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                Yes. Non-Resident Indians (NRIs) and Overseas Citizens of India (OCIs) can freely
-                                acquire commercial and residential real estate in India following Reserve Bank of India
-                                (RBI) regulations. Funds can be transacted through standard NRE/NRO bank accounts.
-                                SAT-SAI-SUNRISE provides comprehensive NRI support including virtual site tours, Power
-                                of Attorney (POA) documentation guidance, legal scrutiny, and seamless milestone
-                                tracking.
+                                <strong>Heaven in the Forest</strong> offers bespoke 2 BHK, 3 BHK, and 4 BHK luxury duplex chalets and scenic mountain suites. Built-up super areas range from approximately 1,450 sq. ft. to 3,200 sq. ft., featuring double-height living areas, floor-to-ceiling insulated glass facades overlooking the Himalayan pine valley, extended viewing decks, and private lawn sit-outs.
                             </div>
                         </div>
                     </div>
@@ -792,19 +907,20 @@
                         <h3 class="accordion-header" id="faqHeading5">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
-                                Q. What is the difference between a running mall shop and an under-construction
-                                commercial project?
+                                <span>What is the driving distance from Kainchi Dham Ashram &amp; Nainital?</span>
+                                <span class="faq-category-tag">Heaven in the Forest</span>
                             </button>
                         </h3>
                         <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5"
                             data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                A running mall shop provides immediate rental returns, verified footfall, and
-                                operational brand tenants with zero construction delivery risk. Conversely, an
-                                under-construction commercial space offers lower initial entry pricing, attractive
-                                construction-linked payment schedules, and higher capital appreciation upside upon
-                                project completion. We guide you toward the right model based on whether your priority
-                                is immediate cash flow or maximum capital appreciation.
+                                The retreat is located along the scenic Bhowali-Niglat ridge:
+                                <ul>
+                                    <li><strong>Kainchi Dham (Neem Karoli Baba Ashram):</strong> Just 10–12 minutes driving distance.</li>
+                                    <li><strong>Nainital Mall Road &amp; Naini Lake:</strong> Approximately 25 minutes.</li>
+                                    <li><strong>Bhimtal &amp; Sattal Lakes:</strong> Approximately 20–30 minutes.</li>
+                                    <li><strong>Kathgodam Railway Station:</strong> Around 70 minutes via wide, all-weather NH roads.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -814,39 +930,32 @@
                         <h3 class="accordion-header" id="faqHeading6">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
-                                Q. How do I verify that a project is genuinely RERA-registered?
+                                <span>Are villas delivered fully furnished with wooden chalets and appliances?</span>
+                                <span class="faq-category-tag">Heaven in the Forest</span>
                             </button>
                         </h3>
                         <div id="faqCollapse6" class="accordion-collapse collapse" aria-labelledby="faqHeading6"
                             data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                You can verify any project's credentials on the official state RERA portal (such as <a
-                                    href="https://www.up-rera.in" target="_blank" rel="noopener noreferrer"
-                                    style="color: #dfab27; font-weight: 600;">up-rera.in</a> for Uttar Pradesh) by
-                                searching its unique RERA Registration Number. The portal displays sanctioned floor
-                                plans, financial disclosures, land title approvals, and promised completion timelines.
-                                Our team provides verified RERA certificates and approval records upfront.
+                                Yes, buyers can opt for turnkey fully furnished delivery packages. These include handcrafted timber woodwork, European modular kitchen with chimney and hob, wooden-finish flooring, premium bathroom fittings with geysers, living room ambient heating, and designer furnishings, allowing immediate personal occupancy or instant onboarding onto boutique vacation rental platforms.
                             </div>
                         </div>
                     </div>
 
+                    <!-- Project 3: The Aarambh Resorts -->
                     <!-- FAQ 7 -->
                     <div class="accordion-item">
                         <h3 class="accordion-header" id="faqHeading7">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#faqCollapse7" aria-expanded="false" aria-controls="faqCollapse7">
-                                Q. What investor profile is suited to plot investment on the Yamuna Expressway?
+                                <span>What plot dimensions and boundaries are available for purchase?</span>
+                                <span class="faq-category-tag">The Aarambh Resorts</span>
                             </button>
                         </h3>
                         <div id="faqCollapse7" class="accordion-collapse collapse" aria-labelledby="faqHeading7"
                             data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                Plot investments on the Yamuna Expressway are best suited for investors with a medium to
-                                long-term horizon (3 to 7 years) seeking substantial capital multipliers. Driven by
-                                multi-billion dollar infrastructure projects like the Noida International Airport at
-                                Jewar, the International Film City, Olympic City, and multimodal logistics corridors,
-                                land parcels in this region represent one of the fastest wealth-compounding real estate
-                                opportunities in North India.
+                                <strong>The Aarambh Resorts</strong> features master-planned freehold plots starting from <strong>200 sq. yards, 350 sq. yards, up to 500+ sq. yards</strong>. Every plot includes clear physical boundary cornerstones, underground electrical/water connection lines at the plot head, wide internal paved access roads, and individual revenue mutation (dakhil kharij) with 100% legal registry.
                             </div>
                         </div>
                     </div>
@@ -856,16 +965,20 @@
                         <h3 class="accordion-header" id="faqHeading8">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#faqCollapse8" aria-expanded="false" aria-controls="faqCollapse8">
-                                Q. Does SAT-SAI-SUNRISE provide support after the purchase?
+                                <span>What clubhouse, sports, and nature amenities can plot owners access?</span>
+                                <span class="faq-category-tag">The Aarambh Resorts</span>
                             </button>
                         </h3>
                         <div id="faqCollapse8" class="accordion-collapse collapse" aria-labelledby="faqHeading8"
                             data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                Absolutely. We believe in end-to-end client relationships. After booking, our team
-                                assists you with bank home loan processing, construction milestone tracking, registry
-                                &amp; stamp duty formalities, handover and possession inspections, and even future
-                                leasing or resale advisory whenever you decide to monetize your investment.
+                                Plot owners and villa residents receive privileged access to resort amenities including:
+                                <ul>
+                                    <li>Centralized eco-clubhouse and infinity-edge swimming pool facing the Corbett foothills.</li>
+                                    <li>Multi-cuisine restaurant, cafe lounge, and open-air lawn amphitheater.</li>
+                                    <li>Outdoor sports courts, nature jogging trails, and organic fruit orchards.</li>
+                                    <li>Gated 24/7 security perimeter with boom barriers, CCTV surveillance, and on-site caretaker assistance.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -875,39 +988,14 @@
                         <h3 class="accordion-header" id="faqHeading9">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#faqCollapse9" aria-expanded="false" aria-controls="faqCollapse9">
-                                Q. What is the nearest metro station to Greater Noida West commercial projects?
+                                <span>Can cottage owners enroll into the centralized resort rental pool?</span>
+                                <span class="faq-category-tag">The Aarambh Resorts</span>
                             </button>
                         </h3>
                         <div id="faqCollapse9" class="accordion-collapse collapse" aria-labelledby="faqHeading9"
                             data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                The nearest currently active metro stations are Sector 52 Noida (Blue Line) and Sector
-                                51 Noida (Aqua Line), located around 10–15 minutes away via wide arterial roads. In
-                                addition, the approved extension of the Noida Metro Aqua Line linking Sector 51 directly
-                                to Greater Noida West (Gaur City / Knowledge Park V) will provide doorstep rapid metro
-                                transit across all major commercial centers.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 10 -->
-                    <div class="accordion-item">
-                        <h3 class="accordion-header" id="faqHeading10">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faqCollapse10" aria-expanded="false" aria-controls="faqCollapse10">
-                                Q. How do I get started with SAT-SAI-SUNRISE?
-                            </button>
-                        </h3>
-                        <div id="faqCollapse10" class="accordion-collapse collapse" aria-labelledby="faqHeading10"
-                            data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Getting started is simple and personalized. You can connect with our dedicated property
-                                experts directly on WhatsApp at <a href="https://wa.me/919953755303" target="_blank"
-                                    style="color: #25D366; font-weight: 600;"><i class="bi bi-whatsapp"></i> +91
-                                    9953755303</a>, call us, or submit an inquiry through our <a href="contact.html"
-                                    style="color: #dfab27; font-weight: 600;">Contact Us</a> page. We will schedule a
-                                one-on-one consultation, share customized property brochures, and arrange a private site
-                                visit at your convenience.
+                                Yes. Owners who build cottages on their plots can enroll in the resort's managed hospitality pool. The on-site resort hospitality management handles guest check-ins, safari corporate retreats, and professional housekeeping, distributing net rental yields directly to the owner without requiring personal day-to-day involvement.
                             </div>
                         </div>
                     </div>
@@ -917,21 +1005,18 @@
         </div>
     </div>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/919953755303" target="_blank" class="whatsapp-float">
-        <i class="bi bi-whatsapp"></i>
-    </a>
-
-    <!-- MAIN FOOTER -->
+    <!-- =====================================================
+         MAIN FOOTER
+    ====================================================== -->
     <footer class="main-footer">
         <div class="container">
             <div class="row g-4 g-lg-5 footer-top-row">
 
                 <!-- Col 1: Brand & About -->
                 <div class="col-lg-4 col-md-12 col-12">
-                    <a href="#" class="footer-brand">
+                    <a href="../" class="footer-brand">
                         <div class="brand-content" style="display: flex; align-items: center;">
-                            <img src="images/SSS-Realty-Logo.png" alt="SAT SAI SUNRISE REALITY"
+                            <img src="../images/SSS-Realty-Logo.png" alt="SAT SAI SUNRISE REALITY"
                                 style="max-height: 100px;">
                         </div>
                     </a>
@@ -952,10 +1037,12 @@
                 <div class="col-lg-2 col-md-3 col-6">
                     <h4 class="footer-col-title">Quick Links</h4>
                     <ul class="footer-links-list">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="../">Home</a></li>
+                        <li><a href="../about_us/">About Us</a></li>
+                        <li><a href="./">Projects</a></li>
+                        <li><a href="../faq/">FAQ</a></li>
+                        <li><a href="../gallery/">Gallery</a></li>
+                        <li><a href="../contact_us/">Contact</a></li>
                     </ul>
                 </div>
 
@@ -983,25 +1070,25 @@
                     </ul>
                 </div>
 
-                <!-- Col 5: Contact Us -->
+                <!-- Col 5: Registered Office -->
                 <div class="col-lg-2 col-md-3 col-12">
-                    <h4 class="footer-col-title">Contact Us</h4>
+                    <h4 class="footer-col-title">Registered Office</h4>
                     <ul class="footer-contact-list">
                         <li>
+                            <i class="bi bi-building-fill-check"></i>
+                            <span><strong>SAT SAI SUNRISE REALITY</strong></span>
+                        </li>
+                        <li>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Near Ramleela Ground, Sector 5, Vaishali, Sahibabad, Ghaziabad, UP - 201010</span>
+                        </li>
+                        <li>
                             <i class="bi bi-telephone-fill"></i>
-                            <span>9953755303</span>
+                            <a href="tel:9953755303">+91 9953755303</a>
                         </li>
                         <li>
                             <i class="bi bi-envelope-fill"></i>
                             <span>satsaisunrisereality@gmail.com</span>
-                        </li>
-                        <li>
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span>Ghaziabad, Uttar Pradesh - 201010, India</span>
-                        </li>
-                        <li>
-                            <i class="bi bi-clock-fill"></i>
-                            <span>Monday to Sunday Open</span>
                         </li>
                     </ul>
                 </div>
@@ -1010,10 +1097,15 @@
 
             <!-- Bottom Copyright Bar -->
             <div class="footer-bottom-bar">
-                <p>© 2026 SAT-SAI-SUNRISE. All Rights Reserved. Built with precision and elegance.</p>
+                <p>© 2026 SAT SAI SUNRISE REALITY. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919953755303" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

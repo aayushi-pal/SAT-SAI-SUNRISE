@@ -4,14 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAT-SAI-SUNRISE | Projects</title>
+
+    <script>
+        if (window.location.pathname.endsWith('/index.html')) {
+            const cleanPath = window.location.pathname.replace(/\/index\.html$/, '/') || '/';
+            window.history.replaceState(null, '', cleanPath + window.location.search + window.location.hash);
+        }
+    </script>
+
+    <title>About Us | SAT-SAI-SUNRISE REALITY - Leading Real Estate Advisory</title>
+    <meta name="description"
+        content="Learn about SAT SAI SUNRISE REALITY. Premier real estate advisory in Delhi NCR offering verified commercial spaces, luxury homes, and investment plots.">
+    <meta name="keywords" content="About SAT SAI SUNRISE REALITY, real estate consultant Ghaziabad, property advisory Delhi NCR, luxury real estate firm UP">
+    <meta name="author" content="SAT SAI SUNRISE REALITY">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://satsaisunrisereality.com/about_us/">
+    <link rel="alternate" type="text/markdown" href="https://satsaisunrisereality.com/llms.txt" title="LLM Context">
+    <link rel="help" type="text/markdown" href="https://satsaisunrisereality.com/llms.txt" title="LLM Documentation">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://satsaisunrisereality.com/about_us/">
+    <meta property="og:title" content="About Us | SAT SAI SUNRISE REALITY">
+    <meta property="og:description" content="Discover SAT SAI SUNRISE REALITY. Our journey, advisory philosophy, and verified property portfolio across Delhi NCR & Uttarakhand.">
+    <meta property="og:image" content="https://satsaisunrisereality.com/images/SSS-Realty-Logo.png">
+    <meta property="og:site_name" content="SAT SAI SUNRISE REALITY">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://satsaisunrisereality.com/about_us/">
+    <meta name="twitter:title" content="About Us | SAT SAI SUNRISE REALITY">
+    <meta name="twitter:description" content="Learn about SAT SAI SUNRISE REALITY — trusted real estate advisory in Delhi NCR.">
+    <meta name="twitter:image" content="https://satsaisunrisereality.com/images/SSS-Realty-Logo.png">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About SAT SAI SUNRISE REALITY",
+      "url": "https://satsaisunrisereality.com/about_us/",
+      "mainEntity": {
+        "@type": ["RealEstateAgent", "Organization"],
+        "name": "SAT SAI SUNRISE REALITY",
+        "legalName": "SAT SAI SUNRISE REALITY",
+        "telephone": "+919953755303",
+        "email": "satsaisunrisereality@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Near Ramleela Ground, Sector 5, Vaishali, Sahibabad",
+          "addressLocality": "Ghaziabad",
+          "addressRegion": "Uttar Pradesh",
+          "postalCode": "201010",
+          "addressCountry": "IN"
+        },
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=61582430763586",
+          "https://www.instagram.com/saisunrisereality/"
+        ]
+      }
+    }
+    </script>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="icon" type="image/png" href="images/fevicon-clean.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="../images/fevicon-clean.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -20,18 +82,18 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
         rel="stylesheet">
     <!-- Main CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="../css/responsive.css">
 
     <style>
         /* Specific Styles for Projects Page matching the design */
         .project-hero-header {
             position: relative;
-            background: url('images/Hero-section-bg.png') no-repeat center center / cover;
+            background: url('../images/Hero-section-bg.png') no-repeat center center / cover;
             min-height: 400px;
             padding-top: 20px;
         }
@@ -226,7 +288,8 @@
 
         .projects-intro-title {
             color: #1c352a;
-            font-weight: 600;
+            font-size: 36px;
+            font-weight: 700;
             margin-bottom: 20px;
         }
 
@@ -591,17 +654,19 @@
     <header class="project-hero-header">
         <div class="project-navbar-container">
             <!-- Logo -->
-            <a href="index.html" class="navbar-brand">
-                <img src="images/SSS-Realty-Logo.png" alt="SAT SAI SUNRISE REALITY"
+            <a href="../" class="navbar-brand">
+                <img src="../images/SSS-Realty-Logo.png" alt="SAT SAI SUNRISE REALITY"
                     style="max-height: 65px; object-fit: contain;">
             </a>
 
             <!-- Center Navbar -->
             <div class="project-nav-pill">
-                <a href="index.html">Home</a>
-                <a href="about.html" style="font-weight: 600;">About Us</a>
-                <a href="projects.html">Projects</a>
-                <a href="contact.html">Contact</a>
+                <a href="../">Home</a>
+                <a href="./" style="font-weight: 600;">About Us</a>
+                <a href="../projects/">Projects</a>
+                <a href="../faq/">FAQ</a>
+                <a href="../gallery/">Gallery</a>
+                <a href="../contact_us/">Contact</a>
             </div>
 
             <!-- Right CTA -->
@@ -615,36 +680,36 @@
     <div class="project-content-area mx-3 mx-md-5">
 
         <div class="project-breadcrumb">
-            <a href="index.html">Home</a> &nbsp;&rarr;&nbsp;
+            <a href="../">Home</a> &nbsp;&rarr;&nbsp;
             <span style="color: #1c352a; font-weight: 500;">About Us</span>
         </div>
 
         <div class="container-fluid" style="max-width: 1200px; padding: 0;">
             <div class="text-center mb-5 mt-4">
-                <h2 class="projects-intro-title">Who We Are</h2>
+                <h1 class="projects-intro-title">Who We Are</h1>
                 <p class="projects-intro-text">
                     <strong>SAT-SAI-SUNRISE REALITY</strong> is a premier real estate advisory firm dedicated to helping
                     clients navigate
                     the complexities of buying, selling, and investing in high-quality properties. With a sharp focus on
                     transparency, trust, and tailored solutions, we aim to transform the way individuals and businesses
-                    invest in real estate across the NCR region, Uttarakhand,Gujarat.
+                    invest in real estate across the NCR region, Uttarakhand, Gujarat.
                 </p>
             </div>
 
             <div class="row g-5 align-items-center mb-5 mt-4">
                 <div class="col-lg-6">
-                    <img src="images/Client-img.png" alt="About SAT-SAI-SUNRISE"
+                    <img src="../images/Client-img.png" alt="About SAT-SAI-SUNRISE"
                         style="width: 100%; height: 550px; object-fit: cover; object-position: center; border-radius: 14px; box-shadow: 0 12px 35px rgba(0,0,0,0.12);">
                 </div>
                 <div class="col-lg-6">
-                    <h3 style="color: #1c352a; font-weight: 600; margin-bottom: 20px;">Our Vision</h3>
+                    <h2 style="color: #1c352a; font-weight: 600; font-size: 24px; margin-bottom: 20px;">Our Vision</h2>
                     <p style="color: #555; line-height: 1.8; margin-bottom: 30px;">
                         To be the most trusted, reliable, and client-centric real estate brand, delivering unparalleled
                         value and ensuring that every investment made through us secures a prosperous future. We
                         envision a real estate landscape where every transaction is seamless, secure, and beneficial to
                         all parties involved.
                     </p>
-                    <h3 style="color: #1c352a; font-weight: 600; margin-bottom: 20px;">Our Mission</h3>
+                    <h2 style="color: #1c352a; font-weight: 600; font-size: 24px; margin-bottom: 20px;">Our Mission</h2>
                     <p style="color: #555; line-height: 1.8;">
                         Our mission is to simplify property investment by offering only RERA-verified, site-visited, and
                         demand-assessed projects. We strive to provide end-to-end guidance, from discovery to
@@ -655,12 +720,12 @@
             </div>
 
             <div class="projects-info-box mt-5 text-center">
-                <h3 class="info-box-title">Ready to Make an Investment?</h3>
+                <h2 class="info-box-title">Ready to Make an Investment?</h2>
                 <p class="info-box-text">
                     Whether you are looking for a weekend home in the hills, a premium residential plot, or a
                     high-return commercial space, our expert team is here to help you find the perfect match.
                 </p>
-                <a href="index.html#contact" class="btn-read-more"
+                <a href="../contact_us/" class="btn-read-more"
                     style="background: #dfab27; color: #fff; padding: 12px 30px; font-weight: 600; border-radius: 6px; display: inline-block; transition: all 0.3s ease;"
                     onmouseover="this.style.backgroundColor='#c4931a'"
                     onmouseout="this.style.backgroundColor='#dfab27'">GET IN TOUCH</a>
@@ -669,21 +734,18 @@
         </div>
     </div>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/919953755303" target="_blank" class="whatsapp-float">
-        <i class="bi bi-whatsapp"></i>
-    </a>
-
-    <!-- MAIN FOOTER -->
+    <!-- =====================================================
+         MAIN FOOTER
+    ====================================================== -->
     <footer class="main-footer">
         <div class="container">
             <div class="row g-4 g-lg-5 footer-top-row">
 
                 <!-- Col 1: Brand & About -->
                 <div class="col-lg-4 col-md-12 col-12">
-                    <a href="#" class="footer-brand">
+                    <a href="../" class="footer-brand">
                         <div class="brand-content" style="display: flex; align-items: center;">
-                            <img src="images/SSS-Realty-Logo.png" alt="SAT SAI SUNRISE REALITY"
+                            <img src="../images/SSS-Realty-Logo.png" alt="SAT SAI SUNRISE REALITY"
                                 style="max-height: 100px;">
                         </div>
                     </a>
@@ -704,10 +766,12 @@
                 <div class="col-lg-2 col-md-3 col-6">
                     <h4 class="footer-col-title">Quick Links</h4>
                     <ul class="footer-links-list">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="../">Home</a></li>
+                        <li><a href="./">About Us</a></li>
+                        <li><a href="../projects/">Projects</a></li>
+                        <li><a href="../faq/">FAQ</a></li>
+                        <li><a href="../gallery/">Gallery</a></li>
+                        <li><a href="../contact_us/">Contact</a></li>
                     </ul>
                 </div>
 
@@ -735,25 +799,25 @@
                     </ul>
                 </div>
 
-                <!-- Col 5: Contact Us -->
+                <!-- Col 5: Registered Office -->
                 <div class="col-lg-2 col-md-3 col-12">
-                    <h4 class="footer-col-title">Contact Us</h4>
+                    <h4 class="footer-col-title">Registered Office</h4>
                     <ul class="footer-contact-list">
                         <li>
+                            <i class="bi bi-building-fill-check"></i>
+                            <span><strong>SAT SAI SUNRISE REALITY</strong></span>
+                        </li>
+                        <li>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Near Ramleela Ground, Sector 5, Vaishali, Sahibabad, Ghaziabad, UP - 201010</span>
+                        </li>
+                        <li>
                             <i class="bi bi-telephone-fill"></i>
-                            <span>9953755303</span>
+                            <a href="tel:9953755303">+91 9953755303</a>
                         </li>
                         <li>
                             <i class="bi bi-envelope-fill"></i>
                             <span>satsaisunrisereality@gmail.com</span>
-                        </li>
-                        <li>
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span>Ghaziabad, Uttar Pradesh - 201010, India</span>
-                        </li>
-                        <li>
-                            <i class="bi bi-clock-fill"></i>
-                            <span>Monday to Sunday Open</span>
                         </li>
                     </ul>
                 </div>
@@ -762,10 +826,15 @@
 
             <!-- Bottom Copyright Bar -->
             <div class="footer-bottom-bar">
-                <p>© 2026 SAT-SAI-SUNRISE. All Rights Reserved. Built with precision and elegance.</p>
+                <p>© 2026 SAT SAI SUNRISE REALITY. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919953755303" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

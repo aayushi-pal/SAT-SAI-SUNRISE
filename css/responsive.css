@@ -111,9 +111,20 @@ body {
         font-size: 34px;
     }
 
+    .contact-form-row {
+        gap: 6px;
+    }
+
+    .contact-cta-input,
+    .contact-cta-select {
+        padding: 0 8px;
+        font-size: 12.5px;
+    }
+
     .contact-cta-btn {
-        padding: 0 16px;
-        font-size: 13px;
+        padding: 0 12px;
+        font-size: 12px;
+        white-space: nowrap;
     }
 
 }

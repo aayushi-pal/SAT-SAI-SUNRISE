@@ -1,0 +1,41 @@
+# SAT-SAI-SUNRISE Clean URL Configuration
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # 1. Remove index.html from URL (Redirects /index.html -> /)
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html(\?|\ |\#) [NC]
+    RewriteRule ^index\.html$ / [R=301,L]
+
+    # 2. Redirect legacy page requests to clean directory URLs
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(about\.html|about)(/|\ |\?) [NC]
+    RewriteRule ^(about\.html|about/?)$ /about_us/ [R=301,L]
+
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /projects\.html [NC]
+    RewriteRule ^projects\.html$ /projects/ [R=301,L]
+
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(contact\.html|contact)(/|\ |\?) [NC]
+    RewriteRule ^(contact\.html|contact/?)$ /contact_us/ [R=301,L]
+
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(faq\.html|faq)(/|\ |\?) [NC]
+    RewriteRule ^(faq\.html|faq/?)$ /faq/ [R=301,L]
+
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(gallery\.html|gallery)(/|\ |\?) [NC]
+    RewriteRule ^(gallery\.html|gallery/?)$ /gallery/ [R=301,L]
+</IfModule>
+
+# AI & LLM Files Headers (CORS & Content-Type for AI Agents)
+<IfModule mod_headers.c>
+    <FilesMatch "(llms\.txt|llms-full\.txt|llm\.txt|ai\.txt)$">
+        Header set Content-Type "text/markdown; charset=utf-8"
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+
+    <FilesMatch "ai-plugin\.json$">
+        Header set Content-Type "application/json; charset=utf-8"
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+
+    # SEO Headers
+    Header set X-Robots-Tag "index, follow"
+</IfModule>

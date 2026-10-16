@@ -1,0 +1,109 @@
+# ========================================================
+# robots.txt for SAT SAI SUNRISE REALITY
+# Website: https://satsaisunrisereality.com
+# Canonical Sitemap: https://satsaisunrisereality.com/sitemap.xml
+# LLM Context: https://satsaisunrisereality.com/llms.txt
+# ========================================================
+
+User-agent: *
+Allow: /
+
+# --------------------------------------------------------
+# Google Search & Google Inspection Crawlers
+# --------------------------------------------------------
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
+User-agent: Google-InspectionTool
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Storebot-Google
+Allow: /
+
+# Google AI & Gemini Training
+User-agent: Google-Extended
+Allow: /
+
+# --------------------------------------------------------
+# Leading AI & LLM Search Crawlers
+# --------------------------------------------------------
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Microsoft Bing & Copilot
+User-agent: Bingbot
+Allow: /
+
+# Meta AI / Llama
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Other Major AI & Retrieval Bots
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+# --------------------------------------------------------
+# AI & LLM Context Documentation (https://llmstxt.org/)
+# --------------------------------------------------------
+# LLMs can read curated markdown documentation at:
+# https://satsaisunrisereality.com/llms.txt
+# https://satsaisunrisereality.com/llms-full.txt
+# https://satsaisunrisereality.com/.well-known/llms.txt
+# https://satsaisunrisereality.com/.well-known/llms-full.txt
+
+# --------------------------------------------------------
+# XML Sitemaps
+# --------------------------------------------------------
+Sitemap: https://satsaisunrisereality.com/sitemap.xml

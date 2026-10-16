@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        if (window.location.pathname.endsWith('/index.html')) {
+            const cleanPath = window.location.pathname.replace(/\/index\.html$/, '/') || '/';
+            window.history.replaceState(null, '', cleanPath + window.location.search + window.location.hash);
+        }
+    </script>
+
+    <title>Photo Gallery &amp; Project Showcase | SAT-SAI-SUNRISE REALITY</title>
+    <meta name="description"
+        content="Explore the project gallery of SAT SAI SUNRISE REALITY: retail shops at The Core Mall Ghaziabad, luxury villas, and eco-resorts in Uttarakhand.">
+    <meta name="keywords" content="The Core Mall photos, SAT SAI SUNRISE REALITY gallery, Heaven in the Forest villa photos, Aarambh Resorts photos, commercial mall NH-24 gallery, real estate pictures Ghaziabad">
+    <meta name="author" content="SAT SAI SUNRISE REALITY">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://satsaisunrisereality.com/gallery/">
+    <link rel="alternate" type="text/markdown" href="https://satsaisunrisereality.com/llms.txt" title="LLM Context">
+    <link rel="help" type="text/markdown" href="https://satsaisunrisereality.com/llms.txt" title="LLM Documentation">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://satsaisunrisereality.com/gallery/">
+    <meta property="og:title" content="Photo Gallery &amp; Visual Showcase | SAT SAI SUNRISE REALITY">
+    <meta property="og:description" content="Tour our portfolio of prime commercial hubs, double-height retail shops, luxury pine forest villas, and resort developments.">
+    <meta property="og:image" content="https://satsaisunrisereality.com/The-Core-Mall/images/core-mall-exterior.jpg">
+    <meta property="og:site_name" content="SAT SAI SUNRISE REALITY">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://satsaisunrisereality.com/gallery/">
+    <meta name="twitter:title" content="Photo Gallery | SAT SAI SUNRISE REALITY">
+    <meta name="twitter:description" content="High-resolution visual showcase of commercial properties, luxury villas, and plots across Delhi NCR and Uttarakhand.">
+    <meta name="twitter:image" content="https://satsaisunrisereality.com/The-Core-Mall/images/core-mall-exterior.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="../images/fevicon-clean.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- Structured Data (JSON-LD) ImageGallery -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageGallery",
+      "name": "SAT SAI SUNRISE REALITY Property Portfolio Gallery",
+      "url": "https://satsaisunrisereality.com/gallery/",
+      "description": "High-resolution photo gallery showcasing The Core Mall, Heaven in the Forest, The Aarambh Resorts, and premium residential spaces.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "SAT SAI SUNRISE REALITY",
+        "url": "https://satsaisunrisereality.com/"
+      }
+    }
+    </script>
+
+    <style>
+        /* Exact Page Structure Matching About Us & Projects */
+        .project-hero-header {
+            position: relative;
+            background: url('../images/Hero-section-bg.png') no-repeat center center / cover;
+            min-height: 400px;
+            padding-top: 20px;
+        }
+
+        .project-hero-header::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .project-navbar-container {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+        }
+
+        .project-nav-pill {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 10px 30px;
+            display: flex;
+            gap: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .project-nav-pill a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        .project-nav-pill a:hover,
+        .project-nav-pill a.active {
+            color: #f7d488;
+        }
+
+        .project-call-btn {
+            background: #dfab27;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid #dfab27;
+            transition: all 0.3s;
+        }
+
+        .project-call-btn:hover {
+            background: #c4931a;
+            border-color: #c4931a;
+            color: #fff;
+        }
+
+        .project-breadcrumb {
+            padding: 15px 0 25px 0;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .project-breadcrumb a {
+            color: #777;
+            text-decoration: none;
+        }
+
+        .project-breadcrumb a:hover {
+            color: #dfab27;
+        }
+
+        .project-content-area {
+            background: #fff;
+            padding: 20px 40px 50px 40px;
+            margin-top: -60px;
+            border-radius: 16px 16px 0 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .projects-intro-title {
+            color: #1c352a;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .projects-intro-text {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Project-Wise Gallery Section Styles */
+        .gallery-project-section {
+            margin-bottom: 50px;
+        }
+
+        .gallery-project-header {
+            margin-top: 25px;
+            margin-bottom: 22px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #f0e6d6;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .gallery-project-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1c352a;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .gallery-project-subtitle {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .gallery-project-subtitle i {
+            color: #dfab27;
+        }
+
+        .gallery-badge {
+            font-size: 13px;
+            color: #1c352a;
+            background: #eef5ed;
+            font-weight: 500;
+            padding: 5px 14px;
+            border-radius: 20px;
+            border: 1px solid #dceada;
+        }
+
+        /* Pure Photo Card - Zero Clutter & No Buttons */
+        .gallery-photo-card {
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            background: #090d16;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            cursor: pointer;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gallery-photo-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+        }
+
+        .gallery-img-wrapper {
+            width: 100%;
+            aspect-ratio: 16 / 11;
+            overflow: hidden;
+            position: relative;
+            background: #0c121e;
+        }
+
+        .gallery-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .gallery-photo-card:hover .gallery-img-wrapper img {
+            transform: scale(1.08);
+        }
+
+        /* Image Overlay with Caption & Zoom Icon */
+        .gallery-img-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(9, 13, 22, 0.82) 0%, rgba(9, 13, 22, 0.25) 55%, rgba(9, 13, 22, 0.05) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 16px;
+            transition: background 0.3s ease;
+        }
+
+        .gallery-photo-card:hover .gallery-img-overlay {
+            background: linear-gradient(to top, rgba(9, 13, 22, 0.92) 0%, rgba(9, 13, 22, 0.35) 55%, rgba(9, 13, 22, 0.1) 100%);
+        }
+
+        .gallery-card-top-tag {
+            align-self: flex-start;
+            background: rgba(28, 53, 42, 0.88);
+            backdrop-filter: blur(6px);
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 500;
+            padding: 4px 10px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            letter-spacing: 0.3px;
+        }
+
+        .gallery-card-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 10px;
+        }
+
+        .gallery-photo-title {
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0 0 3px 0;
+            line-height: 1.3;
+        }
+
+        .gallery-photo-desc {
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 12px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .gallery-photo-desc i {
+            color: #dfab27;
+        }
+
+        .gallery-zoom-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(223, 171, 39, 0.95);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            flex-shrink: 0;
+            transition: transform 0.3s ease, background 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-photo-card:hover .gallery-zoom-icon {
+            transform: scale(1.15);
+            background: #dfab27;
+        }
+
+        /* Info Box */
+        .projects-info-box {
+            border: 1px solid #dceada;
+            border-radius: 12px;
+            padding: 40px;
+            background: #fff;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .info-box-title {
+            color: #1c352a;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .info-box-text {
+            color: #444;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* Lightbox Modal */
+        .lightbox-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .lightbox-modal.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 960px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .lightbox-img {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            object-fit: contain;
+        }
+
+        .lightbox-caption {
+            color: #ffffff;
+            margin-top: 16px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -45px;
+            right: 0;
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 32px;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .lightbox-close:hover {
+            color: #dfab27;
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            z-index: 100;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .project-navbar-container {
+                flex-direction: column;
+                gap: 15px;
+                padding: 0 15px;
+            }
+
+            .project-content-area {
+                padding: 20px 15px 50px 15px;
+            }
+
+            .projects-intro-title {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .project-nav-pill {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header (Identical to About Us, Projects, and Contact Us) -->
+    <header class="project-hero-header">
+        <div class="project-navbar-container">
+            <!-- Logo -->
+            <a href="../" class="navbar-brand">
+                <img src="../images/SSS-Realty-Logo.png" alt="SAT SAI SUNRISE REALITY"
+                    style="max-height: 65px; object-fit: contain;">
+            </a>
+
+            <!-- Center Navbar -->
+            <div class="project-nav-pill">
+                <a href="../">Home</a>
+                <a href="../about_us/">About Us</a>
+                <a href="../projects/">Projects</a>
+                <a href="../faq/">FAQ</a>
+                <a href="./" style="font-weight: 600;">Gallery</a>
+                <a href="../contact_us/">Contact</a>
+            </div>
+
+            <!-- Right CTA -->
+            <a href="tel:9953755303" class="project-call-btn">
+                Call us: +91 9953755303
+            </a>
+        </div>
+    </header>
+
+    <!-- Content Area (Identical to About Us & Projects) -->
+    <div class="project-content-area mx-3 mx-md-5">
+
+        <div class="project-breadcrumb">
+            <a href="../">Home</a> &nbsp;&rarr;&nbsp;
+            <span style="color: #1c352a; font-weight: 500;">Gallery</span>
+        </div>
+
+        <div class="container-fluid" style="max-width: 1400px; padding: 0;">
+
+            <div class="text-center mb-4 mt-2">
+                <h1 class="projects-intro-title">Project &amp; Property Showcase</h1>
+                <p class="projects-intro-text">
+                    Browse high-resolution photographs and architectural perspectives of our flagship commercial developments, high-street retail galleries, luxury Himalayan forest villas, and scenic resort communities.
+                </p>
+            </div>
+
+            <!-- Project Section 1: The Core Mall -->
+            <div class="gallery-project-section">
+                <div class="gallery-project-header">
+                    <div>
+                        <h2 class="gallery-project-title">
+                            <i class="bi bi-building-check" style="color: #dfab27;"></i>
+                            The Core Mall
+                        </h2>
+                        <p class="gallery-project-subtitle">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            Plot-CC1, Sushant Aquapolis, Opp. Crossings Republik, NH-24 Delhi-Meerut Expressway, Ghaziabad
+                        </p>
+                    </div>
+                    <span class="gallery-badge">Commercial &amp; Retail Hub</span>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Core Mall 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="gallery-photo-card" data-img="../The-Core-Mall/images/core-mall-exterior.jpg"
+                            data-caption="The Core Mall - Front Architectural Elevation on NH-24 Delhi-Meerut Expressway">
+                            <div class="gallery-img-wrapper">
+                                <img src="../The-Core-Mall/images/core-mall-exterior.jpg" alt="The Core Mall Front Elevation" loading="lazy">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-card-top-tag">Front Facade</span>
+                                    <div class="gallery-card-bottom">
+                                        <div>
+                                            <h3 class="gallery-photo-title">Expressway Elevation &amp; Facade</h3>
+                                            <p class="gallery-photo-desc"><i class="bi bi-geo-alt"></i> NH-24 Delhi-Meerut Expressway</p>
+                                        </div>
+                                        <div class="gallery-zoom-icon" aria-hidden="true">
+                                            <i class="bi bi-zoom-in"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Core Mall 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="gallery-photo-card" data-img="../The-Core-Mall/images/core-mall-retail.jpg"
+                            data-caption="The Core Mall - Double-Height High-Street Retail Galleria &amp; Brand Outlets">
+                            <div class="gallery-img-wrapper">
+                                <img src="../The-Core-Mall/images/core-mall-retail.jpg" alt="Double-Height Retail Shops" loading="lazy">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-card-top-tag">High-Street Retail</span>
+                                    <div class="gallery-card-bottom">
+                                        <div>
+                                            <h3 class="gallery-photo-title">Double-Height Retail Galleria</h3>
+                                            <p class="gallery-photo-desc"><i class="bi bi-shop"></i> Ground &amp; 1st Floor Boutiques</p>
+                                        </div>
+                                        <div class="gallery-zoom-icon" aria-hidden="true">
+                                            <i class="bi bi-zoom-in"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Core Mall 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="gallery-photo-card" data-img="../The-Core-Mall/images/core-mall-foodcourt.jpg"
+                            data-caption="The Core Mall - Modern Food Court &amp; Open-Air Dining Promenade">
+                            <div class="gallery-img-wrapper">
+                                <img src="../The-Core-Mall/images/core-mall-foodcourt.jpg" alt="Food Court and Terrace Dining" loading="lazy">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-card-top-tag">Food Court &amp; Dining</span>
+                                    <div class="gallery-card-bottom">
+                                        <div>
+                                            <h3 class="gallery-photo-title">Food Court &amp; Dining Deck</h3>
+                                            <p class="gallery-photo-desc"><i class="bi bi-cup-hot"></i> Terrace Dining Promenade</p>
+                                        </div>
+                                        <div class="gallery-zoom-icon" aria-hidden="true">
+                                            <i class="bi bi-zoom-in"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Core Mall 4 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="gallery-photo-card" data-img="../The-Core-Mall/images/core-mall-office.jpg"
+                            data-caption="The Core Mall - Grade-A Corporate Office Spaces &amp; Business Suites">
+                            <div class="gallery-img-wrapper">
+                                <img src="../The-Core-Mall/images/core-mall-office.jpg" alt="Corporate Office Spaces" loading="lazy">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-card-top-tag">Corporate Suites</span>
+                                    <div class="gallery-card-bottom">
+                                        <div>
+                                            <h3 class="gallery-photo-title">Corporate Office Suites</h3>
+                                            <p class="gallery-photo-desc"><i class="bi bi-briefcase"></i> High-Speed Elevators &amp; Power Backup</p>
+                                        </div>
+                                        <div class="gallery-zoom-icon" aria-hidden="true">
+                                            <i class="bi bi-zoom-in"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Core Mall 5 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="gallery-photo-card" data-img="../The-Core-Mall/images/core-mall-entertainment.jpg"
+                            data-caption="The Core Mall - Multiplex Cinemas &amp; Family Entertainment Atrium">
+                            <div class="gallery-img-wrapper">
+                                <img src="../The-Core-Mall/images/core-mall-entertainment.jpg" alt="Family Entertainment Zone" loading="lazy">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-card-top-tag">Multiplex &amp; Fun</span>
+                                    <div class="gallery-card-bottom">
+                                        <div>
+                                            <h3 class="gallery-photo-title">Multiplex &amp; Entertainment</h3>
+                                            <p class="gallery-photo-desc"><i class="bi bi-film"></i> Cinema Atrium &amp; Games Zone</p>
+                                        </div>
+                                        <div class="gallery-zoom-icon" aria-hidden="true">
+                                            <i class="bi bi-zoom-in"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Core Mall 6 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="gallery-photo-card" data-img="../The-Core-Mall/images/the-core-mall-hero.jpg"
+                            data-caption="The Core Mall - Full Aerial &amp; Architectural Project Perspective">
+                            <div class="gallery-img-wrapper">
+                                <img src="../The-Core-Mall/images/the-core-mall-hero.jpg" alt="The Core Mall Master Perspective" loading="lazy">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-card-top-tag">Master Elevation</span>
+                                    <div class="gallery-card-bottom">
+                                        <div>
+                                            <h3 class="gallery-photo-title">Master Perspective</h3>
+                                            <p class="gallery-photo-desc"><i class="bi bi-building"></i> Captive 200,000+ Catchment</p>
+                                        </div>
+                                        <div class="gallery-zoom-icon" aria-hidden="true">
+                                            <i class="bi bi-zoom-in"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Section 2: Heaven in the Forest -->
+            <div class="gallery-project-section">
+                <div class="gallery-project-header">
+                    <div>
+                        <h2 class="gallery-project-title">
+                            <i class="bi bi-tree-fill" style="color: #dfab27;"></i>
+                            Heaven in the Forest
+                        </h2>
+                        <p class="gallery-project-subtitle">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            Pine Forest Ridge near Kainchi Dham (Neem Karoli Baba Ashram), Nainital, Uttarakhand
+                        </p>
+                    </div>
+                    <span class="gallery-badge">Mountain Retreat Villas</span>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Heaven 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="gallery-photo-card" data-img="../images/Heaven-forest-hero.png"
+                            data-caption="Heaven in the Forest - Panoramic Himalayan Valley &amp; Pine Canopy Vista">
+                            <div class="gallery-img-wrapper">
+                                <img src="../images/Heaven-forest-hero.png" alt="Heaven in the Forest Valley View" loading="lazy">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-card-top-tag">Himalayan Panorama</span>
+                                    <div class="gallery-card-bottom">
+                                        <div>
+                                            <h3 class="gallery-photo-title">Himalayan Valley &amp; Pine Vista</h3>
+                                            <p class="gallery-photo-desc"><i class="bi bi-tree"></i> Pristine Forest Canopy</p>
+                                        </div>
+                                        <div class="gallery-zoom-icon" aria-hidden="true">
+                                            <i class="bi bi-zoom-in"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Heaven 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="gallery-photo-card" data-img="../images/Heaven-forest-slide-img.png"
+                            data-caption="Heaven in the Forest - Handcrafted Mountain Cottages &amp; Balcony Suites">
+                            <div class="gallery-img-wrapper">
+                                <img src="../images/Heaven-forest-slide-img.png" alt="Scenic Mountain Cottages" loading="lazy">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-card-top-tag">Luxury Cottages</span>
+                                    <div class="gallery-card-bottom">
+                                        <div>
+                                            <h3 class="gallery-photo-title">Scenic Mountain Cottages</h3>
+                                            <p class="gallery-photo-desc"><i class="bi bi-house-door"></i> Balcony Suites with Valley Views</p>
+                                        </div>
+                                        <div class="gallery-zoom-icon" aria-hidden="true">
+                                            <i class="bi bi-zoom-in"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Heaven 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="gallery-photo-card" data-img="../Heaven-in-the-forest/images/hero_bg.jpg"
+                            data-caption="Heaven in the Forest - Peaceful Hill Sanctuary in Nainital District">
+                            <div class="gallery-img-wrapper">
+                                <img src="../Heaven-in-the-forest/images/hero_bg.jpg" alt="Forest Sanctuary Grounds" loading="lazy">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-card-top-tag">Forest Grounds</span>
+                                    <div class="gallery-card-bottom">
+                                        <div>
+                                            <h3 class="gallery-photo-title">Forest Sanctuary &amp; Grounds</h3>
+                                            <p class="gallery-photo-desc"><i class="bi bi-geo"></i> Kainchi Dham Corridor</p>
+                                        </div>
+                                        <div class="gallery-zoom-icon" aria-hidden="true">
+                                            <i class="bi bi-zoom-in"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Section 3: The Aarambh Resorts -->
+            <div class="gallery-project-section">
+                <div class="gallery-project-header">
+                    <div>
+                        <h2 class="gallery-project-title">
+                            <i class="bi bi-compass-fill" style="color: #dfab27;"></i>
+                            The Aarambh Resorts
+                        </h2>
+                        <p class="gallery-project-subtitle">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            Eco-Luxury Enclave &amp; Foothills in Jim Corbett Wildlife Corridor, Uttarakhand
+                        </p>
+                    </div>
+                    <span class="gallery-badge">Resort Enclave &amp; Plots</span>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Aarambh 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="gallery-photo-card" data-img="../images/Aarambh-Resorts-hero.png"
+                            data-caption="The Aarambh Resorts - Master Eco-Resort Community in Jim Corbett Belt">
+                            <div class="gallery-img-wrapper">
+                                <img src="../images/Aarambh-Resorts-hero.png" alt="The Aarambh Resorts Enclave" loading="lazy">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-card-top-tag">Resort Overview</span>
+                                    <div class="gallery-card-bottom">
+                                        <div>
+                                            <h3 class="gallery-photo-title">Eco-Luxury Enclave Panorama</h3>
+                                            <p class="gallery-photo-desc"><i class="bi bi-sun"></i> Corbett Foothills Setting</p>
+                                        </div>
+                                        <div class="gallery-zoom-icon" aria-hidden="true">
+                                            <i class="bi bi-zoom-in"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Aarambh 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="gallery-photo-card" data-img="../images/Aarambh-Resorts-slide-img.png"
+                            data-caption="The Aarambh Resorts - Master-Planned Cottages along Landscaped Trails">
+                            <div class="gallery-img-wrapper">
+                                <img src="../images/Aarambh-Resorts-slide-img.png" alt="Aarambh Nature Cottages" loading="lazy">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-card-top-tag">Hospitality Cottages</span>
+                                    <div class="gallery-card-bottom">
+                                        <div>
+                                            <h3 class="gallery-photo-title">Master-Planned Nature Cottages</h3>
+                                            <p class="gallery-photo-desc"><i class="bi bi-flower1"></i> Private Lawns &amp; Stone Architecture</p>
+                                        </div>
+                                        <div class="gallery-zoom-icon" aria-hidden="true">
+                                            <i class="bi bi-zoom-in"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Aarambh 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="gallery-photo-card" data-img="../Aarambh Resort/images/luxury_resort_overview.jpg"
+                            data-caption="The Aarambh Resorts - Expansive Gated Resort Landscape and Plots">
+                            <div class="gallery-img-wrapper">
+                                <img src="../Aarambh Resort/images/luxury_resort_overview.jpg" alt="Resort Overview and Corbett Belt" loading="lazy">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-card-top-tag">Wildlife Buffer Belt</span>
+                                    <div class="gallery-card-bottom">
+                                        <div>
+                                            <h3 class="gallery-photo-title">Resort Grounds &amp; Greenery</h3>
+                                            <p class="gallery-photo-desc"><i class="bi bi-compass"></i> Freehold Gated Demarcated Plots</p>
+                                        </div>
+                                        <div class="gallery-zoom-icon" aria-hidden="true">
+                                            <i class="bi bi-zoom-in"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Section 4: Premium Residential & Land -->
+            <div class="gallery-project-section">
+                <div class="gallery-project-header">
+                    <div>
+                        <h2 class="gallery-project-title">
+                            <i class="bi bi-houses-fill" style="color: #dfab27;"></i>
+                            Premium Residential &amp; Land Portfolio
+                        </h2>
+                        <p class="gallery-project-subtitle">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            High-Growth Residential, Villa Communities &amp; Freehold Land Parcels — Delhi NCR &amp; Beyond
+                        </p>
+                    </div>
+                    <span class="gallery-badge">Curated Properties</span>
+                </div>
+
+                <div class="row g-4 mb-4">
+                    <!-- Res 1 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gallery-photo-card" data-img="../images/Apartments.jpg"
+                            data-caption="Luxury Residential High-Rise Communities across Prime NCR Corridors">
+                            <div class="gallery-img-wrapper">
+                                <img src="../images/Apartments.jpg" alt="Luxury Apartments" loading="lazy">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-card-top-tag">Apartments</span>
+                                    <div class="gallery-card-bottom">
+                                        <div>
+                                            <h3 class="gallery-photo-title">High-Rise Residences</h3>
+                                            <p class="gallery-photo-desc"><i class="bi bi-building"></i> Delhi NCR</p>
+                                        </div>
+                                        <div class="gallery-zoom-icon" aria-hidden="true">
+                                            <i class="bi bi-zoom-in"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Res 2 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gallery-photo-card" data-img="../images/Villas.jpg"
+                            data-caption="Independent Luxury Gated Villas with Private Lawns &amp; Amenities">
+                            <div class="gallery-img-wrapper">
+                                <img src="../images/Villas.jpg" alt="Luxury Villas" loading="lazy">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-card-top-tag">Villas</span>
+                                    <div class="gallery-card-bottom">
+                                        <div>
+                                            <h3 class="gallery-photo-title">Gated Villas</h3>
+                                            <p class="gallery-photo-desc"><i class="bi bi-house"></i> Private Lawns</p>
+                                        </div>
+                                        <div class="gallery-zoom-icon" aria-hidden="true">
+                                            <i class="bi bi-zoom-in"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Res 3 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gallery-photo-card" data-img="../images/Plots & Land.jpg"
+                            data-caption="Freehold Demarcated Residential and Commercial Land Parcels">
+                            <div class="gallery-img-wrapper">
+                                <img src="../images/Plots & Land.jpg" alt="Plots and Land Parcels" loading="lazy">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-card-top-tag">Land &amp; Plots</span>
+                                    <div class="gallery-card-bottom">
+                                        <div>
+                                            <h3 class="gallery-photo-title">Freehold Plots</h3>
+                                            <p class="gallery-photo-desc"><i class="bi bi-map"></i> Clear Mutation</p>
+                                        </div>
+                                        <div class="gallery-zoom-icon" aria-hidden="true">
+                                            <i class="bi bi-zoom-in"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Res 4 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gallery-photo-card" data-img="../images/Commercial.jpg"
+                            data-caption="Commercial Business Hubs and Retail Outlets with Strong Footfall">
+                            <div class="gallery-img-wrapper">
+                                <img src="../images/Commercial.jpg" alt="Commercial Hubs" loading="lazy">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-card-top-tag">Commercial</span>
+                                    <div class="gallery-card-bottom">
+                                        <div>
+                                            <h3 class="gallery-photo-title">Commercial Hubs</h3>
+                                            <p class="gallery-photo-desc"><i class="bi bi-graph-up-arrow"></i> High Footfall</p>
+                                        </div>
+                                        <div class="gallery-zoom-icon" aria-hidden="true">
+                                            <i class="bi bi-zoom-in"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info Box (Exact match to About Us & Projects) -->
+            <div class="projects-info-box mt-5 text-center">
+                <h3 class="info-box-title">Ready to Experience These Properties in Person?</h3>
+                <p class="info-box-text">
+                    We arrange accompanied VIP site visits 7 days a week. Tour the high-street retail spaces of The Core Mall or explore the scenic mountain setting of Heaven in the Forest with our senior advisors.
+                </p>
+                <a href="../contact_us/" class="btn-read-more"
+                    style="background: #dfab27; color: #fff; padding: 12px 30px; font-weight: 600; border-radius: 6px; display: inline-block; transition: all 0.3s ease;"
+                    onmouseover="this.style.backgroundColor='#c4931a'"
+                    onmouseout="this.style.backgroundColor='#dfab27'">BOOK SITE VISIT</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <div class="lightbox-content">
+            <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close Preview">&times;</button>
+            <img src="" alt="Enlarged Property Photo" class="lightbox-img" id="lightboxImg">
+            <p class="lightbox-caption" id="lightboxCaption"></p>
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919953755303" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- =====================================================
+         MAIN FOOTER
+    ====================================================== -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row g-4 g-lg-5 footer-top-row">
+
+                <!-- Col 1: Brand & About -->
+                <div class="col-lg-4 col-md-12 col-12">
+                    <a href="../" class="footer-brand">
+                        <div class="brand-content" style="display: flex; align-items: center;">
+                            <img src="../images/SSS-Realty-Logo.png" alt="SAT SAI SUNRISE REALITY"
+                                style="max-height: 100px;">
+                        </div>
+                    </a>
+                    <p class="footer-about-text">
+                        Your trusted real estate partner for premium homes, investment opportunities and a better
+                        tomorrow.
+                    </p>
+                    <div class="footer-social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61582430763586" target="_blank"
+                            class="footer-social-btn fb-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/saisunrisereality/" target="_blank"
+                            class="footer-social-btn insta-icon" aria-label="Instagram"><i
+                                class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div class="col-lg-2 col-md-3 col-6">
+                    <h4 class="footer-col-title">Quick Links</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="../">Home</a></li>
+                        <li><a href="../about_us/">About Us</a></li>
+                        <li><a href="../projects/">Projects</a></li>
+                        <li><a href="../faq/">FAQ</a></li>
+                        <li><a href="./">Gallery</a></li>
+                        <li><a href="../contact_us/">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Property Types -->
+                <div class="col-lg-2 col-md-3 col-6">
+                    <h4 class="footer-col-title">Property Types</h4>
+                    <ul class="footer-links-list">
+                        <li><span>Apartments</span></li>
+                        <li><span>Villas</span></li>
+                        <li><span>Commercial</span></li>
+                        <li><span>Plots &amp; Land</span></li>
+                        <li><span>Resale Properties</span></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Top Locations -->
+                <div class="col-lg-2 col-md-3 col-6">
+                    <h4 class="footer-col-title">Top Locations</h4>
+                    <ul class="footer-links-list">
+                        <li><span>Noida</span></li>
+                        <li><span>Greater Noida</span></li>
+                        <li><span>Delhi NCR</span></li>
+                        <li><span>Gurugram</span></li>
+                        <li><span>Yamuna Expressway</span></li>
+                    </ul>
+                </div>
+
+                <!-- Col 5: Registered Office -->
+                <div class="col-lg-2 col-md-3 col-12">
+                    <h4 class="footer-col-title">Registered Office</h4>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <i class="bi bi-building-fill-check"></i>
+                            <span><strong>SAT SAI SUNRISE REALITY</strong></span>
+                        </li>
+                        <li>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Near Ramleela Ground, Sector 5, Vaishali, Sahibabad, Ghaziabad, UP - 201010</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-telephone-fill"></i>
+                            <a href="tel:9953755303">+91 9953755303</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-envelope-fill"></i>
+                            <span>satsaisunrisereality@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="footer-bottom-bar">
+                <p>© 2026 SAT SAI SUNRISE REALITY. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Lightbox Preview Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Lightbox Modal
+            const lightboxModal = document.getElementById("lightboxModal");
+            const lightboxImg = document.getElementById("lightboxImg");
+            const lightboxCaption = document.getElementById("lightboxCaption");
+            const lightboxClose = document.getElementById("lightboxClose");
+
+            function openLightbox(src, caption) {
+                if (!src) return;
+                lightboxImg.src = src;
+                lightboxCaption.textContent = caption || "";
+                lightboxModal.classList.add("active");
+                document.body.style.overflow = "hidden";
+            }
+
+            function closeLightbox() {
+                lightboxModal.classList.remove("active");
+                document.body.style.overflow = "";
+            }
+
+            // Bind click to each gallery photo card
+            document.querySelectorAll(".gallery-photo-card").forEach(card => {
+                card.addEventListener("click", function () {
+                    const src = this.getAttribute("data-img");
+                    const cap = this.getAttribute("data-caption");
+                    openLightbox(src, cap);
+                });
+            });
+
+            if (lightboxClose) {
+                lightboxClose.addEventListener("click", closeLightbox);
+            }
+
+            if (lightboxModal) {
+                lightboxModal.addEventListener("click", function (e) {
+                    if (e.target === lightboxModal) {
+                        closeLightbox();
+                    }
+                });
+            }
+
+            document.addEventListener("keydown", function (e) {
+                if (e.key === "Escape" && lightboxModal.classList.contains("active")) {
+                    closeLightbox();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
